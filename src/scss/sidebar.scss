@@ -1,0 +1,35 @@
+.side-bar-container {
+  /*
+  width: 20vw;
+  min-width: 250px;
+  height: 100%;
+  min-height: 300px;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
+  background-color: grey;
+  position: fixed;
+  left: 0;
+  */
+  a {
+    color: whitesmoke;
+    /* blue colors for links too */
+    text-decoration: inherit;
+    /* no underline */
+  }
+  a:hover {
+    color: #8549c8;
+  }
+}
