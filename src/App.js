@@ -13,8 +13,8 @@ const App = () => {
   return (
     <Router>
       <Fragment>
-        <Sidebar />
-        <div className="container">
+        <div className="page-wrap">
+          <Sidebar />
           <Switch>
             <Route exact path="/" component={Home} />
           </Switch>
