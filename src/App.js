@@ -4,6 +4,8 @@ import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import Sidebar from './components/layout/Sidebar';
 import Home from './components/Home';
+import './scss/default.scss';
+import './scss/sidebar.scss';
 
 const App = () => {
   // Materialize js initialization
@@ -14,10 +16,14 @@ const App = () => {
     <Router>
       <Fragment>
         <div className="page-wrap">
-          <Sidebar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-          </Switch>
+          <div className="sidebar">
+            <Sidebar />
+          </div>
+          <div className="main-content">
+            <Switch>
+              <Route exact path="/" component={Home} />
+            </Switch>
+          </div>
         </div>
       </Fragment>
     </Router>

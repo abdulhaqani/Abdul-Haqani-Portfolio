@@ -3,8 +3,8 @@ import '../scss/home_container.scss';
 
 export const Home = () => {
   return (
-    <div className="main-content">
-      <div>Home</div>
+    <div className="main-content center-align">
+      <p> Home </p>
     </div>
   );
 };

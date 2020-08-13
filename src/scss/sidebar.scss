@@ -1,5 +1,5 @@
 .side-bar-container {
-  width: 20vw;
+  width: 22%;
   min-width: 250px;
   height: 100%;
   position: fixed;
@@ -23,7 +23,7 @@
   -webkit-animation: fadein 2s;
 
   animation: fadein 2s;
-  background-color: grey;
+  background-color: #101010;
 
   a {
     color: whitesmoke;
@@ -34,4 +34,25 @@
   a:hover {
     color: #8549c8;
   }
+}
+.sidebar {
+  width: 22%;
+}
+
+.link-row {
+  top: 0px;
+  width: 100%;
+  position: absolute;
+  background-color: #080808;
+}
+
+.links {
+  columns: 4;
+}
+.link {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.sidebar-navigation {
 }
