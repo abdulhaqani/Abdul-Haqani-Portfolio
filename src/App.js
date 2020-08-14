@@ -4,6 +4,10 @@ import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import Sidebar from './components/layout/Sidebar';
 import Home from './components/Home';
+import AboutMe from './components/AboutMe';
+import Works from './components/Works';
+import Contact from './components/Contact';
+import Services from './components/Services';
 import './scss/default.scss';
 import './scss/sidebar.scss';
 
@@ -22,6 +26,10 @@ const App = () => {
           <div className="main-content">
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/about-me" component={AboutMe} />
+              <Route exact path="/works" component={Works} />
+              <Route exact path="/contact" component={Contact} />
+              <Route exact path="/services" component={Services} />
             </Switch>
           </div>
         </div>

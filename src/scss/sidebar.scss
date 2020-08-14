@@ -24,17 +24,18 @@
 
   animation: fadein 2s;
   background-color: #101010;
-
-  a {
-    color: whitesmoke;
-    /* blue colors for links too */
-    text-decoration: inherit;
-    /* no underline */
-  }
-  a:hover {
-    color: #8549c8;
-  }
 }
+
+.nav-links {
+  color: whitesmoke;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
+}
+.nav-links:hover {
+  color: #8549c8;
+}
+
 .sidebar {
   width: 22%;
 }
@@ -55,5 +56,24 @@
   color: whitesmoke;
 }
 
-.sidebar-navigation {
+@mixin top-icons {
+  font-size: 1.7rem;
+}
+
+.github {
+  @include top-icons();
+  color: orangered;
+}
+
+.home {
+  @include top-icons();
+  color: #117864;
+}
+.resume {
+  @include top-icons();
+  color: yellow;
+}
+.linkedin {
+  @include top-icons();
+  color: blue;
 }

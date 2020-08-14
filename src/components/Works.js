@@ -1,12 +1,12 @@
 import React from 'react';
-import '../scss/home.scss';
+import '../scss/works.scss';
 
-export const Home = () => {
+export const Works = () => {
   return (
     <div className="main-content center-align">
-      <p> Home </p>
+      <p> Works </p>
     </div>
   );
 };
 
-export default Home;
+export default Works;
