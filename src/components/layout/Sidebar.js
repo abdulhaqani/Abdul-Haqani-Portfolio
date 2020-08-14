@@ -14,7 +14,11 @@ export const Sidebar = () => {
               </Link>
             </li>
             <li className="link">
-              <a href="https://github.com/abdulhaqani" target="_blank">
+              <a
+                href="https://github.com/abdulhaqani"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i class="fa fa-github github" aria-hidden="true"></i>
               </a>
             </li>
@@ -22,6 +26,7 @@ export const Sidebar = () => {
               <a
                 href="https://www.linkedin.com/in/abdulrahman-haqani-173a5611b/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i class="fa fa-linkedin linkedin" aria-hidden="true"></i>
               </a>
