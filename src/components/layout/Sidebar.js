@@ -1,8 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../scss/sidebar.scss';
+import Particles from 'react-particles-js';
+import particlesConfig from '../../particlesjs-config.json';
+import { useMediaQuery } from 'react-responsive';
 
 export const Sidebar = () => {
+  const isDesktop = useMediaQuery({
+    query: '(min-device-width: 1000px)',
+  });
   return (
     <div>
       <div className="side-bar-container">
@@ -36,25 +42,31 @@ export const Sidebar = () => {
             </li>
           </ul>
         </div>
+        <Particles
+          params={particlesConfig}
+          width={'20vw'}
+          height={'80vw'}
+          className="particles-canvas"
+        />
         <ul>
-          <li className="sidebar-navigation">
+          <li>
             <Link to={'about-me'} activeClassName="active">
-              <h3 className="nav-links">About me</h3>
+              <h4 className="nav-links">About me</h4>
             </Link>
           </li>
           <li>
             <Link to={'contact'} activeClassName="active">
-              <h3 className="nav-links">Contact</h3>
+              <h4 className="nav-links">Contact</h4>
             </Link>
           </li>
           <li>
             <Link to={'works'} activeClassName="active">
-              <h3 className="nav-links">Works</h3>
+              <h4 className="nav-links">Works</h4>
             </Link>
           </li>
           <li>
             <Link to={'services'} activeClassName="active">
-              <h3 className="nav-links">Services</h3>
+              <h4 className="nav-links">Services</h4>
             </Link>
           </li>
         </ul>
