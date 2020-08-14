@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../scss/sidebar.scss';
 import Particles from 'react-particles-js';
@@ -9,6 +9,13 @@ export const Sidebar = () => {
   const isDesktop = useMediaQuery({
     query: '(min-device-width: 1000px)',
   });
+
+  const [sidebarOpen, setSidebarOpen] = useState(isDesktop);
+
+  const openHandler = () => {
+    !sidebarOpen ? setSidebarOpen(true) : setSidebarOpen(false);
+  };
+
   return (
     <div>
       <div className="side-bar-container">
