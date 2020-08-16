@@ -1,5 +1,5 @@
 .page-wrap {
-  background-image: url(../images/homePage-typing.jpg);
+  background-image: url(../images/bridge.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
@@ -10,11 +10,14 @@
 .main-content {
   @media screen and (min-width: 1000px) {
     flex: 78%;
-    flex-grow: 1;
-
     position: relative;
     z-index: 50 !important;
   }
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center top;
 }
 
 .darken {
