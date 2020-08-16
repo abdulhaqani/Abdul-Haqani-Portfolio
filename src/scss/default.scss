@@ -1,10 +1,17 @@
 .page-wrap {
+  background-image: url(../images/homePage-typing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: absolute;
   height: 100%;
   display: flex;
 }
 .main-content {
   @media screen and (min-width: 1000px) {
     flex: 78%;
+    flex-grow: 1;
+
     position: relative;
     z-index: 50 !important;
   }
@@ -21,4 +28,8 @@
     right: 0;
     bottom: 0;
   }
+}
+
+.background-img {
+  background-image: url(../images/homePage-typing.jpg);
 }

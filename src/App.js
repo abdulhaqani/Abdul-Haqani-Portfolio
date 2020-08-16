@@ -2,7 +2,6 @@ import React, { useEffect, Fragment, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
-import { useMediaQuery } from 'react-responsive';
 // react components
 import Sidebar from './components/layout/Sidebar';
 import Home from './components/Home';
@@ -14,6 +13,8 @@ import Services from './components/Services';
 // scss
 import './scss/default.scss';
 import './scss/sidebar.scss';
+// extras
+import homePage from './images/homePage-typing.jpg';
 
 const App = () => {
   // Materialize js initialization
