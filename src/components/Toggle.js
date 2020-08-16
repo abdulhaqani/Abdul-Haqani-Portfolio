@@ -4,7 +4,7 @@ import '../scss/sidebar.scss';
 export const Toggle = (props) => {
   return (
     <Fragment>
-      <i class="material-icons toggle-sidebar" onClick={props.click}>
+      <i className="material-icons toggle-sidebar" onClick={props.click}>
         menu
       </i>
     </Fragment>

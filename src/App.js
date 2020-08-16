@@ -16,28 +16,43 @@ import './scss/default.scss';
 import './scss/sidebar.scss';
 
 const App = () => {
-  const isDesktop = useMediaQuery({
-    query: '(min-device-width: 1000px)',
-  });
   // Materialize js initialization
   useEffect(() => {
     M.AutoInit();
   });
 
-  const [sidebarOpen, setSidebarOpen] = useState(isDesktop);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  let pageWrap = 'page-wrap';
   const openHandler = () => {
-    !sidebarOpen ? setSidebarOpen(true) : setSidebarOpen(false);
+    if (!sidebarOpen) {
+      setSidebarOpen(true);
+    } else {
+      setSidebarOpen(false);
+    }
   };
+
+  let sidebar;
+  if (sidebarOpen) {
+    sidebar = <Sidebar className="sidebar open" />;
+    pageWrap = 'page-wrap darken';
+  } else {
+    sidebar = <Sidebar className="sidebar" />;
+    pageWrap = 'page-wrap';
+  }
 
   return (
     <Router>
       <Fragment>
-        <div className="page-wrap">
-          <div className="sidebar">
-            <Sidebar />
+        <div className={pageWrap}>
+          <div className="sidebar-container">
+            {sidebar}
+            <Toggle click={openHandler} />
           </div>
-          <div className="main-content">
+          <div
+            className="main-content"
+            onClick={sidebarOpen ? openHandler : console.log()}
+          >
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/about-me" component={AboutMe} />
