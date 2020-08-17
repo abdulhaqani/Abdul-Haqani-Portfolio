@@ -1,4 +1,4 @@
-.home-container {
+.home-content {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -7,4 +7,12 @@
 .home-title {
   font-family: monospace;
   color: whitesmoke;
+}
+
+.home-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-width: thin;
+  border-style: solid;
+  border-color: #e0e0e0;
+  padding: 2%;
 }
