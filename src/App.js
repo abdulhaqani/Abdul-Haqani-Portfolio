@@ -35,10 +35,20 @@ const App = () => {
 
   let sidebar;
   if (sidebarOpen) {
-    sidebar = <Sidebar className="sidebar open" />;
+    sidebar = (
+      <div className="sidebar-container open">
+        <Sidebar className="sidebar open" />
+        <Toggle click={openHandler} />
+      </div>
+    );
     pageWrap = 'page-wrap darken';
   } else {
-    sidebar = <Sidebar className="sidebar" />;
+    sidebar = (
+      <div className="sidebar-container">
+        <Sidebar className="sidebar" />
+        <Toggle click={openHandler} />
+      </div>
+    );
     pageWrap = 'page-wrap';
   }
 
@@ -46,10 +56,7 @@ const App = () => {
     <Router>
       <Fragment>
         <div className={pageWrap}>
-          <div className="sidebar-container">
-            {sidebar}
-            <Toggle click={openHandler} />
-          </div>
+          {sidebar}
           <div
             className="main-content"
             onClick={sidebarOpen ? openHandler : console.log()}

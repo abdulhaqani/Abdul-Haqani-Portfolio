@@ -1,25 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../scss/sidebar.scss';
 import Particles from 'react-particles-js';
 import particlesConfig from '../../particlesjs-config.json';
-import { useMediaQuery } from 'react-responsive';
 
 export const Sidebar = (props) => {
-  /* const isDesktop = useMediaQuery({
-    query: '(min-device-width: 1000px)',
-  });
-
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  const openHandler = () => {
-    if (!sidebarOpen) {
-      setSidebarOpen(true);
-    } else {
-      setSidebarOpen(false);
-    }
-  }; */
-
   return (
     <div>
       <div className={props.className}>

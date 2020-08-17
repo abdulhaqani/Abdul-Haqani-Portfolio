@@ -1,8 +1,10 @@
-.home-img {
-  background-image: url(../images/homePage-typing.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top right;
-  position: absolute;
-  height: 100%;
+.home-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.home-title {
+  font-family: monospace;
+  color: whitesmoke;
 }

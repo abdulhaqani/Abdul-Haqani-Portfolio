@@ -1,10 +1,13 @@
 .page-wrap {
-  background-image: url(../images/bridge.jpg);
+  background-image: url(../images/stars.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
+  background-attachment: fixed;
   position: absolute;
-  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  height: fit-content;
   display: flex;
 }
 .main-content {
@@ -13,17 +16,23 @@
     position: relative;
     z-index: 50 !important;
   }
-
-  flex-grow: 1;
+  margin-left: 3%;
+  margin-right: 3%;
+  flex: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center top;
+  justify-content: center;
 }
 
 .darken {
   @media screen and (max-width: 999px) {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    background-image: 
+  /* top, transparent red */ linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      /* your image */ url(../images/bridge.jpg);
     height: 100%;
     width: 100%;
     top: 0;
@@ -33,6 +42,11 @@
   }
 }
 
-.background-img {
-  background-image: url(../images/homePage-typing.jpg);
+.paragraph-text {
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  text-size-adjust: auto;
+  -webkit-text-size-adjust: auto;
+  font-size: large;
+  max-width: 750px;
 }
