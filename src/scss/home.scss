@@ -16,3 +16,14 @@
   border-color: #e0e0e0;
   padding: 2%;
 }
+
+.home-background {
+  background-image: url(../images/bridge.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  height: fit-content;
+}

@@ -14,7 +14,6 @@ import Services from './components/Services';
 import './scss/default.scss';
 import './scss/sidebar.scss';
 // extras
-import homePage from './images/homePage-typing.jpg';
 
 const App = () => {
   // Materialize js initialization
