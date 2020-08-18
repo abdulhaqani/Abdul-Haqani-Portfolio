@@ -1,29 +1,49 @@
 .home-content {
-  display: flex;
   align-items: center;
-  flex-direction: row;
 }
 
 .home-title {
-  font-family: monospace;
   color: whitesmoke;
+  font-size: 4.8em;
+  font-weight: 300;
 }
-
-.home-container {
+.intro-text {
+  font-size: 2em;
+}
+.home-intro-container {
   background-color: rgba(0, 0, 0, 0.3);
   border-width: thin;
   border-style: solid;
   border-color: #e0e0e0;
   padding: 2%;
+  flex-shrink: auto;
+  margin: 3%;
 }
-
+.home-container {
+  position: relative;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
 .home-background {
-  background-image: url(../images/bridge.jpg);
-  background-size: cover;
+  background-image: url(../images/stars.jpg);
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
   background-position: top right;
   position: absolute;
   height: 100%;
   width: 100%;
-  height: fit-content;
+  justify-content: center;
+
+  @media screen and (max-width: 999px) {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }

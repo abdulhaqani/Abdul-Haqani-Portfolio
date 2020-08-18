@@ -23,7 +23,7 @@ const App = () => {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  let pageWrap = 'page-wrap';
+  let darken = '';
   const openHandler = () => {
     if (!sidebarOpen) {
       setSidebarOpen(true);
@@ -40,7 +40,7 @@ const App = () => {
         <Toggle click={openHandler} />
       </div>
     );
-    pageWrap = 'page-wrap darken';
+    darken = 'darken';
   } else {
     sidebar = (
       <div className="sidebar-container">
@@ -48,20 +48,25 @@ const App = () => {
         <Toggle click={openHandler} />
       </div>
     );
-    pageWrap = 'page-wrap';
+    darken = '';
   }
 
   return (
     <Router>
       <Fragment>
-        <div className={pageWrap}>
+        <div className="page-wrap">
           {sidebar}
           <div
             className="main-content"
             onClick={sidebarOpen ? openHandler : console.log()}
           >
             <Switch>
-              <Route exact path="/" component={Home} />
+              )}
+              <Route
+                exact
+                path="/"
+                render={(routeProps) => <Home darken={darken} />}
+              />
               <Route exact path="/about-me" component={AboutMe} />
               <Route exact path="/works" component={Works} />
               <Route exact path="/contact" component={Contact} />
