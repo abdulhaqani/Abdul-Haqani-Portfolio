@@ -27,11 +27,30 @@
   }
 }
 
-.paragraph-text {
+@mixin paragraph {
   color: whitesmoke;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial';
   text-size-adjust: auto;
   -webkit-text-size-adjust: auto;
-  font-size: large;
+  font-size: 1.2em;
   max-width: 750px;
+}
+
+.paragraph-text {
+  @include paragraph();
+}
+
+@mixin background {
+  background-size: 100vw 100vh;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  @media screen and (max-width: 999px) {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
