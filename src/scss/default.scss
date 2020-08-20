@@ -28,16 +28,16 @@
 }
 
 @mixin paragraph {
-  color: whitesmoke;
   font-family: 'Arial';
   text-size-adjust: auto;
   -webkit-text-size-adjust: auto;
   font-size: 1.2em;
-  max-width: 750px;
 }
 
 .paragraph-text {
+  color: whitesmoke;
   @include paragraph();
+  max-width: 750px;
 }
 
 @mixin background {

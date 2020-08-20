@@ -12,22 +12,13 @@
 }
 
 .contact-head {
-  border-bottom: medium;
-  font-family: 'Arial Narrow';
-  border-style: solid;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  font-size: 3.6em;
-  font-stretch: condensed;
-  font-weight: 100;
-  font-stretch: narrower;
-  color: whitesmoke;
+  border-bottom-style: solid;
   margin: auto;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding: auto;
+  padding: 0 0.5em;
   width: min-content;
+  border-bottom-width: 5px;
+  color: whitesmoke;
+  font-size: 3.6em;
 }
 
 .contact-form {
@@ -61,6 +52,8 @@
   @include paragraph();
   margin: auto;
   margin-top: 2%;
+  max-width: 750px;
+  color: whitesmoke;
 }
 
 .submit-btn-edit {
