@@ -19,28 +19,32 @@ export const Contact = () => {
             in touch with you.
           </p>
         </div>
-        <div className="form contact-form center-align">
+        <div className="form contact-form grey darken-3 center-align">
           <div className="input-field input-edit">
-            <input
-              placeholder="Name"
-              id="name"
-              type="text"
-              className="validate"
-            />
-            <label for="first_name">Name</label>
+            <input id="name" type="text" className="validate text-inputs" />
+            <label for="first_name" className="active">
+              Name
+            </label>
           </div>
 
           <div className="input-field input-edit">
-            <input id="email" type="email" className="validate" />
-            <label for="email">Email</label>
+            <input id="email" type="email" className="validate text-inputs" />
+            <label for="email" className="active">
+              Email
+            </label>
           </div>
 
-          <div class="input-field input-edit ">
-            <textarea id="Message" class="materialize-textarea"></textarea>
-            <label for="Message">Message</label>
+          <div className="input-field input-edit">
+            <textarea
+              id="Message"
+              className="materialize-textarea text-inputs"
+            ></textarea>
+            <label for="Message" className="active">
+              Message
+            </label>
           </div>
           <button
-            class="btn waves-effect waves-light grey darken-1 submit-btn-edit"
+            className="btn waves-effect waves-light grey darken-1 submit-btn-edit"
             type="submit"
             name="action"
           >

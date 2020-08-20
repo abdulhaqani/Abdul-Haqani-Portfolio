@@ -2,6 +2,8 @@ import React from 'react';
 import '../scss/home.scss';
 import '../scss/default.scss';
 import Contact from './Contact';
+import AboutMe from './AboutMe';
+import Services from './Services';
 
 export const Home = (props) => {
   let background = `home-background ${props.darken}`;
@@ -22,7 +24,13 @@ export const Home = (props) => {
           </p>
         </div>
       </div>
-      <div className="contact">
+      <div className="border-mine">
+        <AboutMe />
+      </div>
+      <div className="border-mine">
+        <Services />
+      </div>
+      <div className="border-mine">
         <Contact />
       </div>
     </div>

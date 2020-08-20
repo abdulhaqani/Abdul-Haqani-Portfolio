@@ -49,6 +49,7 @@
 .toggle-sidebar {
   margin: 10px;
   z-index: 5;
+  position: fixed;
   @media screen and (min-width: 999px) {
     left: 100%;
   }
