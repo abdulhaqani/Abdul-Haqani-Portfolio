@@ -3,7 +3,7 @@ import '../scss/aboutMe.scss';
 
 export const AboutMe = () => {
   return (
-    <div className="about-me-background center-align">
+    <div className="about-me-background">
       <div className="row about-me-header-container">
         <div className="about-me-header condensed thin">About Abdul Haqani</div>
         <div className="about-nav row">
