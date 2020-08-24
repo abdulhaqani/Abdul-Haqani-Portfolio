@@ -19,7 +19,7 @@ export const Contact = () => {
             in touch with you.
           </p>
         </div>
-        <div className="form contact-form grey darken-3 center-align">
+        <div className="form contact-form center-align">
           <div className="input-field input-edit">
             <input id="name" type="text" className="validate text-inputs" />
             <label for="first_name" className="active">

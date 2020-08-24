@@ -20,15 +20,15 @@ export const AboutMe = () => {
         <div className="about-me-subheader">Developer to the core.</div>
       </div>
       <div className="about-content">
-        <div>
+        <div className="about-photo-container">
           <img
             src={require('../images/linkedIn2.jpg')}
             className="about-photo"
             alt=""
           />
         </div>
-        <div>
-          <p className="about-paragraph">
+        <div className="about-paragraph">
+          <p className="about-words">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam
             animi voluptate nam non porro itaque, officia molestiae earum
             laudantium iusto! Dolor id illo unde aliquid. Voluptatum ab
