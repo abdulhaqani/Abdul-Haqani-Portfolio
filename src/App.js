@@ -67,7 +67,7 @@ const App = () => {
                 path="/"
                 render={(routeProps) => <Home darken={darken} />}
               />
-              <Route exact path="/about-me" component={AboutMe} />
+              <Route path="/about-me" component={AboutMe} />
               <Route exact path="/works" component={Works} />
               <Route exact path="/contact" component={Contact} />
               <Route exact path="/services" component={Services} />

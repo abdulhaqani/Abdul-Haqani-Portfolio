@@ -46,22 +46,22 @@ export const Sidebar = (props) => {
         />
         <ul>
           <li>
-            <Link to={'about-me'}>
+            <Link to={'/about-me'}>
               <h4 className="nav-links">About me</h4>
             </Link>
           </li>
           <li>
-            <Link to={'contact'}>
+            <Link to={'/contact'}>
               <h4 className="nav-links">Contact</h4>
             </Link>
           </li>
           <li>
-            <Link to={'works'}>
+            <Link to={'/works'}>
               <h4 className="nav-links">Works</h4>
             </Link>
           </li>
           <li>
-            <Link to={'services'}>
+            <Link to={'/services'}>
               <h4 className="nav-links">Services</h4>
             </Link>
           </li>
