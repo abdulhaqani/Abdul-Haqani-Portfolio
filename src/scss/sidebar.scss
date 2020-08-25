@@ -93,18 +93,36 @@
 
 .github {
   @include top-icons();
-  color: orangered;
+  color: rgb(255, 69, 0);
+}
+
+.github:hover {
+  color: rgba(255, 69, 0, 0.5);
 }
 
 .home {
   @include top-icons();
-  color: #117864;
+  color: rgb(17, 120, 100);
 }
+
+.home:hover {
+  color: rgba(17, 120, 100, 0.5);
+}
+
 .resume {
   @include top-icons();
   color: yellow;
 }
+
+.resume:hover {
+  color: rgba(255, 255, 0, 0.5);
+}
+
 .linkedin {
   @include top-icons();
   color: blue;
+}
+
+.linkedin:hover {
+  color: rgba(0, 0, 255, 0.5);
 }
