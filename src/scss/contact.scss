@@ -51,6 +51,7 @@
 
 .contact-paragraph {
   @include paragraph();
+  font-family: 'Arial';
   margin: auto;
   margin-top: 2%;
   max-width: 750px;

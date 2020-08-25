@@ -28,15 +28,15 @@
 }
 
 @mixin paragraph {
-  font-family: 'Arial';
   text-size-adjust: auto;
   -webkit-text-size-adjust: auto;
   font-size: 1.2em;
 }
 
 .paragraph-text {
-  color: whitesmoke;
   @include paragraph();
+  font-family: 'Arial';
+  color: whitesmoke;
   max-width: 750px;
 }
 

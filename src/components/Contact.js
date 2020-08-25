@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../scss/contact.scss';
 import '../scss/default.scss';
 
 export const Contact = () => {
+  const [message, setMessage] = useState({
+    name: '',
+    email: '',
+    messageContent: '',
+  });
+
+  const { name, email, messageContent } = message;
+
+  const onChange = (e) => {
+    setMessage({ ...message, [e.target.name]: e.target.value });
+  };
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log('Message submit');
+  };
+
   return (
     <div className="contact-background">
       <div>
         <h1 className="center-align contact-head">CONTACT</h1>
         <div>
-          <p className="contact-paragraph center-align">
+          <p className="contact-paragraph">
             Speaking with other developers, designers, entrepreneurs and people
             in general is always refreshing. Contact me through this form if you
             have any recomendations, critiques or if you just want to say hello.
@@ -19,39 +35,53 @@ export const Contact = () => {
             in touch with you.
           </p>
         </div>
-        <div className="form contact-form center-align">
-          <div className="input-field input-edit">
-            <input id="name" type="text" className="validate text-inputs" />
-            <label for="first_name" className="active">
+        <form className="contact-form center-align" onSubmit={onSubmit}>
+          <div className="form-group input-field input-edit">
+            <input
+              name="name"
+              type="text"
+              className="validate text-inputs"
+              value={name}
+              onChange={onChange}
+            />
+            <label htmlFor="name" className="active">
               Name
             </label>
           </div>
 
-          <div className="input-field input-edit">
-            <input id="email" type="email" className="validate text-inputs" />
-            <label for="email" className="active">
+          <div className="form-group input-field input-edit">
+            <input
+              name="email"
+              type="email"
+              className="validate text-inputs"
+              value={email}
+              onChange={onChange}
+            />
+            <label htmlFor="email" className="active">
               Email
             </label>
           </div>
 
-          <div className="input-field input-edit">
+          <div className="form-group input-field input-edit">
             <textarea
-              id="Message"
+              name="messageContent"
               className="materialize-textarea text-inputs"
+              value={messageContent}
+              onChange={onChange}
             ></textarea>
-            <label for="Message" className="active">
+            <label htmlFor="messageContent" className="active">
               Message
             </label>
           </div>
+
           <button
-            className="btn waves-effect waves-light grey darken-1 submit-btn-edit"
             type="submit"
-            name="action"
+            className="btn waves-effect waves-light grey darken-1 submit-btn-edit"
           >
             Submit
-            <i class="material-icons right">send</i>
+            <i className="material-icons right">send</i>
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );
