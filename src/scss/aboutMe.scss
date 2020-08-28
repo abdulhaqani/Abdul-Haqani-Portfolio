@@ -160,6 +160,7 @@
 .informal-content {
   @include education-content();
 }
+
 .education-logo {
   height: 105px;
   margin-top: 2%;
@@ -177,11 +178,18 @@
 
 .canada-logo {
   width: 80%;
-  margin: 5% auto;
+  margin: 3% auto;
 }
 
 .right-arrow {
   font-size: 3em;
   float: right;
-  margin-bottom: 4%;
+}
+
+.freelance-card {
+  font-family: 'Trebuchet MS';
+}
+
+.freelance-card-fit {
+  width: 100%;
 }

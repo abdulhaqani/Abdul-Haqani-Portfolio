@@ -4,11 +4,11 @@ export const Experience = () => {
   return (
     <div>
       <div className="about-me-subheader center-align">Applying my skills.</div>
-      <div class="row">
-        <a href="#">
-          <div class="card grey darken-1 auto-center">
-            <div class="card-content white-text center-align">
-              <span class="card-title">Satistics Canada</span>
+      <div className="row">
+        <a className="modal-trigger" href="#modal1">
+          <div className="card grey darken-1 auto-center">
+            <div className="card-content white-text center-align waves-effect">
+              <span className="card-title">Satistics Canada</span>
               <div className="italics">01/01/2019 - 04/30/2020</div>
 
               <img
@@ -17,32 +17,56 @@ export const Experience = () => {
                 alt=""
               />
               <div>
-                <i class="material-icons right-align right-arrow">
+                <i className="material-icons right-align right-arrow">
                   keyboard_arrow_right
                 </i>
+                <br />
               </div>
             </div>
           </div>
         </a>
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+              Agree
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div class="row">
-        <a href="#">
-          <div class="card blue-grey darken-1 auto-center">
-            <div class="card-content white-text">
-              <span class="card-title">Card Title</span>
-              <p>
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
-              </p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
+      <div className="row">
+        <a className="modal-trigger" href="#modal1">
+          <div className="card light-blue darken-2 grey-text center-align text-darken-4 auto-center">
+            <div className="card-content center-align waves-effect freelance-card-fit">
+              <div className="italics">01/05/2020 - Current</div>
+
+              <h1 className="freelance-card italics">Freelancing</h1>
+
+              <div>
+                <i className="material-icons right-align right-arrow">
+                  keyboard_arrow_right
+                </i>
+                <br />
+              </div>
             </div>
           </div>
         </a>
+
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+              Agree
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
