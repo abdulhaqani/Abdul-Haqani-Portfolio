@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-export const Experience = () => {
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
+
+const Experience = () => {
+  useEffect(() => {
+    var myModal = document.querySelectorAll('.modal');
+    M.Modal.init(myModal, {});
+  }, []);
   return (
     <div>
       <div className="about-me-subheader center-align">Applying my skills.</div>
       <div className="row">
-        <a className="modal-trigger" href="#modal1">
-          <div className="card grey darken-1 auto-center">
+        <a className="modal-trigger" href="#modal-stats-can">
+          <div className="card modal-stats-can auto-center">
             <div className="card-content white-text center-align waves-effect">
               <span className="card-title">Satistics Canada</span>
               <div className="italics">01/01/2019 - 04/30/2020</div>
@@ -25,13 +33,33 @@ export const Experience = () => {
             </div>
           </div>
         </a>
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
+
+        <div id="modal-stats-can" className="modal modal-stats-can">
+          <div className="modal-content">
+            <img
+              src={require('../../images/statistics-canada.png')}
+              className="statistics-canada-logo"
+              alt=""
+            />
+            <h4>Software Developer</h4>
+            <h6 className="italics">01/01/2019 - 04/30/2020</h6>
+            <p>
+              Developed a full stack app with a Python Django PostgreSQL stack
+              with a colleague that uses web scrapers to pull data from various
+              social medias and perform analytics on it. The social medias
+              included in the web scraping were Twitter and Reddit. The data and
+              web scrapers were interfaced with the application to display
+              information to the users. The purpose of the application was to
+              allow journalists to send requests for public sentiment data on
+              various journalism topics instead of having to manually search for
+              it.
+            </p>
           </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+          <div className="modal-footer modal-stats-can">
+            <a
+              href="#!"
+              className="modal-close white-text waves-effect waves-grey btn-flat "
+            >
               Agree
             </a>
           </div>
@@ -39,8 +67,8 @@ export const Experience = () => {
       </div>
 
       <div className="row">
-        <a className="modal-trigger" href="#modal1">
-          <div className="card light-blue darken-2 grey-text center-align text-darken-4 auto-center">
+        <a className="modal-trigger" href="#modal-freelancing">
+          <div className="card modal-freelancing center-align grey-text text-lighten-1 auto-center">
             <div className="card-content center-align waves-effect freelance-card-fit">
               <div className="italics">01/05/2020 - Current</div>
 
@@ -56,13 +84,32 @@ export const Experience = () => {
           </div>
         </a>
 
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
+        <div
+          id="modal-freelancing"
+          className="modal modal-freelancing grey-text text-lighten-1"
+        >
+          <div className="modal-content">
+            <h2 className="center-align my-modal-header underline italics">
+              Freelancing
+            </h2>
+            <h4>Mercury Web Scraping</h4>
+            <p>
+              Developed a full stack app with a Python Django PostgreSQL stack
+              with a colleague that uses web scrapers to pull data from various
+              social medias and perform analytics on it. The social medias
+              included in the web scraping were Twitter and Reddit. The data and
+              web scrapers were interfaced with the application to display
+              information to the users. The purpose of the application was to
+              allow journalists to send requests for public sentiment data on
+              various journalism topics instead of having to manually search for
+              it.
+            </p>
           </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+          <div className="modal-footer modal-freelancing">
+            <a
+              href="#!"
+              className="modal-close waves-effect waves-purple btn-flat grey-text text-lighten-1"
+            >
               Agree
             </a>
           </div>

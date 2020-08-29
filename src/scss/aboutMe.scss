@@ -193,3 +193,23 @@
 .freelance-card-fit {
   width: 100%;
 }
+
+.my-modal-header {
+  font-weight: 100;
+}
+
+.modal-freelancing {
+  background: radial-gradient(
+    circle,
+    rgba(94, 53, 177, 1) 0%,
+    rgba(42, 23, 80, 1) 100%
+  );
+}
+
+.modal-stats-can {
+  background: radial-gradient(
+    circle,
+    rgba(117, 117, 117, 1) 0%,
+    rgba(43, 43, 43, 1) 100%
+  );
+}
