@@ -6,19 +6,8 @@
   min-height: 500px;
   min-height: 100vh;
   height: fit-content;
-  justify-content: center;
   display: flex;
   flex-direction: column;
-}
-
-.contact-head {
-  border-bottom-style: solid;
-  margin: auto;
-  padding: 0 0.5em;
-  width: min-content;
-  border-bottom-width: 5px;
-  color: whitesmoke;
-  font-size: 3.6em;
 }
 
 .contact-form {
@@ -56,6 +45,7 @@
   margin-top: 2%;
   max-width: 750px;
   color: whitesmoke;
+  margin-bottom: 5%;
 }
 
 .submit-btn-edit {

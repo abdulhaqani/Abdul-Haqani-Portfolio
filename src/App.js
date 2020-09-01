@@ -9,7 +9,6 @@ import Toggle from './components/Toggle';
 import AboutMe from './components/AboutMe';
 import Works from './components/Works';
 import Contact from './components/Contact';
-import Services from './components/Services';
 // scss
 import './scss/default.scss';
 import './scss/sidebar.scss';
@@ -70,7 +69,6 @@ const App = () => {
               <Route path="/about-me" component={AboutMe} />
               <Route exact path="/works" component={Works} />
               <Route exact path="/contact" component={Contact} />
-              <Route exact path="/services" component={Services} />
             </Switch>
           </div>
         </div>

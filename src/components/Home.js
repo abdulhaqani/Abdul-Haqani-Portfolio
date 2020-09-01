@@ -3,7 +3,7 @@ import '../scss/home.scss';
 import '../scss/default.scss';
 import Contact from './Contact';
 import AboutMe from './AboutMe';
-import Services from './Services';
+import Works from './Works';
 
 export const Home = (props) => {
   let background = `home-background ${props.darken}`;
@@ -28,7 +28,7 @@ export const Home = (props) => {
         <AboutMe />
       </div>
       <div className="border-mine">
-        <Services />
+        <Works />
       </div>
       <div className="border-mine">
         <Contact />

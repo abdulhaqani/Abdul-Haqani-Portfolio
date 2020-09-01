@@ -1,0 +1,25 @@
+@import './default.scss';
+
+.works-background {
+  @include background();
+
+  background: radial-gradient(
+    circle,
+    rgba(118, 192, 255, 1) 0%,
+    rgba(0, 39, 73, 1) 100%
+  );
+  min-height: 100vh;
+}
+
+.works-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.works-card {
+  margin: auto;
+  margin: 3% 5%;
+  width: 40%;
+}

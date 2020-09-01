@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Story = () => {
   return (
-    <div>
+    <div className="about-fill">
       <div className="about-me-subheader center-align">
         Developer to the core.
       </div>

@@ -10,10 +10,8 @@ export const AboutMe = () => {
   return (
     <Router>
       <div className="about-me-background">
-        <div className="row about-me-header-container">
-          <div className="about-me-header condensed thin">
-            About Abdul Haqani
-          </div>
+        <div className="row header-container">
+          <div className="header condensed thin">About Abdul Haqani</div>
           <div className="about-nav">
             <Link to={'/about-me'}>
               <i className="material-icons about-icons">person</i>

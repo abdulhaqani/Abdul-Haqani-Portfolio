@@ -22,7 +22,7 @@ export const Contact = () => {
   return (
     <div className="contact-background">
       <div>
-        <h1 className="center-align contact-head">CONTACT</h1>
+        <h1 className="header">CONTACT</h1>
         <div>
           <p className="contact-paragraph">
             Speaking with other developers, designers, entrepreneurs and people

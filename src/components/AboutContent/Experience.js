@@ -12,9 +12,9 @@ const Experience = () => {
     <div>
       <div className="about-me-subheader center-align">Applying my skills.</div>
       <div className="row">
-        <a className="modal-trigger" href="#modal-stats-can">
-          <div className="card modal-stats-can auto-center">
-            <div className="card-content white-text center-align waves-effect">
+        <div className="card modal-stats-can auto-center">
+          <a className="modal-trigger" href="#modal-stats-can">
+            <div className="card-content white-text center-align waves-effect waves-light">
               <span className="card-title">Satistics Canada</span>
               <div className="italics">01/01/2019 - 04/30/2020</div>
 
@@ -30,8 +30,8 @@ const Experience = () => {
                 <br />
               </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
         <div id="modal-stats-can" className="modal modal-stats-can">
           <div className="modal-content grey-text text-lighten-2">
@@ -67,7 +67,7 @@ const Experience = () => {
           <div className="modal-footer modal-stats-can">
             <a
               href="#!"
-              className="modal-close white-text waves-effect waves-grey btn-flat "
+              className="modal-close white-text waves-effect waves-light waves-grey btn-flat "
             >
               Agree
             </a>
@@ -76,9 +76,12 @@ const Experience = () => {
       </div>
 
       <div className="row">
-        <a className="modal-trigger" href="#modal-freelancing">
-          <div className="card modal-freelancing center-align grey-text text-lighten-2 auto-center">
-            <div className="card-content center-align waves-effect freelance-card-fit">
+        <div className="card modal-freelancing center-align auto-center">
+          <a
+            className="modal-trigger  grey-text text-lighten-2"
+            href="#modal-freelancing"
+          >
+            <div className="card-content center-align waves-effect waves-purple card-fit">
               <div className="italics">01/05/2020 - Current</div>
 
               <h1 className="freelance-card italics">Freelancing</h1>
@@ -90,8 +93,8 @@ const Experience = () => {
                 <br />
               </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
         <div
           id="modal-freelancing"
