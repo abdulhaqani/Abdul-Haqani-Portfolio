@@ -8,7 +8,15 @@
     rgba(118, 192, 255, 1) 0%,
     rgba(0, 39, 73, 1) 100%
   );
+
   min-height: 100vh;
+}
+
+.darken {
+  @media screen and (max-width: 999px) {
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .works-cards {

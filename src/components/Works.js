@@ -1,9 +1,12 @@
 import React from 'react';
 import '../scss/works.scss';
+import '../scss/default.scss';
 
-export const Works = () => {
+export const Works = (props) => {
+  let background = `works-background ${props.darken}`;
+
   return (
-    <div className="works-background">
+    <div className={background}>
       <div className="works-cards">
         <div className="card works-card center-align">
           <div className="card-content center-align waves-effect">

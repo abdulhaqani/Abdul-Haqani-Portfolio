@@ -25,13 +25,13 @@ export const Home = (props) => {
         </div>
       </div>
       <div className="border-mine">
-        <AboutMe />
+        <AboutMe darken={props.darken} />
       </div>
       <div className="border-mine">
-        <Works />
+        <Works darken={props.darken} />
       </div>
       <div className="border-mine">
-        <Contact />
+        <Contact darken={props.darken} />
       </div>
     </div>
   );

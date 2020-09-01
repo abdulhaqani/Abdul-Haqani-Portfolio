@@ -6,10 +6,11 @@ import Story from './AboutContent/Story';
 import Education from './AboutContent/Education';
 import Experience from './AboutContent/Experience';
 
-export const AboutMe = () => {
+export const AboutMe = (props) => {
+  let background = `about-me-background ${props.darken}`;
   return (
     <Router>
-      <div className="about-me-background">
+      <div className={background}>
         <div className="row header-container">
           <div className="header condensed thin">About Abdul Haqani</div>
           <div className="about-nav">

@@ -46,6 +46,11 @@ export const Sidebar = (props) => {
         />
         <ul>
           <li>
+            <Link to={'/'}>
+              <h4 className="nav-links">Home</h4>
+            </Link>
+          </li>
+          <li>
             <Link to={'/about-me'}>
               <h4 className="nav-links">About me</h4>
             </Link>
@@ -58,11 +63,6 @@ export const Sidebar = (props) => {
           <li>
             <Link to={'/works'}>
               <h4 className="nav-links">Works</h4>
-            </Link>
-          </li>
-          <li>
-            <Link to={'/services'}>
-              <h4 className="nav-links">Services</h4>
             </Link>
           </li>
         </ul>

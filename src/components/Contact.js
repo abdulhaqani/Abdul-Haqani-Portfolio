@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../scss/contact.scss';
 import '../scss/default.scss';
 
-export const Contact = () => {
+export const Contact = (props) => {
   const [message, setMessage] = useState({
     name: '',
     email: '',
@@ -18,9 +18,10 @@ export const Contact = () => {
     e.preventDefault();
     console.log('Message submit');
   };
+  let background = `contact-background ${props.darken}`;
 
   return (
-    <div className="contact-background">
+    <div className={background}>
       <div>
         <h1 className="header">CONTACT</h1>
         <div>

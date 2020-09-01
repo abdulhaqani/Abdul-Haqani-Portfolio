@@ -3,9 +3,11 @@
 .contact-background {
   @include background();
   background-image: url('../images/laptop.jpg');
-  min-height: 500px;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+  min-height: 700px;
   min-height: 100vh;
-  height: fit-content;
   display: flex;
   flex-direction: column;
 }
