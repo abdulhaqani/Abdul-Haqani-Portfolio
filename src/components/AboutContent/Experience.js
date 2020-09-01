@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
@@ -35,7 +34,7 @@ const Experience = () => {
         </a>
 
         <div id="modal-stats-can" className="modal modal-stats-can">
-          <div className="modal-content">
+          <div className="modal-content grey-text text-lighten-2">
             <img
               src={require('../../images/statistics-canada.png')}
               className="statistics-canada-logo"
@@ -44,6 +43,7 @@ const Experience = () => {
             <h4>Software Developer</h4>
             <h6 className="italics">01/01/2019 - 04/30/2020</h6>
             <p>
+              <br />
               Developed a full stack app with a Python Django PostgreSQL stack
               with a colleague that uses web scrapers to pull data from various
               social medias and perform analytics on it. The social medias
@@ -54,6 +54,15 @@ const Experience = () => {
               various journalism topics instead of having to manually search for
               it.
             </p>
+            <div className="chip-align">
+              <div className="chip">ReactJS</div>
+              <div className="chip">Node.js </div>
+              <div className="chip">Python</div>
+              <div className="chip">Django</div>
+              <div className="chip">MongoDB</div>
+              <div className="chip">PostgreSQL</div>
+              <div className="chip">Web Development</div>
+            </div>
           </div>
           <div className="modal-footer modal-stats-can">
             <a
@@ -68,7 +77,7 @@ const Experience = () => {
 
       <div className="row">
         <a className="modal-trigger" href="#modal-freelancing">
-          <div className="card modal-freelancing center-align grey-text text-lighten-1 auto-center">
+          <div className="card modal-freelancing center-align grey-text text-lighten-2 auto-center">
             <div className="card-content center-align waves-effect freelance-card-fit">
               <div className="italics">01/05/2020 - Current</div>
 
@@ -104,6 +113,14 @@ const Experience = () => {
               various journalism topics instead of having to manually search for
               it.
             </p>
+            <div className="chip-align">
+              <div className="chip">Python</div>
+              <div className="chip">Django </div>
+              <div className="chip">PostgreSQL</div>
+              <div className="chip">Web Scraping</div>
+              <div className="chip">Web Development</div>
+              <div className="chip">API</div>
+            </div>
           </div>
           <div className="modal-footer modal-freelancing">
             <a

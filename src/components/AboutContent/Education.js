@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Education = () => {
   return (
-    <div>
+    <div className="grey-text text-lighten-4">
       <div className="about-me-subheader center-align">
         Eternal Student of the craft.
       </div>

@@ -213,3 +213,12 @@
     rgba(43, 43, 43, 1) 100%
   );
 }
+
+.chip-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+}

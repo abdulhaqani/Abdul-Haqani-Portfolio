@@ -33,6 +33,8 @@
 .home-background {
   @include background();
   background-image: url(../images/stars.jpg);
+  width: 100%;
+
   background-repeat: no-repeat;
   background-position: top right;
   position: absolute;

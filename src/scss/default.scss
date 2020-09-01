@@ -1,6 +1,5 @@
 .page-wrap {
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: top right;
   background-attachment: fixed;
   position: absolute;
@@ -8,6 +7,7 @@
   min-width: 100%;
   display: flex;
 }
+
 .main-content {
   @media screen and (min-width: 1000px) {
     flex: 78%;
@@ -73,5 +73,6 @@
 }
 
 .statistics-canada-logo {
+  margin-bottom: 2%;
   width: 30%;
 }
