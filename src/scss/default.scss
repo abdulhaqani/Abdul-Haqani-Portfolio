@@ -104,3 +104,12 @@
   flex-shrink: 10;
   align-content: flex-start;
 }
+
+.modal-orientation {
+  width: 78%;
+  margin-left: 22%;
+  @media screen and (max-width: 999px) {
+    width: 100%;
+    margin-left: 0%;
+  }
+}

@@ -33,7 +33,10 @@ const Experience = () => {
           </a>
         </div>
 
-        <div id="modal-stats-can" className="modal modal-stats-can">
+        <div
+          id="modal-stats-can"
+          className="modal modal-stats-can modal-orientation"
+        >
           <div className="modal-content grey-text text-lighten-2">
             <img
               src={require('../../images/statistics-canada.png')}
@@ -75,7 +78,7 @@ const Experience = () => {
       </div>
 
       <div className="row">
-        <div className="card card-hover modal-freelancing center-align auto-center">
+        <div className="card card-hover freelancing-bg center-align auto-center">
           <a
             className="modal-trigger  grey-text text-lighten-2"
             href="#modal-freelancing"
@@ -97,7 +100,7 @@ const Experience = () => {
 
         <div
           id="modal-freelancing"
-          className="modal modal-freelancing grey-text text-lighten-1"
+          className="modal modal-orientation freelancing-bg grey-text text-lighten-1"
         >
           <div className="modal-content">
             <h2 className="center-align my-modal-header underline italics">
@@ -123,7 +126,7 @@ const Experience = () => {
               <div className="chip">API</div>
             </div>
           </div>
-          <div className="modal-footer modal-freelancing">
+          <div className="modal-footer freelancing-bg">
             <a
               href="#!"
               className="modal-close waves-effect waves-purple btn-flat grey-text text-lighten-1"
