@@ -9,10 +9,10 @@ export const Home = (props) => {
   let background = `home-background ${props.darken}`;
   return (
     <div className={background}>
-      <div className="home-container">
-        <div className="home-intro-container z-depth-2">
-          <div className="home-title">Abdul Haqani</div>
-          <p className="intro-text">
+      <div id="home-container">
+        <div id="home-intro-container" className="z-depth-2">
+          <div id="home-title">Abdul Haqani</div>
+          <p id="intro-text">
             University of Ottawa Alum, Junior Software Engineer
           </p>
 
@@ -24,13 +24,13 @@ export const Home = (props) => {
           </p>
         </div>
       </div>
-      <div className="border-mine">
+      <div id="border-mine">
         <AboutMe darken={props.darken} />
       </div>
-      <div className="border-mine">
+      <div id="border-mine">
         <Works darken={props.darken} />
       </div>
-      <div className="border-mine">
+      <div id="border-mine">
         <Contact darken={props.darken} />
       </div>
     </div>

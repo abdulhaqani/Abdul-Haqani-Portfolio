@@ -1,35 +1,5 @@
 @import './default.scss';
 
-.home-title {
-  color: whitesmoke;
-  font-size: 4.8em;
-  font-weight: 300;
-}
-.intro-text {
-  font-size: 2em;
-  font-weight: 100;
-  color: whitesmoke;
-}
-
-.home-intro-container {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-width: thin;
-  border-style: solid;
-  border-color: #e0e0e0;
-  padding: 2%;
-  flex-shrink: auto;
-  margin: 3%;
-}
-
-.home-container {
-  position: relative;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-}
-
 .home-background {
   @include background();
   background-image: url(../images/stars.jpg);
@@ -38,4 +8,35 @@
   background-repeat: no-repeat;
   background-position: top right;
   position: absolute;
+}
+
+#home-container {
+  position: relative;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+#home-title {
+  color: whitesmoke;
+  font-size: 4.8em;
+  font-weight: 300;
+}
+
+#intro-text {
+  font-size: 2em;
+  font-weight: 100;
+  color: whitesmoke;
+}
+
+#home-intro-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-width: thin;
+  border-style: solid;
+  border-color: #e0e0e0;
+  padding: 2%;
+  flex-shrink: auto;
+  margin: 3%;
 }
