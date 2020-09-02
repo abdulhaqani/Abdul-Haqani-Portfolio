@@ -72,13 +72,13 @@ const App = () => {
                 render={(routeProps) => <Works darken={darken} />}
               />
               <Route
-                path="/about"
-                render={(routeProps) => <AboutMe darken={darken} />}
-              />
-              <Route
                 exact
                 path="/contact"
                 render={(routeProps) => <Contact darken={darken} />}
+              />
+              <Route
+                path="/about"
+                render={(routeProps) => <AboutMe darken={darken} />}
               />
             </Switch>
           </div>
