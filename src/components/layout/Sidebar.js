@@ -51,18 +51,18 @@ export const Sidebar = (props) => {
             </Link>
           </li>
           <li>
-            <Link to={'/about-me'}>
-              <h4 className="nav-links">About me</h4>
-            </Link>
-          </li>
-          <li>
-            <Link to={'/contact'}>
-              <h4 className="nav-links">Contact</h4>
+            <Link to={'/about'}>
+              <h4 className="nav-links">About</h4>
             </Link>
           </li>
           <li>
             <Link to={'/works'}>
               <h4 className="nav-links">Works</h4>
+            </Link>
+          </li>
+          <li>
+            <Link to={'/contact'}>
+              <h4 className="nav-links">Contact</h4>
             </Link>
           </li>
         </ul>

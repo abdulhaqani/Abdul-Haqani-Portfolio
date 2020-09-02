@@ -99,3 +99,8 @@
   margin-bottom: 2%;
   width: 30%;
 }
+
+.fit-content {
+  flex-shrink: 10;
+  align-content: flex-start;
+}

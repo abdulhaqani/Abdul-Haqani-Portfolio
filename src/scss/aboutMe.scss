@@ -179,6 +179,14 @@
   float: right;
 }
 
+.card-hover {
+  transition: all 0.5s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+}
+
 .freelance-card {
   font-family: 'Trebuchet MS';
 }

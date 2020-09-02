@@ -12,7 +12,7 @@ const Experience = () => {
     <div>
       <div className="about-me-subheader center-align">Applying my skills.</div>
       <div className="row">
-        <div className="card modal-stats-can auto-center">
+        <div className="card card-hover modal-stats-can auto-center">
           <a className="modal-trigger" href="#modal-stats-can">
             <div className="card-content white-text center-align waves-effect waves-light">
               <span className="card-title">Satistics Canada</span>
@@ -61,7 +61,6 @@ const Experience = () => {
               <div className="chip">Django</div>
               <div className="chip">MongoDB</div>
               <div className="chip">PostgreSQL</div>
-              <div className="chip">Web Development</div>
             </div>
           </div>
           <div className="modal-footer modal-stats-can">
@@ -76,7 +75,7 @@ const Experience = () => {
       </div>
 
       <div className="row">
-        <div className="card modal-freelancing center-align auto-center">
+        <div className="card card-hover modal-freelancing center-align auto-center">
           <a
             className="modal-trigger  grey-text text-lighten-2"
             href="#modal-freelancing"
@@ -120,8 +119,7 @@ const Experience = () => {
               <div className="chip">Python</div>
               <div className="chip">Django </div>
               <div className="chip">PostgreSQL</div>
-              <div className="chip">Web Scraping</div>
-              <div className="chip">Web Development</div>
+              <div className="chip">Web-Scraping</div>
               <div className="chip">API</div>
             </div>
           </div>

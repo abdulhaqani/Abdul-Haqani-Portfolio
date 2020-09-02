@@ -72,8 +72,7 @@ const App = () => {
                 render={(routeProps) => <Works darken={darken} />}
               />
               <Route
-                exact
-                path="/about-me"
+                path="/about"
                 render={(routeProps) => <AboutMe darken={darken} />}
               />
               <Route

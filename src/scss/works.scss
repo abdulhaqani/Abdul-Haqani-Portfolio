@@ -8,7 +8,8 @@
     rgba(118, 192, 255, 1) 0%,
     rgba(0, 39, 73, 1) 100%
   );
-
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -23,11 +24,55 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
 }
 
 .works-card {
   margin: auto;
-  margin: 3% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5%;
+  transition: all 0.5s ease-in-out;
   width: 40%;
+}
+
+.works-card:hover {
+  transform: scale(1.05);
+}
+
+.card-header {
+  font-size: 3.6em;
+}
+
+.bring-it {
+  background: radial-gradient(
+    circle,
+    rgba(117, 117, 117, 1) 0%,
+    rgba(43, 43, 43, 1) 100%
+  );
+}
+
+.ecosnap {
+  background: radial-gradient(
+    circle,
+    rgba(6, 194, 24, 1) 0%,
+    rgba(38, 124, 200, 1) 100%
+  );
+}
+
+.mercury-scraping {
+  background: radial-gradient(
+    circle,
+    rgba(194, 98, 6, 1) 0%,
+    rgba(44, 0, 140, 1) 100%
+  );
+}
+
+.works-class-container {
+  width: 100%;
+  .works-class {
+    font-size: 2.4em;
+    width: fit-content;
+    margin: 2% 5% 1% 5%;
+  }
 }
