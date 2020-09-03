@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../scss/works.scss';
-import '../scss/contact.scss';
 import '../scss/default.scss';
+
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 export const Works = (props) => {
   let background = `works-background ${props.darken}`;
-
+  useEffect(() => {
+    var myModal = document.querySelectorAll('.modal');
+    M.Modal.init(myModal, {});
+  }, []);
   return (
     <div className={background}>
       <div>
