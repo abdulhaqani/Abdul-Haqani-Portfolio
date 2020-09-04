@@ -41,7 +41,7 @@ export const Works = (props) => {
                       'margin-bottom': '3%',
                     }}
                   >
-                    Node.Js | Express | MongoDB
+                    Node.Js | Express | MongoDB | Bootstrap
                     <i className="material-icons right-align right-arrow">
                       keyboard_arrow_right
                     </i>
@@ -68,12 +68,11 @@ export const Works = (props) => {
                 search for it.
               </p>
               <div className="chip-align">
-                <div className="chip">ReactJS</div>
-                <div className="chip">Node.js </div>
-                <div className="chip">Python</div>
-                <div className="chip">Django</div>
+                <div className="chip">Node.js</div>
+                <div className="chip">ExpressJs </div>
+                <div className="chip">Express Handlebars</div>
                 <div className="chip">MongoDB</div>
-                <div className="chip">PostgreSQL</div>
+                <div className="chip">APIs</div>
               </div>
             </div>
             <div className="modal-footer bring-it">
@@ -130,12 +129,11 @@ export const Works = (props) => {
                 search for it.
               </p>
               <div className="chip-align">
-                <div className="chip">ReactJS</div>
-                <div className="chip">Node.js </div>
+                <div className="chip">Kotlin</div>
+                <div className="chip">Android Studio</div>
                 <div className="chip">Python</div>
-                <div className="chip">Django</div>
-                <div className="chip">MongoDB</div>
-                <div className="chip">PostgreSQL</div>
+                <div className="chip">Keras</div>
+                <div className="chip">Firebase DB</div>
               </div>
             </div>
             <div className="modal-footer ecosnap">
@@ -171,7 +169,7 @@ export const Works = (props) => {
                       'margin-bottom': '3%',
                     }}
                   >
-                    Python | Django | PostgreSQL
+                    Python | Django | PostgreSQL | Bootstrap
                     <i className="material-icons right-align right-arrow">
                       keyboard_arrow_right
                     </i>
@@ -201,12 +199,12 @@ export const Works = (props) => {
                 search for it.
               </p>
               <div className="chip-align">
-                <div className="chip">ReactJS</div>
-                <div className="chip">Node.js </div>
                 <div className="chip">Python</div>
-                <div className="chip">Django</div>
-                <div className="chip">MongoDB</div>
+                <div className="chip">Django </div>
                 <div className="chip">PostgreSQL</div>
+                <div className="chip">Bootstrap</div>
+                <div className="chip">Web Scraping</div>
+                <div className="chip">APIs</div>
               </div>
             </div>
             <div className="modal-footer mercury-scraping">
