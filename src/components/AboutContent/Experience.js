@@ -37,7 +37,7 @@ const Experience = () => {
           id="modal-stats-can"
           className="modal modal-stats-can modal-orientation"
         >
-          <div className="modal-content grey-text text-lighten-2">
+          <div className="modal-content my-modal grey-text text-lighten-2">
             <img
               src={require('../../images/statistics-canada.png')}
               className="statistics-canada-logo"
@@ -45,17 +45,21 @@ const Experience = () => {
             />
             <h4>Software Developer</h4>
             <h6 className="italics">01/01/2019 - 04/30/2020</h6>
-            <p>
+            <p className="modal-paragraph">
+              - Developed full stack MERN applications for various purposes,
+              ranging from organizing data sets for the training of AIs, to
+              integrating an AI backend with a front-end application
               <br />
-              Developed a full stack app with a Python Django PostgreSQL stack
-              with a colleague that uses web scrapers to pull data from various
-              social medias and perform analytics on it. The social medias
-              included in the web scraping were Twitter and Reddit. The data and
-              web scrapers were interfaced with the application to display
-              information to the users. The purpose of the application was to
-              allow journalists to send requests for public sentiment data on
-              various journalism topics instead of having to manually search for
-              it.
+              - Developed a comprehensive full stack application to integrate a
+              legacy SQL database. The application looked to interact with users
+              and the database, and provide a user friendly experience while
+              performing analytics on the data provided from the database.
+              <br />- Performed general software solutions ranging from data
+              analytics using pythons extensive data visualization libraries,
+              implementing a variable weighted shortest path algorithm for the
+              Alberta grain transport system, and even developing a python crash
+              course for some of the other individuals working in the
+              organization.
             </p>
             <div className="chip-align">
               <div className="chip">ReactJS</div>
@@ -102,12 +106,12 @@ const Experience = () => {
           id="modal-freelancing"
           className="modal modal-orientation freelancing-bg grey-text text-lighten-1"
         >
-          <div className="modal-content">
+          <div className="modal-content my-modal">
             <h2 className="center-align my-modal-header underline italics">
               Freelancing
             </h2>
             <h4>Mercury Web Scraping</h4>
-            <p>
+            <p className="modal-paragraph">
               Developed a full stack app with a Python Django PostgreSQL stack
               with a colleague that uses web scrapers to pull data from various
               social medias and perform analytics on it. The social medias
