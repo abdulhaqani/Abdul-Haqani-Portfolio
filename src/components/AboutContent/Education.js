@@ -53,6 +53,7 @@ export const Education = () => {
               <div>
                 <div className="italics">Online Education</div>
                 Enrolled in Classes 2017-Present <br />
+                Continued learning
               </div>
             </div>
           </div>

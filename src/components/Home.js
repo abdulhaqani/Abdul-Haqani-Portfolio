@@ -13,7 +13,7 @@ export const Home = (props) => {
         <div id="home-intro-container" className="z-depth-2">
           <div id="home-title">Abdul Haqani</div>
           <p id="intro-text">
-            University of Ottawa Alum, Junior Software Engineer
+            University of Ottawa Alum, Junior Software Developer/Engineer
           </p>
 
           <p className="paragraph-text">

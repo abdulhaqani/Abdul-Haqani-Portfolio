@@ -16,24 +16,33 @@ export const Story = () => {
         </div>
         <div className="about-paragraph">
           <p className="about-words">
-            My goal is to help individuals and companies with their software
-            needs, be it the user experience on their website, the design of
-            their applications or consulting on their online persona. In the
-            modern age too many businesses suffer from a poor online persona, be
-            it their websites or lack thereof. As a consultant and web architect
-            my goal is to help businesses and individuals create a professional
-            online image for themselves, something that will pay dividends for
-            years to come. Having worked in the public sector and in the private
-            sector as a Full Stack Developer (Agri-Food Canada and Ciena), Front
-            End Engineer (Kinaxis) and a Back End Engineer (IBM), I've gained a
-            technical and theoretical skill set which allows me to consult
-            others by understanding their current positions and goals. Through
-            these skills I can offer advanced, holistic, and relevant solutions.
-            Developing an image for yourself and your work is never easy but
-            with help it can be. Now you now know a bit about me, but I am still
-            eager to get to know you. Feel free to contact me as I love to meet
-            interesting people and if you are someone who might be able to
-            benefit from my services I encourage you to reach out.
+            My goal in the software field is to design and implement solutions
+            for individuals and companies, be it user experience solutions for
+            companies on their websites or applications, assisting in the design
+            of a project, or even consulting to come up with feasible and
+            effective solutions for their problems.
+            <br />
+            <br />
+            As a full stack developer, I look to help individuals and businesses
+            come up with a web presence that is ideal for their situation,
+            something that can stand the test of time and help them for the
+            forseeable future. Having obtained meaningful experience as a
+            Software Developer at Statistics Canada, I've obtained strong
+            technical and design skills which allow me to understand and consult
+            others based on their requirements. With these skills I can offer a
+            strong, modern skillset that can aid you in developing effective,
+            relevant solutions.
+            <br />
+            <br />
+            Understanding how to tackle problems that you face in work and life
+            is important, and can also prove to be difficult. However, that can
+            be made to be easier with help from qualified individuals. Now that
+            you know a little bit about me, I would be happy to hear from you.
+            Feel free to contact me as I love hearing from and meeting new
+            people, especially when I can obtain different perspectives from
+            their experiences. If I can be of benefit through my services, I
+            encourage you to reach out. I am always available to listen and
+            potentially move forward with you.
           </p>
         </div>
       </div>
