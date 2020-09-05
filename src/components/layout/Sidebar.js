@@ -34,7 +34,13 @@ export const Sidebar = (props) => {
               </a>
             </li>
             <li className="link">
-              <i className="fa fa-file-text resume" aria-hidden="true"></i>
+              <a
+                href={require('../../images/Abdul_Haqani_C_resume.pdf')}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-file-text resume" aria-hidden="true"></i>
+              </a>
             </li>
           </ul>
         </div>
