@@ -112,15 +112,26 @@ const Experience = () => {
             </h2>
             <h4>Mercury Web Scraping</h4>
             <p className="modal-paragraph">
-              Developed a full stack app with a Python Django PostgreSQL stack
-              with a colleague that uses web scrapers to pull data from various
-              social medias and perform analytics on it. The social medias
-              included in the web scraping were Twitter and Reddit. The data and
-              web scrapers were interfaced with the application to display
-              information to the users. The purpose of the application was to
-              allow journalists to send requests for public sentiment data on
-              various journalism topics instead of having to manually search for
-              it.
+              <br />
+              Mercury Scraping is a full stack app with a Python Django
+              PostgreSQL stack that I co-developed with a colleage. Public
+              sentiment data is something which in modern times is readily
+              available on the many social medias that are frequented on a
+              regular basis. These sentiments are valuable to certain people,
+              especially to those people in the field of journalism, who
+              regularly use these sentiments to determine where to head next. It
+              is for this reason that this application was developed, it aims to
+              dramatically reduce the time that journalists normally have to
+              spend manually looking for public sentiment data.
+            </p>
+            <p className="modal-paragraph">
+              The app uses web scrapers to pull data from various social medias
+              and perform analytics on it. The web scrapers are able to filter
+              out based on the content of the posts, the date of posting,
+              whether the post was positive or negative, among other things. The
+              social medias that were included in the web scraping were Twitter
+              and Reddit. The data and web scrapers were interfaced with the
+              application to display information to the client.
             </p>
             <div className="chip-align">
               <div className="chip">Python</div>
