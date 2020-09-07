@@ -21,14 +21,14 @@ app.post('/contact', (req, res) => {
     secure: true,
     auth: {
       // should be replaced with real sender's account
-      user: 'abdulhaqani.portfolio@gmail.com',
-      pass: 'myPortfolioRes',
+      user: process.env.USER_EMAIL,
+      pass: process.env.USER_PASSWORD,
     },
   });
 
   let mailOptions = {
     // should be replaced with real recipient's account
-    to: 'abdulhaqani.portfolio@gmail.com',
+    to: process.env.USER_EMAIL,
     subject: 'Portfolio Response',
     text: `From: ${req.body.email} \n${req.body.name} \n\n${req.body.messageContent}`,
   };
