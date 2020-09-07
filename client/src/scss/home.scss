@@ -4,7 +4,7 @@
   @include background();
   background-image: url(../images/stars.jpg);
   width: 100%;
-
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
   position: absolute;

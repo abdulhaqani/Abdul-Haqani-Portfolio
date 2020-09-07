@@ -35,9 +35,9 @@ export const Works = (props) => {
                 <div>
                   <p
                     style={{
-                      'margin-left': '10%',
-                      'margin-top': '3%',
-                      'margin-bottom': '3%',
+                      marginLeft: '10%',
+                      marginTop: '3%',
+                      marginBottom: '3%',
                     }}
                   >
                     Kotlin | Android Studio | Python | Keras
@@ -134,9 +134,9 @@ export const Works = (props) => {
                 <div>
                   <p
                     style={{
-                      'margin-left': '10%',
-                      'margin-top': '3%',
-                      'margin-bottom': '3%',
+                      marginLeft: '10%',
+                      marginTop: '3%',
+                      marginBottom: '3%',
                     }}
                   >
                     Node.Js | Express | MongoDB | Bootstrap
@@ -218,9 +218,9 @@ export const Works = (props) => {
                 <div>
                   <p
                     style={{
-                      'margin-left': '10%',
-                      'margin-top': '3%',
-                      'margin-bottom': '3%',
+                      marginLeft: '10%',
+                      marginTop: '3%',
+                      marginBottom: '3%',
                     }}
                   >
                     Python | Django | PostgreSQL | Bootstrap
