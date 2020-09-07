@@ -22,7 +22,7 @@ app.post('/contact', (req, res) => {
     auth: {
       // should be replaced with real sender's account
       user: 'abdulhaqani.portfolio@gmail.com',
-      pass: process.env.USER_PASSWORD,
+      pass: 'myPortfolioRes',
     },
   });
 
