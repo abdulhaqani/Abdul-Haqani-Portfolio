@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../scss/contact.scss';
 import '../scss/default.scss';
+
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 export const Contact = (props) => {
   const [message, setMessage] = useState({
@@ -9,14 +13,43 @@ export const Contact = (props) => {
     messageContent: '',
   });
 
+  // Materialize js initialization
+  useEffect(() => {
+    M.AutoInit();
+  });
+
   const { name, email, messageContent } = message;
 
   const onChange = (e) => {
     setMessage({ ...message, [e.target.name]: e.target.value });
   };
-  const onSubmit = (e) => {
+
+  const onSubmit = async (e, message) => {
     e.preventDefault();
-    console.log('Message submit');
+
+    // config request
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    const toastContent = {
+      html: 'Message Sent',
+      classes: 'rounded center-align',
+    };
+
+    try {
+      await axios.post('/contact', { name, email, messageContent }, config);
+      M.toast(toastContent);
+    } catch (error) {
+      console.log('error');
+    }
+    setMessage({
+      name: '',
+      email: '',
+      messageContent: '',
+    });
   };
   let background = `contact-background ${props.darken}`;
 
@@ -44,6 +77,7 @@ export const Contact = (props) => {
               className="validate text-inputs"
               value={name}
               onChange={onChange}
+              required
             />
             <label htmlFor="name" className="active">
               Name
@@ -57,6 +91,7 @@ export const Contact = (props) => {
               className="validate text-inputs"
               value={email}
               onChange={onChange}
+              required
             />
             <label htmlFor="email" className="active">
               Email
@@ -69,6 +104,7 @@ export const Contact = (props) => {
               className="materialize-textarea text-inputs"
               value={messageContent}
               onChange={onChange}
+              required
             ></textarea>
             <label htmlFor="messageContent" className="active">
               Message
