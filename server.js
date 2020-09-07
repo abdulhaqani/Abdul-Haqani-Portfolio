@@ -7,6 +7,13 @@ require('dotenv').config();
 
 const app = express();
 
+app.use((req, res, next) => {
+  if (req.get('X-Forwarded-Proto') === 'http') {
+    res.redirect(301, `https://${req.headers.host}${req.url}`);
+  }
+  next();
+});
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
