@@ -1,7 +1,3 @@
-# Express-ejs-project-skeleton
+# Portfolio Website
 
-- Just a basic skeleton app using: 
-  - Nodejs 
-  - Expressjs
-  - MongoDB
-  - Ejs
+This is my portfolio which was built on a React front end and a simple Node.js express.js backend. I hope you enjoy :)
