@@ -39,11 +39,15 @@ export const Contact = (props) => {
       classes: 'rounded center-align',
     };
 
+    const errorToast = {
+      html: 'Message failed to send',
+      classes: 'rounded center-align',
+    };
     try {
       await axios.post('/contact', { name, email, messageContent }, config);
       M.toast(toastContent);
     } catch (error) {
-      console.log('error');
+      M.toast(errorToast);
     }
     setMessage({
       name: '',

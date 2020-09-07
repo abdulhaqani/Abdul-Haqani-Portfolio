@@ -44,12 +44,12 @@ app.post('/contact', (req, res) => {
   // mail back first
   transporter.sendMail(mailBackOptions, (error, info) => {
     if (error) {
-      return console.log(error);
+      return;
     } else {
       // successful mailback, send message to me now (to avoid spam from fake emails)
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-          return console.log(error);
+          return;
         }
       });
     }
