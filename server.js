@@ -13,8 +13,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-// simple backend to send the emails
+if (process.env.NODE_ENV === 'production') {
+  // set static folder
+  app.use(express.static('client/build'));
 
+  app.get('*', (req, res) =>
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  );
+}
+
+// simple backend to send the emails
+app.get('/');
 app.post('/contact', (req, res) => {
   let transporter = nodeMailer.createTransport({
     host: 'smtp.gmail.com',
