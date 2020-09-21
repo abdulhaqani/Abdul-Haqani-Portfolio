@@ -17,7 +17,7 @@
 @mixin education-content {
   @include education-text();
   margin-top: 3%;
-  width: 35%;
+  width: 100%;
   line-height: 30px;
 }
 
