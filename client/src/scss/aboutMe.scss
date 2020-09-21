@@ -17,8 +17,10 @@
 @mixin education-content {
   @include education-text();
   margin-top: 3%;
+  width: 35%;
   line-height: 30px;
 }
+
 .about-me-background {
   @include background();
   background: radial-gradient(
