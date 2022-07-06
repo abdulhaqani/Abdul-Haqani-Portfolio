@@ -12,15 +12,13 @@ export const Home = (props) => {
       <div id="home-container">
         <div id="home-intro-container" className="z-depth-2">
           <div id="home-title">Abdul Haqani</div>
-          <p id="intro-text">
-            University of Ottawa Alum, Junior Software Developer/Engineer
-          </p>
+          <p id="intro-text">University of Ottawa Alum, Software Engineer</p>
 
           <p className="paragraph-text">
-            Recent graduate from the university of Ottawa, designer to my core,
-            permanent student of the craft. I love to learn, create, design and
-            overcome challenges while developing new things. Feel free to
-            contact me!
+            Class of 2020 Graduate from the university of Ottawa, designer to my
+            core, permanent student of the craft. I love to learn, create,
+            design and overcome challenges while developing new things. Feel
+            free to contact me!
           </p>
         </div>
       </div>
