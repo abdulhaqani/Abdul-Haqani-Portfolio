@@ -60,7 +60,6 @@ const App = () => {
             onClick={sidebarOpen ? openHandler : console.log()}
           >
             <Switch>
-              )}
               <Route
                 exact
                 path="/"

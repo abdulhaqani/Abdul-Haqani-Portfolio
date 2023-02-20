@@ -18,8 +18,12 @@ export const Education = () => {
             <div className="content">
               <h6>UNIVERSITY OF OTTAWA</h6>
               <div>
-                <div className="italics">Honours BSc. Computing Technology</div>
-                Graduated April 2020 <br />
+                <div className="italics">
+                  BSc. Computing Technology (2015-2020)
+                </div>
+                <div className="italics">
+                  BASc. Biomedical Mechanical Engineering (2015-2020)
+                </div>
                 CGPA: 8/10
               </div>
             </div>
@@ -70,6 +74,8 @@ export const Education = () => {
               <div className="italics">by Brad Traversy</div>
               Basics of GraphQL with Ruby on Rails
               <div className="italics">by Alex Deva</div>
+              AWS Lambda & Serverless Architecture Bootcamp
+              <div className="italics">by Riyyaz Sayyad</div>
             </div>
           </div>
         </div>
