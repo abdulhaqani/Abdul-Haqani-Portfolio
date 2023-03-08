@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../scss/sidebar.scss';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 import particlesConfig from '../../particlesjs-config.json';
 
 export const Sidebar = (props) => {

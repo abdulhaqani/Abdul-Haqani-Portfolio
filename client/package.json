@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "v18.14.2",
-    "npm": "9.5.0"
+    "node": "v18.14.2"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -13,12 +12,11 @@
     "materialize-css": "^1.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-materialize": "^3.9.2",
-    "react-particles-js": "^3.3.0",
+    "react-materialize": "^3.9.9",
     "react-responsive": "^8.1.0",
     "react-router-dom": "^5.2.0",
-    "sass": "^1.58.3",
-    "react-scripts": "^5.0.1"
+    "react-tsparticles": "^2.9.3",
+    "sass": "^1.58.3"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
@@ -41,5 +39,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
+  }
 }
