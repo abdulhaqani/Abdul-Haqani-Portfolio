@@ -1,17 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../../scss/sidebar.scss';
-import Particles from 'react-tsparticles';
-import particlesConfig from '../../particlesjs-config.json';
+import { React, useCallback } from "react";
+import { Link } from "react-router-dom";
+import "../../scss/sidebar.scss";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import particlesConfig from "../../particlesjs-config.json";
 
 export const Sidebar = (props) => {
+  const particlesInit = useCallback(async (engine) => {
+    console.log(engine);
+    await loadFull(engine);
+  }, []);
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
+  }, []);
   return (
     <div>
       <div className={props.className}>
         <div className="link-row">
           <ul className="links">
             <li className="link">
-              <Link to={'/'}>
+              <Link to={"/"}>
                 <i className="fa fa-home home" aria-hidden="true"></i>
               </Link>
             </li>
@@ -35,7 +43,7 @@ export const Sidebar = (props) => {
             </li>
             <li className="link">
               <a
-                href={require('../../images/Abdul_Haqani_C_resume.pdf')}
+                href={require("../../images/Abdul_Haqani_C_resume.pdf")}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -45,29 +53,33 @@ export const Sidebar = (props) => {
           </ul>
         </div>
         <Particles
-          params={particlesConfig}
-          width={'20vw'}
-          height={'80vw'}
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={particlesConfig}
+          width={"20vw"}
+          height={"80vw"}
           className="particles-canvas"
         />
+
         <ul>
           <li>
-            <Link to={'/'}>
+            <Link to={"/"}>
               <h4 className="nav-links">Home</h4>
             </Link>
           </li>
           <li>
-            <Link to={'/about'}>
+            <Link to={"/about"}>
               <h4 className="nav-links">About</h4>
             </Link>
           </li>
           <li>
-            <Link to={'/works'}>
+            <Link to={"/works"}>
               <h4 className="nav-links">Works</h4>
             </Link>
           </li>
           <li>
-            <Link to={'/contact'}>
+            <Link to={"/contact"}>
               <h4 className="nav-links">Contact</h4>
             </Link>
           </li>

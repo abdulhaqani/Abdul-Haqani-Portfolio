@@ -1,9 +1,9 @@
-const express = require('express');
-const path = require('path');
-var bodyParser = require('body-parser');
+const express = require("express");
+const path = require("path");
+var bodyParser = require("body-parser");
 
-const nodeMailer = require('nodemailer');
-require('dotenv').config();
+const nodeMailer = require("nodemailer");
+require("dotenv").config();
 
 const app = express();
 
@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // simple backend to send the emails
-app.post('/contact', (req, res) => {
+app.post("/contact", (req, res) => {
   let transporter = nodeMailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: "smtp.gmail.com",
     port: 465,
     secure: true,
     auth: {
@@ -29,14 +29,14 @@ app.post('/contact', (req, res) => {
   let mailOptions = {
     // should be replaced with real recipient's account
     to: process.env.USER_EMAIL,
-    subject: 'Portfolio Response',
+    subject: "Portfolio Response",
     text: `From: ${req.body.email} \n${req.body.name} \n\n${req.body.messageContent}`,
   };
 
   let mailBackOptions = {
     // should be replaced with real recipient's account
     to: req.body.email,
-    subject: 'Message to Abdul Haqani',
+    subject: "Message to Abdul Haqani",
     text: `This is a confirmation email\n\nThe following message was successfully sent to Abdul Haqani \n\n"${req.body.messageContent}"`,
   };
 
@@ -57,13 +57,13 @@ app.post('/contact', (req, res) => {
   res.end();
 });
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === "production") {
   // set static folder
-  app.use(express.static('client/build'));
+  app.use(express.static("client/build"));
 
-  app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
   );
 }
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 3001);
