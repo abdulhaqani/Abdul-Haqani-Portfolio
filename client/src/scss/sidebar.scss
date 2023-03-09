@@ -1,7 +1,8 @@
-.particles-canvas {
-  position: fixed;
-
-  z-index: -10;
+.particles-canvas canvas {
+  position: fixed !important;
+  z-index: -10 !important;
+  width: 20% !important;
+  height: 100vh !important;
 }
 
 .sidebar-container {

@@ -13,6 +13,12 @@ export const Sidebar = (props) => {
   const particlesLoaded = useCallback(async (container) => {
     await console.log(container);
   }, []);
+  const particlesStyle = {
+    position: "fixed !important",
+    "z-index": "-10",
+    width: "20% !important",
+    height: "100vh",
+  };
   return (
     <div>
       <div className={props.className}>
@@ -57,9 +63,9 @@ export const Sidebar = (props) => {
           init={particlesInit}
           loaded={particlesLoaded}
           options={particlesConfig}
-          width={"20vw"}
-          height={"80vw"}
-          className="particles-canvas"
+          width="20%"
+          height="100vh"
+          style={particlesStyle}
         />
 
         <ul>
