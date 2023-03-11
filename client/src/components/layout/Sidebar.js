@@ -1,9 +1,9 @@
-import { React, useCallback } from "react";
-import { Link } from "react-router-dom";
-import "../../scss/sidebar.scss";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import particlesConfig from "../../particlesjs-config.json";
+import { React, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import '../../scss/sidebar.scss';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import particlesConfig from '../../particlesjs-config.json';
 
 export const Sidebar = (props) => {
   const particlesInit = useCallback(async (engine) => {
@@ -14,10 +14,10 @@ export const Sidebar = (props) => {
     await console.log(container);
   }, []);
   const particlesStyle = {
-    position: "fixed !important",
-    "z-index": "-10",
-    width: "20% !important",
-    height: "100vh",
+    position: 'fixed !important',
+    'z-index': '-10',
+    width: '20% !important',
+    height: '100vh',
   };
   return (
     <div>
@@ -25,7 +25,7 @@ export const Sidebar = (props) => {
         <div className="link-row">
           <ul className="links">
             <li className="link">
-              <Link to={"/"}>
+              <Link to={'/'}>
                 <i className="fa fa-home home" aria-hidden="true"></i>
               </Link>
             </li>
@@ -49,7 +49,7 @@ export const Sidebar = (props) => {
             </li>
             <li className="link">
               <a
-                href={require("../../images/Abdul_Haqani_C_resume.pdf")}
+                href={require('../../images/Abdul_Haqani_C_resume.pdf')}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -58,34 +58,37 @@ export const Sidebar = (props) => {
             </li>
           </ul>
         </div>
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={particlesConfig}
-          width="20%"
-          height="100vh"
-          style={particlesStyle}
-        />
 
-        <ul>
-          <li>
-            <Link to={"/"}>
+        <div className="particles-container">
+          <Particles
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={particlesConfig}
+            width="100%"
+            height="100%"
+            className="particles-canvas"
+          />
+        </div>
+
+        <ul className="nav-link-list">
+          <li className="nav-link-li">
+            <Link to={'/'}>
               <h4 className="nav-links">Home</h4>
             </Link>
           </li>
-          <li>
-            <Link to={"/about"}>
+          <li className="nav-link-li">
+            <Link to={'/about'}>
               <h4 className="nav-links">About</h4>
             </Link>
           </li>
-          <li>
-            <Link to={"/works"}>
+          <li className="nav-link-li">
+            <Link to={'/works'}>
               <h4 className="nav-links">Works</h4>
             </Link>
           </li>
-          <li>
-            <Link to={"/contact"}>
+          <li className="nav-link-li">
+            <Link to={'/contact'}>
               <h4 className="nav-links">Contact</h4>
             </Link>
           </li>

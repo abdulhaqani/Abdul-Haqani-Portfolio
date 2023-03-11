@@ -1,8 +1,13 @@
-.particles-canvas canvas {
-  position: fixed !important;
-  z-index: -10 !important;
-  width: 20% !important;
-  height: 100vh !important;
+.particles-container {
+  position: fixed;
+  height: 95%;
+  width: 20%;
+  z-index: -10;
+}
+.particles-canvas {
+  height: 100%;
+  position: relative;
+  z-index: inherit;
 }
 
 .sidebar-container {
@@ -56,7 +61,18 @@
   }
 }
 
+.nav-link-list {
+  position: relative;
+  z-index: 5;
+}
+
+.nav-link-li {
+  position: relative;
+  z-index: inherit;
+}
 .nav-links {
+  position: relative;
+  z-index: inherit;
   color: whitesmoke;
   /* blue colors for links too */
   text-decoration: inherit;

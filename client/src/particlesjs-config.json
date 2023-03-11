@@ -1,14 +1,14 @@
 {
   "particles": {
     "number": {
-      "value": 200,
+      "value": 250,
       "density": {
         "enable": true,
         "value_area": 800
       }
     },
     "color": {
-      "value": "#1C8DDE"
+      "value": "#AAAAAA"
     },
     "size": {
       "value": 3,
@@ -23,7 +23,7 @@
     "line_linked": {
       "enable": true,
       "distance": 135,
-      "color": "#898989",
+      "color": "#888888",
       "opacity": 0.3,
       "width": 0.5
     },
@@ -46,5 +46,7 @@
       "resize": true
     }
   },
-  "retina_detect": true
+  "retina_detect": true,
+  "fullScreen": { "enable": false },
+  "height": "100%"
 }
