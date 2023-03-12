@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../scss/contact.scss';
+import '../scss/home.scss';
 import '../scss/default.scss';
 
 import 'materialize-css/dist/css/materialize.min.css';
@@ -55,75 +56,73 @@ export const Contact = (props) => {
       messageContent: '',
     });
   };
-  let background = `contact-background ${props.darken}`;
+  let container = `container-cover ${props.darken}`;
 
   return (
-    <div className={background}>
+    <div className={container}>
+      <h1 className="header">CONTACT</h1>
       <div>
-        <h1 className="header">CONTACT</h1>
-        <div>
-          <p className="contact-paragraph">
-            Speaking with other developers, designers, entrepreneurs and people
-            in general is always refreshing. Contact me through this form if you
-            have any recomendations, critiques or if you just want to say hello.
-            If you are interested in my work, it is all posted on Github and if
-            you wish to connect with me, feel free to send me an invitation
-            through LinkedIn. If you are interested in working together or in
-            the services I offer please send me a message as I would love to get
-            in touch with you.
-          </p>
-        </div>
-        <form className="contact-form center-align" onSubmit={onSubmit}>
-          <div className="form-group input-field input-edit">
-            <input
-              name="name"
-              type="text"
-              className="validate text-inputs"
-              value={name}
-              onChange={onChange}
-              required
-            />
-            <label htmlFor="name" className="active">
-              Name
-            </label>
-          </div>
-
-          <div className="form-group input-field input-edit">
-            <input
-              name="email"
-              type="email"
-              className="validate text-inputs"
-              value={email}
-              onChange={onChange}
-              required
-            />
-            <label htmlFor="email" className="active">
-              Email
-            </label>
-          </div>
-
-          <div className="form-group input-field input-edit">
-            <textarea
-              name="messageContent"
-              className="materialize-textarea text-inputs"
-              value={messageContent}
-              onChange={onChange}
-              required
-            ></textarea>
-            <label htmlFor="messageContent" className="active">
-              Message
-            </label>
-          </div>
-
-          <button
-            type="submit"
-            className="btn waves-effect waves-light grey darken-1 submit-btn-edit"
-          >
-            Submit
-            <i className="material-icons right">send</i>
-          </button>
-        </form>
+        <p className="contact-paragraph">
+          Speaking with other developers, designers, entrepreneurs and people in
+          general is always refreshing. Contact me through this form if you have
+          any recomendations, critiques or if you just want to say hello. If you
+          are interested in my work, it is all posted on Github and if you wish
+          to connect with me, feel free to send me an invitation through
+          LinkedIn. If you are interested in working together or in the services
+          I offer please send me a message as I would love to get in touch with
+          you.
+        </p>
       </div>
+      <form className="contact-form center-align" onSubmit={onSubmit}>
+        <div className="form-group input-field input-edit">
+          <input
+            name="name"
+            type="text"
+            className="validate text-inputs"
+            value={name}
+            onChange={onChange}
+            required
+          />
+          <label htmlFor="name" className="active">
+            Name
+          </label>
+        </div>
+
+        <div className="form-group input-field input-edit">
+          <input
+            name="email"
+            type="email"
+            className="validate text-inputs"
+            value={email}
+            onChange={onChange}
+            required
+          />
+          <label htmlFor="email" className="active">
+            Email
+          </label>
+        </div>
+
+        <div className="form-group input-field input-edit">
+          <textarea
+            name="messageContent"
+            className="materialize-textarea text-inputs"
+            value={messageContent}
+            onChange={onChange}
+            required
+          ></textarea>
+          <label htmlFor="messageContent" className="active">
+            Message
+          </label>
+        </div>
+
+        <button
+          type="submit"
+          className="btn waves-effect waves-light grey darken-1 submit-btn-edit"
+        >
+          Submit
+          <i className="material-icons right">send</i>
+        </button>
+      </form>
     </div>
   );
 };

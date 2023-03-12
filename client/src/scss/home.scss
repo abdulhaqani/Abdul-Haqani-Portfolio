@@ -1,13 +1,9 @@
 @import './default.scss';
 
 .home-background {
-  @include background();
-  background-image: url(../images/stars.jpg);
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top right;
-  position: absolute;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 #home-container {
@@ -39,4 +35,23 @@
   padding: 2%;
   flex-shrink: auto;
   margin: 3%;
+  display: inline;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
 }

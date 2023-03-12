@@ -1,5 +1,6 @@
 import React, { useEffect, Fragment, useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
+import { BrowserRouter as Router } from 'react-router-dom';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 // react components
@@ -59,27 +60,18 @@ const App = () => {
             className="main-content"
             onClick={sidebarOpen ? openHandler : console.log()}
           >
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={(routeProps) => <Home darken={darken} />}
-              />
-              <Route
-                exact
-                path="/works"
-                render={(routeProps) => <Works darken={darken} />}
-              />
-              <Route
-                exact
-                path="/contact"
-                render={(routeProps) => <Contact darken={darken} />}
-              />
-              <Route
-                path="/about"
-                render={(routeProps) => <AboutMe darken={darken} />}
-              />
-            </Switch>
+            <Fade delay={500}>
+              <Home darken={darken} />
+            </Fade>
+            <Fade delay={500}>
+              <Works darken={darken} />
+            </Fade>
+            <Fade delay={500}>
+              <Contact darken={darken} />
+            </Fade>
+            <Fade delay={500}>
+              <AboutMe darken={darken} />
+            </Fade>
           </div>
         </div>
       </Fragment>

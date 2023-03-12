@@ -6,30 +6,19 @@ import AboutMe from './AboutMe';
 import Works from './Works';
 
 export const Home = (props) => {
-  let background = `home-background ${props.darken}`;
+  let container = `container-cover ${props.darken}`;
   return (
-    <div className={background}>
-      <div id="home-container">
-        <div id="home-intro-container" className="z-depth-2">
-          <div id="home-title">Abdul Haqani</div>
-          <p id="intro-text">University of Ottawa Alum, Software Engineer</p>
+    <div className={container} id="home-container">
+      <div id="home-intro-container" className="z-depth-2">
+        <div id="home-title">Abdul Haqani</div>
+        <p id="intro-text">University of Ottawa Alum, Software Engineer</p>
 
-          <p className="paragraph-text">
-            Class of 2020 Graduate from the university of Ottawa, designer to my
-            core, permanent student of the craft. I love to learn, create,
-            design and overcome challenges while developing new things. Feel
-            free to contact me!
-          </p>
-        </div>
-      </div>
-      <div id="border-mine">
-        <AboutMe darken={props.darken} />
-      </div>
-      <div id="border-mine">
-        <Works darken={props.darken} />
-      </div>
-      <div id="border-mine">
-        <Contact darken={props.darken} />
+        <p className="paragraph-text">
+          Class of 2020 Graduate from the university of Ottawa, designer to my
+          core, permanent student of the craft. I love to learn, create, design
+          and overcome challenges while developing new things. Feel free to
+          contact me!
+        </p>
       </div>
     </div>
   );
