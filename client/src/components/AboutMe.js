@@ -10,10 +10,10 @@ import Experience from './AboutContent/Experience';
 export const AboutMe = (props) => {
   let container = `container-cover ${props.darken}`;
   return (
-    <Router style={{ margin: 0, padding: 0 }}>
+    <Router>
       <div className={container}>
         <div className="row header-container">
-          <div className="header condensed thin">About Abdul Haqani</div>
+          <div className="header condensed thin">Hi I'm Abdul Haqani!</div>
           <div className="about-nav">
             <Link to={'/about'}>
               <i className="material-icons about-icons">person</i>
@@ -27,9 +27,9 @@ export const AboutMe = (props) => {
           </div>
         </div>
         <Switch>
-          <Route exact path="/about/education" component={Education} />
-          <Route exact path="/about/experience" component={Experience} />
-          <Route exact path={['/', '/about']} component={Story} />
+          <Route path="/about/education" component={Education} />
+          <Route path="/about/experience" component={Experience} />
+          <Route path={['/', '/about']} component={Story} />
         </Switch>
       </div>
     </Router>

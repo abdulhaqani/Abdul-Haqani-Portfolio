@@ -60,7 +60,7 @@ const App = () => {
             className="main-content"
             onClick={sidebarOpen ? openHandler : console.log()}
           >
-            <Fade delay={500}>
+            <Fade>
               <Home darken={darken} />
             </Fade>
             <Fade delay={500}>

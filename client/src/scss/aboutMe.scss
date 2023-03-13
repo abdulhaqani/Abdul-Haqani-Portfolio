@@ -47,16 +47,21 @@
   @include paragraph();
   font-size: 1.15em;
   font-weight: 100;
-  width: 45%;
+  width: 100%;
   display: flex;
   margin: auto;
   margin-right: 5%;
   justify-content: center;
   color: rgb(248, 248, 248);
+  text-align: justify;
+  @media screen and (max-width: 999px) {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .about-photo-container {
-  width: 50%;
+  width: 90%;
   height: auto;
   display: flex;
   margin: auto;
@@ -66,11 +71,15 @@
 .about-photo {
   margin-bottom: 5%;
   display: flex;
-  width: 50%;
-  @media screen and (max-width: 999px) {
-    width: 90%;
-  }
+  max-width: 80%;
   border-radius: 50%;
+  max-height: 500px;
+  @media screen and (max-width: 999px) {
+    width: 30%;
+    margin: 0%;
+    clip-path: polygon(6% 6%, 100% 6%, 100% 90%, 6% 90%);
+    border-radius: 0%;
+  }
 }
 
 .about-fill {
@@ -82,6 +91,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @media screen and (max-width: 999px) {
+    columns: 1;
+    flex-direction: column;
+  }
   height: 80%;
 }
 
@@ -124,9 +137,10 @@
 .education-column {
   margin-top: 1%;
   width: 35%;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 999px) {
     margin-right: 5%;
   }
+  margin-bottom: 5%;
 }
 
 .education-header {
@@ -170,7 +184,6 @@
 
 .auto-center {
   margin: 3% auto;
-  min-width: 400px;
 }
 
 .canada-logo {
@@ -222,4 +235,32 @@
   margin-top: 3%;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.open {
+  top: auto !important;
+  position: fixed !important;
+  z-index: 1100;
+}
+
+.col.s4 {
+  @media screen and (max-width: 999px) {
+    width: 60% !important;
+    margin-left: 20% !important;
+  }
+}
+.col.s1 {
+  @media screen and (max-width: 999px) {
+    width: 0% !important;
+    margin: 0% !important;
+    padding: 0% !important;
+  }
+}
+
+.col.s2 {
+  @media screen and (max-width: 999px) {
+    width: 0% !important;
+    margin: 0% !important;
+    padding: 0% !important;
+  }
 }

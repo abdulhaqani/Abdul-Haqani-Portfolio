@@ -14,6 +14,7 @@
   margin-top: 1%;
   flex-direction: column;
   width: fit-content;
+  z-index: 0;
 }
 
 .page-wrap {
@@ -39,7 +40,7 @@
   flex-direction: column;
   justify-content: center;
   background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
-    url(../images/stars.jpg);
+    url(../images/stars-min.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -120,10 +121,9 @@
 
 .modal-orientation {
   width: 78%;
-  margin-left: 22%;
   @media screen and (max-width: 999px) {
-    width: 100%;
-    margin-left: 0%;
+    width: 90%;
+    margin: auto;
   }
 }
 

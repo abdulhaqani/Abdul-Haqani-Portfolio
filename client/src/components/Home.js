@@ -11,7 +11,7 @@ export const Home = (props) => {
     <div className={container} id="home-container">
       <div id="home-intro-container" className="z-depth-2">
         <div id="home-title">Abdul Haqani</div>
-        <p id="intro-text">University of Ottawa Alum, Software Engineer</p>
+        <p id="intro-text">Qlik Software Engineer</p>
 
         <p className="paragraph-text">
           Class of 2020 Graduate from the university of Ottawa, designer to my
