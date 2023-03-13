@@ -64,13 +64,13 @@ const App = () => {
               <Home darken={darken} />
             </Fade>
             <Fade delay={500}>
+              <AboutMe darken={darken} />
+            </Fade>
+            <Fade delay={500}>
               <Works darken={darken} />
             </Fade>
             <Fade delay={500}>
               <Contact darken={darken} />
-            </Fade>
-            <Fade delay={500}>
-              <AboutMe darken={darken} />
             </Fade>
           </div>
         </div>

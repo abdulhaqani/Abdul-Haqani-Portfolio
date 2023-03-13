@@ -8,11 +8,82 @@ const Experience = () => {
     var myModal = document.querySelectorAll('.modal');
     M.Modal.init(myModal, {});
   }, []);
+  //<h1 className="freelance-card italics">Freelancing</h1>;
+
   return (
     <div>
       <div className="about-me-subheader center-align">Applying my skills.</div>
       <div className="row">
-        <div className="card card-hover modal-stats-can auto-center">
+        <div className="col s1"></div>
+        <div className="col s5 card card-hover modal-stats-can auto-center">
+          <a className="modal-trigger" href="#modal-stats-can">
+            <div className="card-content white-text center-align waves-effect waves-light">
+              <span className="card-title">Satistics Canada</span>
+              <div className="italics">01/01/2019 - 04/30/2020</div>
+
+              <img
+                src={require('../../images/canada.png')}
+                className="canada-logo"
+                alt=""
+              />
+              <div>
+                <i className="material-icons right-align right-arrow">
+                  keyboard_arrow_right
+                </i>
+                <br />
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div
+          id="modal-stats-can"
+          className="modal modal-stats-can modal-orientation"
+        >
+          <div className="modal-content my-modal grey-text text-lighten-2">
+            <img
+              src={require('../../images/statistics-canada.png')}
+              className="statistics-canada-logo"
+              alt=""
+            />
+            <h4>Software Developer</h4>
+            <h6 className="italics">01/01/2019 - 04/30/2020</h6>
+            <p className="modal-paragraph">
+              - Developed full stack MERN applications for various purposes,
+              ranging from organizing data sets for the training of AIs, to
+              integrating an AI backend with a front-end application
+              <br />
+              - Developed a comprehensive full stack application to integrate a
+              legacy SQL database. The application looked to interact with users
+              and the database, and provide a user friendly experience while
+              performing analytics on the data provided from the database.
+              <br />- Performed general software solutions ranging from data
+              analytics using pythons extensive data visualization libraries,
+              implementing a variable weighted shortest path algorithm for the
+              Alberta grain transport system, and even developing a python crash
+              course for some of the other individuals working in the
+              organization.
+            </p>
+            <div className="chip-align">
+              <div className="chip">ReactJS</div>
+              <div className="chip">Node.js </div>
+              <div className="chip">Python</div>
+              <div className="chip">Django</div>
+              <div className="chip">MongoDB</div>
+              <div className="chip">PostgreSQL</div>
+            </div>
+          </div>
+          <div className="modal-footer modal-stats-can">
+            <a
+              href="#!"
+              className="modal-close white-text waves-effect waves-light waves-grey btn-flat "
+            >
+              Agree
+            </a>
+          </div>
+        </div>
+
+        <div className="col s5 card card-hover modal-stats-can auto-center">
           <a className="modal-trigger" href="#modal-stats-can">
             <div className="card-content white-text center-align waves-effect waves-light">
               <span className="card-title">Satistics Canada</span>
@@ -82,15 +153,89 @@ const Experience = () => {
       </div>
 
       <div className="row">
-        <div className="card card-hover freelancing-bg center-align auto-center">
+        <div className="col s1"></div>
+        <div className="col s5 card card-hover modal-stats-can auto-center">
+          <a className="modal-trigger" href="#modal-stats-can">
+            <div className="card-content white-text center-align waves-effect waves-light">
+              <span className="card-title">Satistics Canada</span>
+              <div className="italics">01/01/2019 - 04/30/2020</div>
+
+              <img
+                src={require('../../images/canada.png')}
+                className="canada-logo"
+                alt=""
+              />
+              <div>
+                <i className="material-icons right-align right-arrow">
+                  keyboard_arrow_right
+                </i>
+                <br />
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div
+          id="modal-stats-can"
+          className="modal modal-stats-can modal-orientation"
+        >
+          <div className="modal-content my-modal grey-text text-lighten-2">
+            <img
+              src={require('../../images/statistics-canada.png')}
+              className="statistics-canada-logo"
+              alt=""
+            />
+            <h4>Software Developer</h4>
+            <h6 className="italics">01/01/2019 - 04/30/2020</h6>
+            <p className="modal-paragraph">
+              - Developed full stack MERN applications for various purposes,
+              ranging from organizing data sets for the training of AIs, to
+              integrating an AI backend with a front-end application
+              <br />
+              - Developed a comprehensive full stack application to integrate a
+              legacy SQL database. The application looked to interact with users
+              and the database, and provide a user friendly experience while
+              performing analytics on the data provided from the database.
+              <br />- Performed general software solutions ranging from data
+              analytics using pythons extensive data visualization libraries,
+              implementing a variable weighted shortest path algorithm for the
+              Alberta grain transport system, and even developing a python crash
+              course for some of the other individuals working in the
+              organization.
+            </p>
+            <div className="chip-align">
+              <div className="chip">ReactJS</div>
+              <div className="chip">Node.js </div>
+              <div className="chip">Python</div>
+              <div className="chip">Django</div>
+              <div className="chip">MongoDB</div>
+              <div className="chip">PostgreSQL</div>
+            </div>
+          </div>
+          <div className="modal-footer modal-stats-can">
+            <a
+              href="#!"
+              className="modal-close white-text waves-effect waves-light waves-grey btn-flat "
+            >
+              Agree
+            </a>
+          </div>
+        </div>
+
+        <div className="col s5 card card-hover freelancing-bg center-align auto-center">
           <a
             className="modal-trigger  grey-text text-lighten-2"
             href="#modal-freelancing"
           >
             <div className="card-content center-align waves-effect waves-purple card-fit">
+              <span className="card-title">Satistics Canada</span>
               <div className="italics">01/05/2020 - Current</div>
 
-              <h1 className="freelance-card italics">Freelancing</h1>
+              <img
+                src={require('../../images/canada.png')}
+                className="canada-logo"
+                alt=""
+              />
 
               <div>
                 <i className="material-icons right-align right-arrow">

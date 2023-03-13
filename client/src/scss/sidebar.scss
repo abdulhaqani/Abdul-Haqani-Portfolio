@@ -32,7 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #101010;
+  background-image: radial-gradient(rgb(40, 40, 40), rgb(16, 16, 16));
   left: 0;
   z-index: 10;
   @media screen and (max-width: 999px) {
