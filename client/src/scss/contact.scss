@@ -1,4 +1,4 @@
-@import './default.scss';
+@import "./default.scss";
 
 .contact-background {
   @include background();
@@ -44,11 +44,13 @@
 
 .contact-paragraph {
   @include paragraph();
-  font-family: 'Arial';
+  font-family: "Arial";
   margin: auto;
   margin-top: 2%;
-  max-width: 750px;
+  width: 80%;
+  max-width: 1000px;
   color: whitesmoke;
+  text-align: justify;
   margin-bottom: 5%;
 }
 

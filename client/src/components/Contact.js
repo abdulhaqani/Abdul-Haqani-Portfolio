@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import '../scss/contact.scss';
-import '../scss/home.scss';
-import '../scss/default.scss';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "../scss/contact.scss";
+import "../scss/home.scss";
+import "../scss/default.scss";
 
-import 'materialize-css/dist/css/materialize.min.css';
-import M from 'materialize-css/dist/js/materialize.min.js';
+import "materialize-css/dist/css/materialize.min.css";
+import M from "materialize-css/dist/js/materialize.min.js";
 
 export const Contact = (props) => {
   const [message, setMessage] = useState({
-    name: '',
-    email: '',
-    messageContent: '',
+    name: "",
+    email: "",
+    messageContent: "",
   });
 
   // Materialize js initialization
@@ -31,29 +31,29 @@ export const Contact = (props) => {
     // config request
     const config = {
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     };
 
     const toastContent = {
-      html: 'Message Sent',
-      classes: 'rounded center-align',
+      html: "Message Sent",
+      classes: "rounded center-align",
     };
 
     const errorToast = {
-      html: 'Message failed to send',
-      classes: 'rounded center-align',
+      html: "Message failed to send",
+      classes: "rounded center-align",
     };
     try {
-      await axios.post('/contact', { name, email, messageContent }, config);
+      await axios.post("/contact", { name, email, messageContent }, config);
       M.toast(toastContent);
     } catch (error) {
       M.toast(errorToast);
     }
     setMessage({
-      name: '',
-      email: '',
-      messageContent: '',
+      name: "",
+      email: "",
+      messageContent: "",
     });
   };
   let container = `container-cover ${props.darken}`;
@@ -68,9 +68,9 @@ export const Contact = (props) => {
           any recomendations, critiques or if you just want to say hello. If you
           are interested in my work, it is all posted on Github and if you wish
           to connect with me, feel free to send me an invitation through
-          LinkedIn. If you are interested in working together or in the services
-          I offer please send me a message as I would love to get in touch with
-          you.
+          LinkedIn from the link on my page. If you are interested in working
+          together, or in the services / consulting I offer please send me a
+          message as I would love to get in touch with you.
         </p>
       </div>
       <form className="contact-form center-align" onSubmit={onSubmit}>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Story = () => {
   return (
@@ -9,13 +9,13 @@ export const Story = () => {
       <div className="about-content">
         <div className="about-photo-container">
           <img
-            src={require('../../images/linkedIn2.jpg')}
+            src={require("../../images/linkedIn2.jpg")}
             className="about-photo"
             alt=""
           />
         </div>
         <div className="about-paragraph">
-          <p className="about-words">
+          <p>
             My goal in the software field is to design and implement solutions
             for individuals and/or companies, be it user experience solutions
             for companies on their websites or applications, developing
