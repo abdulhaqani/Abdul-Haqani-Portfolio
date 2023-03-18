@@ -191,6 +191,15 @@
   margin: 3% auto;
 }
 
+.qlik-logo {
+  max-height: 40%;
+  max-width: 90%;
+}
+
+.cibc-logo {
+  width: 47%;
+}
+
 .right-arrow {
   font-size: 3em;
   float: right;
@@ -200,6 +209,16 @@
   transition: all 0.5s ease-in-out;
 }
 
+.arrow-icon {
+  width: 95%;
+}
+
+.experience-card {
+  height: 25vh;
+  max-height: 25vh;
+  width: 100%;
+  text-align: center;
+}
 .card-hover:hover {
   transform: scale(1.05);
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Education = () => {
   return (
@@ -11,7 +11,7 @@ export const Education = () => {
           <div className="education-header">Formal Education</div>
           <div className="formal-subheader">
             <img
-              src={require('../../images/uottawa.png')}
+              src={require("../../images/uottawa.png")}
               className="education-logo"
               alt=""
             />
@@ -24,7 +24,7 @@ export const Education = () => {
                 <div className="italics">
                   BASc. Biomedical Mechanical Engineering (2015-2020)
                 </div>
-                CGPA: 8/10
+                CGPA: A-
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ export const Education = () => {
           <div className="education-header">Additional Education</div>
           <div className="informal-subheader">
             <img
-              src={require('../../images/udemy.png')}
+              src={require("../../images/udemy.png")}
               className="education-logo"
               alt=""
             />

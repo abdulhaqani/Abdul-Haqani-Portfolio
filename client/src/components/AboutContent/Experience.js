@@ -15,18 +15,18 @@ const Experience = () => {
       <div className="about-me-subheader center-align">Applying my skills.</div>
       <div className="row">
         <div className="col s1"></div>
-        <div className="col s4 card card-hover modal-qlik auto-center">
+        <div className="col s4 card card-hover modal-qlik auto-center experience-card">
           <a className="modal-trigger" href="#modal-qlik">
-            <div className="card-content white-text center-align waves-effect waves-light">
+            <div className="card-content white-text center-align waves-effect waves-light experience-card">
               <span className="card-title">Qlik</span>
               <div className="italics">04/20/2022 - Current</div>
 
               <img
                 src={require("../../images/qlik-logo.png")}
-                className="canada-logo"
+                className="qlik-logo"
                 alt=""
               />
-              <div>
+              <div className="arrow-icon">
                 <i className="material-icons right-align right-arrow">
                   keyboard_arrow_right
                 </i>
@@ -39,7 +39,7 @@ const Experience = () => {
           <div className="modal-content my-modal grey-text text-lighten-2">
             <img
               src={require("../../images/qlik-logo.png")}
-              className="statistics-canada-logo"
+              className="qlik-logo"
               alt=""
             />
             <h4>Software Engineer</h4>
@@ -88,7 +88,7 @@ const Experience = () => {
 
               <img
                 src={require("../../images/cibc.png")}
-                className="canada-logo"
+                className="cibc-logo"
                 alt=""
               />
               <div>
