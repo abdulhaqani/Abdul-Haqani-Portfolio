@@ -1,4 +1,4 @@
-@import "./default.scss";
+@import './default.scss';
 
 @mixin education-text {
   display: flex;
@@ -187,17 +187,21 @@
 }
 
 .canada-logo {
-  width: 80%;
-  margin: 3% auto;
+  max-height: 40%;
+  max-width: 90%;
+  margin: auto;
 }
 
 .qlik-logo {
   max-height: 40%;
   max-width: 90%;
+  margin: auto;
 }
 
 .cibc-logo {
-  width: 47%;
+  max-height: 40%;
+  max-width: 90%;
+  margin: auto;
 }
 
 .right-arrow {
@@ -224,7 +228,7 @@
 }
 
 .freelance-card {
-  font-family: "Trebuchet MS";
+  font-family: 'Trebuchet MS';
 }
 
 .my-modal-header {

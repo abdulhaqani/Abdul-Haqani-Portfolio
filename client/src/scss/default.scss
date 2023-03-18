@@ -28,6 +28,9 @@
   width: 100%;
 }
 
+.card-title {
+  font-size: 20px;
+}
 .main-content {
   @media screen and (min-width: 1000px) {
     flex: 78%;
@@ -49,7 +52,7 @@
 }
 
 .main-content::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -76,7 +79,7 @@
 
 .paragraph-text {
   @include paragraph();
-  font-family: "Arial";
+  font-family: 'Arial';
   color: whitesmoke;
   max-width: 750px;
 }
