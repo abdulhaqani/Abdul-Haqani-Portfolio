@@ -198,9 +198,20 @@
   margin: auto;
 }
 
+.qlik-logo2 {
+  max-height: 20%;
+  max-width: 30%;
+}
+
 .cibc-logo {
   max-height: 40%;
   max-width: 90%;
+  margin: auto;
+}
+
+.cibc-logo2 {
+  max-height: 20%;
+  max-width: 30%;
   margin: auto;
 }
 
@@ -220,7 +231,7 @@
 .experience-card {
   height: 25vh;
   max-height: 25vh;
-  width: 100%;
+  width: 80%;
   text-align: center;
 }
 .card-hover:hover {
@@ -276,10 +287,23 @@
   margin-right: 10%;
 }
 
+.modal-qlik.open {
+  top: 25% !important;
+}
+
+.modal-cibc.open {
+  top: 30% !important;
+}
+
+.modal-stats-can.open {
+  top: 35% !important;
+}
+
 .open {
-  top: auto !important;
   position: fixed !important;
   z-index: 1100;
+  max-height: 90vh;
+  overflow: auto;
 }
 
 .col.s4 {
