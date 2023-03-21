@@ -1,15 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import 'materialize-css/dist/css/materialize.min.css';
-import M from 'materialize-css/dist/js/materialize.min.js';
+import "materialize-css/dist/css/materialize.min.css";
+import M from "materialize-css/dist/js/materialize.min.js";
 
 const Experience = () => {
   useEffect(() => {
-    var myModal = document.querySelectorAll('.modal');
+    var myModal = document.querySelectorAll(".modal");
     const moodalInstance = M.Modal.init(myModal, { preventScrolling: true });
   }, []);
-  //<h1 className="freelance-card italics">Freelancing</h1>;
-
   return (
     <div>
       <div className="about-me-subheader center-align">Applying my skills.</div>
@@ -20,7 +18,7 @@ const Experience = () => {
             <div className="italics">04/20/2022 - Current</div>
 
             <img
-              src={require('../../images/qlik-logo.png')}
+              src={require("../../images/qlik-logo.png")}
               className="qlik-logo"
               alt=""
             />
@@ -36,7 +34,7 @@ const Experience = () => {
       <div id="modal-qlik" className="modal modal-qlik modal-orientation">
         <div className="modal-content my-modal grey-text text-lighten-2">
           <img
-            src={require('../../images/qlik-logo.png')}
+            src={require("../../images/qlik-logo.png")}
             className="qlik-logo2"
             alt=""
           />
@@ -80,13 +78,13 @@ const Experience = () => {
       <div className="card card-hover modal-cibc auto-center experience-card">
         <a className="modal-trigger" href="#modal-cibc">
           <div className="card-content white-text center-align waves-effect waves-light experience-card">
-            <span className="card-title" style={{ 'font-size': '20px' }}>
-              CIBC Capital Markets{' '}
+            <span className="card-title" style={{ "font-size": "20px" }}>
+              CIBC Capital Markets{" "}
             </span>
             <div className="italics">01/10/2020 - 04/20/2022</div>
 
             <img
-              src={require('../../images/cibc.png')}
+              src={require("../../images/cibc.png")}
               className="cibc-logo"
               alt=""
             />
@@ -103,7 +101,7 @@ const Experience = () => {
       <div id="modal-cibc" className="modal modal-cibc modal-orientation">
         <div className="modal-content my-modal grey-text text-lighten-2">
           <img
-            src={require('../../images/cibc.png')}
+            src={require("../../images/cibc.png")}
             className="cibc-logo2"
             alt=""
           />
@@ -151,7 +149,7 @@ const Experience = () => {
             <div className="italics">01/01/2019 - 04/30/2020</div>
 
             <img
-              src={require('../../images/canada.png')}
+              src={require("../../images/canada.png")}
               className="canada-logo"
               alt=""
             />
@@ -171,7 +169,7 @@ const Experience = () => {
       >
         <div className="modal-content my-modal grey-text text-lighten-2">
           <img
-            src={require('../../images/statistics-canada.png')}
+            src={require("../../images/statistics-canada.png")}
             className="statistics-canada-logo"
             alt=""
           />

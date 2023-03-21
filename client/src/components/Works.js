@@ -1,25 +1,109 @@
-import React, { useEffect } from 'react';
-import '../scss/works.scss';
-import '../scss/home.scss';
-import '../scss/default.scss';
+import React, { useEffect } from "react";
+import "../scss/works.scss";
+import "../scss/home.scss";
+import "../scss/default.scss";
 
-import 'materialize-css/dist/css/materialize.min.css';
-import M from 'materialize-css/dist/js/materialize.min.js';
+import "materialize-css/dist/css/materialize.min.css";
+import M from "materialize-css/dist/js/materialize.min.js";
 
 export const Works = (props) => {
   let container = `container-cover ${props.darken}`;
   useEffect(() => {
-    var myModal = document.querySelectorAll('.modal');
+    var myModal = document.querySelectorAll(".modal");
     M.Modal.init(myModal, {});
   }, []);
   return (
     <div className={container}>
       <h1 className="header">Works</h1>
       <br />
+      <div className="works-class-container grey-text text-lighten-3">
+        <h6 className="works-class">Freelancing</h6>
+        <hr style={{ width: "90%" }} />
+        <br />
+      </div>
+
+      <div className="card works-card center-align mercury-scraping grey-text text-lighten-4 waves-effect waves-red">
+        <a
+          className="modal-trigger grey-text text-lighten-3"
+          href="#modal-mercury-scraping"
+        >
+          <div className="card-content">
+            <br />
+            <span className="card-header">Mercury Scraping</span>
+            <div className="italics">Freelance Project</div>
+            <div>
+              <p
+                style={{
+                  marginLeft: "10%",
+                  marginTop: "3%",
+                  marginBottom: "3%",
+                }}
+              >
+                Python | Django | PostgreSQL | Bootstrap
+                <i className="material-icons right-align right-arrow">
+                  keyboard_arrow_right
+                </i>
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div
+        id="modal-mercury-scraping"
+        className="modal mercury-scraping modal-orientation"
+      >
+        <div className="modal-content  my-modal grey-text text-lighten-2">
+          <h4 className="center-align">Mercury Scraping</h4>
+          <h6 className="italics center-align">Freelance Project</h6>
+          <p className="modal-paragraph">
+            <br />
+            Mercury Scraping is a full stack app with a Python Django PostgreSQL
+            stack that I co-developed with a colleage. Public sentiment data is
+            something which in modern times is readily available on the many
+            social medias that are frequented on a regular basis. These
+            sentiments are valuable to certain people, especially to those
+            people in the field of journalism, who regularly use these
+            sentiments to determine where to head next. It is for this reason
+            that this application was developed, it aims to dramatically reduce
+            the time that journalists normally have to spend manually looking
+            for public sentiment data.
+          </p>
+          <p className="modal-paragraph">
+            The app uses web scrapers to pull data from various social medias
+            and perform analytics on it. The web scrapers are able to filter out
+            based on the content of the posts, the date of posting, whether the
+            post was positive or negative, among other things. The social medias
+            that were included in the web scraping were Twitter and Reddit. The
+            data and web scrapers were interfaced with the application to
+            display information to the client.
+          </p>
+          <p className="modal-paragraph italics">
+            Note: images and/or a live version of the application should be
+            coming soon, we just need to sort out some things so bear with me :)
+          </p>
+          <div className="chip-align">
+            <div className="chip">Python</div>
+            <div className="chip">Django </div>
+            <div className="chip">PostgreSQL</div>
+            <div className="chip">Bootstrap</div>
+            <div className="chip">Web Scraping</div>
+            <div className="chip">APIs</div>
+          </div>
+        </div>
+        <div className="modal-footer mercury-scraping">
+          <a
+            href="#!"
+            className="modal-close white-text waves-effect waves-green btn-flat"
+          >
+            Agree
+          </a>
+        </div>
+      </div>
       <div className="works-cards">
         <div className="works-class-container grey-text text-lighten-3">
           <h6 className="works-class">Hackathons</h6>
-          <hr style={{ width: '90%' }} />
+          <hr style={{ width: "90%" }} />
           <br />
         </div>
 
@@ -35,9 +119,9 @@ export const Works = (props) => {
               <div>
                 <p
                   style={{
-                    marginLeft: '10%',
-                    marginTop: '3%',
-                    marginBottom: '3%',
+                    marginLeft: "10%",
+                    marginTop: "3%",
+                    marginBottom: "3%",
                   }}
                 >
                   Kotlin | Android Studio | Python | Keras
@@ -89,22 +173,22 @@ export const Works = (props) => {
 
             <div className="modal-images">
               <img
-                src={require('../images/in-app-camera.jpg')}
+                src={require("../images/in-app-camera.jpg")}
                 className="modal-image-ecosnap"
                 alt=""
               />
               <img
-                src={require('../images/image-result.jpg')}
+                src={require("../images/image-result.jpg")}
                 className="modal-image-ecosnap"
                 alt=""
               />
               <img
-                src={require('../images/recycling-steps.jpg')}
+                src={require("../images/recycling-steps.jpg")}
                 className="modal-image-ecosnap"
                 alt=""
               />
               <img
-                src={require('../images/leaderboard.jpg')}
+                src={require("../images/leaderboard.jpg")}
                 className="modal-image-ecosnap"
                 alt=""
               />
@@ -134,9 +218,9 @@ export const Works = (props) => {
               <div>
                 <p
                   style={{
-                    marginLeft: '10%',
-                    marginTop: '3%',
-                    marginBottom: '3%',
+                    marginLeft: "10%",
+                    marginTop: "3%",
+                    marginBottom: "3%",
                   }}
                 >
                   Node.Js | Express | MongoDB | Bootstrap
@@ -179,12 +263,12 @@ export const Works = (props) => {
             </div>
             <div className="modal-images">
               <img
-                src={require('../images/bringIt.jpg')}
+                src={require("../images/bringIt.jpg")}
                 className="modal-image-bringit"
                 alt=""
               />
               <img
-                src={require('../images/shopping-cart.jpg')}
+                src={require("../images/shopping-cart.jpg")}
                 className="modal-image-bringit"
                 alt=""
               />
@@ -194,92 +278,6 @@ export const Works = (props) => {
             <a
               href="#!"
               className="modal-close white-text waves-effect waves-light waves-grey btn-flat"
-            >
-              Agree
-            </a>
-          </div>
-        </div>
-
-        <div className="works-class-container grey-text text-lighten-3">
-          <h6 className="works-class">Freelancing</h6>
-          <hr style={{ width: '90%' }} />
-          <br />
-        </div>
-
-        <div className="card works-card center-align mercury-scraping grey-text text-lighten-4 waves-effect waves-red">
-          <a
-            className="modal-trigger grey-text text-lighten-3"
-            href="#modal-mercury-scraping"
-          >
-            <div className="card-content">
-              <br />
-              <span className="card-header">Mercury Scraping</span>
-              <div className="italics">Freelance Project</div>
-              <div>
-                <p
-                  style={{
-                    marginLeft: '10%',
-                    marginTop: '3%',
-                    marginBottom: '3%',
-                  }}
-                >
-                  Python | Django | PostgreSQL | Bootstrap
-                  <i className="material-icons right-align right-arrow">
-                    keyboard_arrow_right
-                  </i>
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div
-          id="modal-mercury-scraping"
-          className="modal mercury-scraping modal-orientation"
-        >
-          <div className="modal-content  my-modal grey-text text-lighten-2">
-            <h4 className="center-align">Mercury Scraping</h4>
-            <h6 className="italics center-align">Freelance Project</h6>
-            <p className="modal-paragraph">
-              <br />
-              Mercury Scraping is a full stack app with a Python Django
-              PostgreSQL stack that I co-developed with a colleage. Public
-              sentiment data is something which in modern times is readily
-              available on the many social medias that are frequented on a
-              regular basis. These sentiments are valuable to certain people,
-              especially to those people in the field of journalism, who
-              regularly use these sentiments to determine where to head next. It
-              is for this reason that this application was developed, it aims to
-              dramatically reduce the time that journalists normally have to
-              spend manually looking for public sentiment data.
-            </p>
-            <p className="modal-paragraph">
-              The app uses web scrapers to pull data from various social medias
-              and perform analytics on it. The web scrapers are able to filter
-              out based on the content of the posts, the date of posting,
-              whether the post was positive or negative, among other things. The
-              social medias that were included in the web scraping were Twitter
-              and Reddit. The data and web scrapers were interfaced with the
-              application to display information to the client.
-            </p>
-            <p className="modal-paragraph italics">
-              Note: images and/or a live version of the application should be
-              coming soon, we just need to sort out some things so bear with me
-              :)
-            </p>
-            <div className="chip-align">
-              <div className="chip">Python</div>
-              <div className="chip">Django </div>
-              <div className="chip">PostgreSQL</div>
-              <div className="chip">Bootstrap</div>
-              <div className="chip">Web Scraping</div>
-              <div className="chip">APIs</div>
-            </div>
-          </div>
-          <div className="modal-footer mercury-scraping">
-            <a
-              href="#!"
-              className="modal-close white-text waves-effect waves-green btn-flat"
             >
               Agree
             </a>
