@@ -1,18 +1,18 @@
-import React, { useEffect, Fragment, useState } from "react";
-import Fade from "react-reveal/Fade";
-import { BrowserRouter as Router } from "react-router-dom";
-import "materialize-css/dist/css/materialize.min.css";
-import M from "materialize-css/dist/js/materialize.min.js";
+import React, { useEffect, Fragment, useState } from 'react';
+import Fade from 'react-reveal/Fade';
+import { BrowserRouter as Router } from 'react-router-dom';
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
 // react components
-import Sidebar from "./components/layout/Sidebar";
-import Home from "./components/Home";
-import Toggle from "./components/Toggle";
-import AboutMe from "./components/AboutMe";
-import Works from "./components/Works";
-import Contact from "./components/Contact";
+import Sidebar from './components/layout/Sidebar';
+import Home from './components/Home';
+import Toggle from './components/Toggle';
+import AboutMe from './components/AboutMe';
+import Works from './components/Works';
+import Contact from './components/Contact';
 // scss
-import "./scss/default.scss";
-import "./scss/sidebar.scss";
+import './scss/default.scss';
+import './scss/sidebar.scss';
 // extras
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  let darken = "";
+  let darken = '';
   const openHandler = () => {
     if (!sidebarOpen) {
       setSidebarOpen(true);
@@ -40,7 +40,7 @@ const App = () => {
         <Toggle click={openHandler} />
       </div>
     );
-    darken = "darken";
+    darken = 'darken';
   } else {
     sidebar = (
       <div className="sidebar-container">
@@ -48,7 +48,7 @@ const App = () => {
         <Toggle click={openHandler} />
       </div>
     );
-    darken = "";
+    darken = '';
   }
 
   return (
@@ -69,7 +69,7 @@ const App = () => {
             <Fade delay={500} opposite={true} style={{ zIndex: 0 }}>
               <Works darken={darken} />
             </Fade>
-            <Fade delay={500} style={{ zIndex: "inherit" }}>
+            <Fade delay={500} style={{ zIndex: 'inherit' }}>
               <Contact darken={darken} />
             </Fade>
           </div>

@@ -19,6 +19,17 @@ export const Sidebar = (props) => {
     width: '20% !important',
     height: '100vh',
   };
+
+  const handleClickScroll = (id) => {
+    const element = document.getElementById(id);
+    console.log('EVENT');
+    console.log(element);
+    console.log(id);
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div>
       <div className={props.className}>
@@ -74,22 +85,33 @@ export const Sidebar = (props) => {
         <ul className="nav-link-list">
           <li className="nav-link-li">
             <Link to={'/'}>
-              <h4 className="nav-links">Home</h4>
+              <h4
+                className="nav-links"
+                onClick={handleClickScroll('home-container')}
+              >
+                Home
+              </h4>
             </Link>
           </li>
           <li className="nav-link-li">
             <Link to={'/about'}>
-              <h4 className="nav-links">About</h4>
+              <h4 className="nav-links" onClick={handleClickScroll('about')}>
+                About
+              </h4>
             </Link>
           </li>
           <li className="nav-link-li">
             <Link to={'/works'}>
-              <h4 className="nav-links">Works</h4>
+              <h4 className="nav-links" onClick={handleClickScroll('works')}>
+                Works
+              </h4>
             </Link>
           </li>
           <li className="nav-link-li">
             <Link to={'/contact'}>
-              <h4 className="nav-links">Contact</h4>
+              <h4 className="nav-links" onClick={handleClickScroll('contact')}>
+                Contact
+              </h4>
             </Link>
           </li>
         </ul>

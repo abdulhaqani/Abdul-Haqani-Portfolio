@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import "../scss/contact.scss";
-import "../scss/home.scss";
-import "../scss/default.scss";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import '../scss/contact.scss';
+import '../scss/home.scss';
+import '../scss/default.scss';
 
-import "materialize-css/dist/css/materialize.min.css";
-import M from "materialize-css/dist/js/materialize.min.js";
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 export const Contact = (props) => {
   const [message, setMessage] = useState({
-    name: "",
-    email: "",
-    messageContent: "",
+    name: '',
+    email: '',
+    messageContent: '',
   });
 
   // Materialize js initialization
@@ -31,35 +31,35 @@ export const Contact = (props) => {
     // config request
     const config = {
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     };
 
     const toastContent = {
-      html: "Message Sent",
-      classes: "rounded center-align",
+      html: 'Message Sent',
+      classes: 'rounded center-align',
     };
 
     const errorToast = {
-      html: "Message failed to send",
-      classes: "rounded center-align",
+      html: 'Message failed to send',
+      classes: 'rounded center-align',
     };
     try {
-      await axios.post("/contact", { name, email, messageContent }, config);
+      await axios.post('/contact', { name, email, messageContent }, config);
       M.toast(toastContent);
     } catch (error) {
       M.toast(errorToast);
     }
     setMessage({
-      name: "",
-      email: "",
-      messageContent: "",
+      name: '',
+      email: '',
+      messageContent: '',
     });
   };
   let container = `container-cover ${props.darken}`;
 
   return (
-    <div className={container}>
+    <div id="contact" className={container}>
       <h1 className="header">CONTACT</h1>
       <div>
         <p className="contact-paragraph">

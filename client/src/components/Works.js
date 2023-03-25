@@ -1,52 +1,119 @@
-import React, { useEffect } from "react";
-import "../scss/works.scss";
-import "../scss/home.scss";
-import "../scss/default.scss";
+import React, { useEffect } from 'react';
+import '../scss/works.scss';
+import '../scss/home.scss';
+import '../scss/default.scss';
 
-import "materialize-css/dist/css/materialize.min.css";
-import M from "materialize-css/dist/js/materialize.min.js";
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 export const Works = (props) => {
   let container = `container-cover ${props.darken}`;
   useEffect(() => {
-    var myModal = document.querySelectorAll(".modal");
+    var myModal = document.querySelectorAll('.modal');
     M.Modal.init(myModal, {});
   }, []);
   return (
-    <div className={container}>
+    <div id="works" className={container}>
       <h1 className="header">Works</h1>
       <br />
       <div className="works-class-container grey-text text-lighten-3">
         <h6 className="works-class">Freelancing</h6>
-        <hr style={{ width: "90%" }} />
+        <hr style={{ width: '90%' }} />
         <br />
       </div>
+      <div className="row">
+        <div className="col card-hover card works-card center-align mercury-scraping grey-text text-lighten-4 waves-effect waves-red">
+          <a
+            className="modal-trigger grey-text text-lighten-3"
+            href="#modal-mercury-scraping"
+          >
+            <div className="card-content">
+              <br />
+              <h4 className="mercury-title">Mercury Scraping</h4>
+              <div className="italics">Freelance Project</div>
+              <div>
+                <p
+                  style={{
+                    margin: '3% auto',
+                  }}
+                >
+                  Python | Django | PostgreSQL | Bootstrap
+                  <i className="material-icons right-align right-arrow">
+                    keyboard_arrow_right
+                  </i>
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
 
-      <div className="card works-card center-align mercury-scraping grey-text text-lighten-4 waves-effect waves-red">
-        <a
-          className="modal-trigger grey-text text-lighten-3"
-          href="#modal-mercury-scraping"
+        <div className="col card card-hover modal-koga auto-center works-card">
+          <a className="modal-trigger" href="#modal-koga">
+            <div className="card-content white-text">
+              <br />
+              <h4 className="mercury-title">Koga Website</h4>
+              <div className="italics">Freelance Project</div>
+              <div>
+                <p
+                  style={{
+                    margin: '3% auto',
+                  }}
+                >
+                  Python | Django | PostgreSQL | Bootstrap
+                  <i className="material-icons right-align right-arrow">
+                    keyboard_arrow_right
+                  </i>
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          id="modal-koga"
+          className="modal mercury-scraping modal-orientation"
         >
-          <div className="card-content">
-            <br />
-            <span className="card-header">Mercury Scraping</span>
-            <div className="italics">Freelance Project</div>
-            <div>
-              <p
-                style={{
-                  marginLeft: "10%",
-                  marginTop: "3%",
-                  marginBottom: "3%",
-                }}
-              >
-                Python | Django | PostgreSQL | Bootstrap
-                <i className="material-icons right-align right-arrow">
-                  keyboard_arrow_right
-                </i>
-              </p>
+          <div className="modal-content my-modal grey-text text-lighten-2">
+            <img
+              src={require('../images/qlik-logo.png')}
+              className="qlik-logo2"
+              alt=""
+            />
+            <h4>Software Engineer</h4>
+            <h6 className="italics">04/20/2022 - Current</h6>
+            <p className="modal-paragraph">
+              - Developed full stack MERN applications for various purposes,
+              ranging from organizing data sets for the training of AIs, to
+              integrating an AI backend with a front-end application
+              <br />
+              - Developed a comprehensive full stack application to integrate a
+              legacy SQL database. The application looked to interact with users
+              and the database, and provide a user friendly experience while
+              performing analytics on the data provided from the database.
+              <br />- Performed general software solutions ranging from data
+              analytics using pythons extensive data visualization libraries,
+              implementing a variable weighted shortest path algorithm for the
+              Alberta grain transport system, and even developing a python crash
+              course for some of the other individuals working in the
+              organization.
+            </p>
+            <div className="chip-align">
+              <div className="chip">ReactJS</div>
+              <div className="chip">Node.js </div>
+              <div className="chip">Python</div>
+              <div className="chip">Django</div>
+              <div className="chip">MongoDB</div>
+              <div className="chip">PostgreSQL</div>
             </div>
           </div>
-        </a>
+          <div className="modal-footer mercury-scraping">
+            <a
+              href="#!"
+              className="modal-close white-text waves-effect waves-light waves-grey btn-flat "
+            >
+              Agree
+            </a>
+          </div>
+        </div>
       </div>
 
       <div
@@ -59,7 +126,7 @@ export const Works = (props) => {
           <p className="modal-paragraph">
             <br />
             Mercury Scraping is a full stack app with a Python Django PostgreSQL
-            stack that I co-developed with a colleage. Public sentiment data is
+            stack that I co-developed with a colleague. Public sentiment data is
             something which in modern times is readily available on the many
             social medias that are frequented on a regular basis. These
             sentiments are valuable to certain people, especially to those
@@ -71,16 +138,12 @@ export const Works = (props) => {
           </p>
           <p className="modal-paragraph">
             The app uses web scrapers to pull data from various social medias
-            and perform analytics on it. The web scrapers are able to filter out
-            based on the content of the posts, the date of posting, whether the
-            post was positive or negative, among other things. The social medias
-            that were included in the web scraping were Twitter and Reddit. The
-            data and web scrapers were interfaced with the application to
-            display information to the client.
-          </p>
-          <p className="modal-paragraph italics">
-            Note: images and/or a live version of the application should be
-            coming soon, we just need to sort out some things so bear with me :)
+            and perform analytics on it. The web scrapers are able to filter
+            posts based on the content, the date of posting, whether the post
+            was positive or negative, among other things. The social medias that
+            were included in the web scraping were Twitter and Reddit. The data
+            and web scrapers were interfaced with the application to display
+            information to the client.
           </p>
           <div className="chip-align">
             <div className="chip">Python</div>
@@ -103,7 +166,7 @@ export const Works = (props) => {
       <div className="works-cards">
         <div className="works-class-container grey-text text-lighten-3">
           <h6 className="works-class">Hackathons</h6>
-          <hr style={{ width: "90%" }} />
+          <hr style={{ width: '90%' }} />
           <br />
         </div>
 
@@ -119,9 +182,9 @@ export const Works = (props) => {
               <div>
                 <p
                   style={{
-                    marginLeft: "10%",
-                    marginTop: "3%",
-                    marginBottom: "3%",
+                    marginLeft: '10%',
+                    marginTop: '3%',
+                    marginBottom: '3%',
                   }}
                 >
                   Kotlin | Android Studio | Python | Keras
@@ -173,22 +236,22 @@ export const Works = (props) => {
 
             <div className="modal-images">
               <img
-                src={require("../images/in-app-camera.jpg")}
+                src={require('../images/in-app-camera.jpg')}
                 className="modal-image-ecosnap"
                 alt=""
               />
               <img
-                src={require("../images/image-result.jpg")}
+                src={require('../images/image-result.jpg')}
                 className="modal-image-ecosnap"
                 alt=""
               />
               <img
-                src={require("../images/recycling-steps.jpg")}
+                src={require('../images/recycling-steps.jpg')}
                 className="modal-image-ecosnap"
                 alt=""
               />
               <img
-                src={require("../images/leaderboard.jpg")}
+                src={require('../images/leaderboard.jpg')}
                 className="modal-image-ecosnap"
                 alt=""
               />
@@ -218,9 +281,9 @@ export const Works = (props) => {
               <div>
                 <p
                   style={{
-                    marginLeft: "10%",
-                    marginTop: "3%",
-                    marginBottom: "3%",
+                    marginLeft: '10%',
+                    marginTop: '3%',
+                    marginBottom: '3%',
                   }}
                 >
                   Node.Js | Express | MongoDB | Bootstrap
@@ -263,12 +326,12 @@ export const Works = (props) => {
             </div>
             <div className="modal-images">
               <img
-                src={require("../images/bringIt.jpg")}
+                src={require('../images/bringIt.jpg')}
                 className="modal-image-bringit"
                 alt=""
               />
               <img
-                src={require("../images/shopping-cart.jpg")}
+                src={require('../images/shopping-cart.jpg')}
                 className="modal-image-bringit"
                 alt=""
               />

@@ -1,4 +1,4 @@
-@import "./default.scss";
+@import './default.scss';
 
 .works-background {
   @include background();
@@ -27,6 +27,21 @@
   z-index: 0;
 }
 
+.modal-trigger {
+  width: 100% !important;
+}
+
+.mercury-title {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.card-content {
+  margin: 0;
+  width: 100%;
+  padding: 0px !important;
+}
 .works-card {
   margin: auto;
   display: flex;
@@ -36,6 +51,7 @@
   transition: all 0.5s ease-in-out;
   width: 40%;
   min-width: 300px;
+  min-height: 175px !important;
 }
 
 .works-card:hover {
@@ -44,6 +60,12 @@
 
 .card-header {
   font-size: 3.6em;
+}
+
+.card-header-mercury {
+  margin: 0;
+  font-size: 1.8em;
+  width: 100%;
 }
 
 .bring-it {
@@ -70,6 +92,10 @@
   );
 }
 
+.mercury-scraping.open {
+  top: 50% !important;
+}
+
 .works-class-container {
   width: 100%;
   .works-class {
@@ -77,4 +103,28 @@
     width: fit-content;
     margin: 2% 5% 1% 5%;
   }
+}
+
+.works-card {
+  height: 25vh;
+  max-height: 25vh;
+  width: 40%;
+  margin: 0% 5%;
+  text-align: center;
+  @media screen and (max-width: 999px) {
+    width: 80%;
+    margin: 5% 10%;
+  }
+}
+
+.modal-koga {
+  background: radial-gradient(
+    circle,
+    rgba(64, 64, 64, 1) 0%,
+    rgba(8, 8, 8, 1) 100%
+  );
+}
+
+.modal-koga.open {
+  top: 25% !important;
 }

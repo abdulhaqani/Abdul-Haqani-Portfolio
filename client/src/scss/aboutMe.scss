@@ -1,4 +1,4 @@
-@import "./default.scss";
+@import './default.scss';
 
 @mixin education-text {
   display: flex;
@@ -231,6 +231,7 @@
 .experience-card {
   height: 25vh;
   max-height: 25vh;
+  min-height: 175px;
   width: 60%;
   text-align: center;
   @media screen and (max-width: 999px) {
@@ -242,7 +243,7 @@
 }
 
 .freelance-card {
-  font-family: "Trebuchet MS";
+  font-family: 'Trebuchet MS';
 }
 
 .my-modal-header {
