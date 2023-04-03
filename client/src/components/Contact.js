@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 import axios from 'axios';
 import '../scss/contact.scss';
 import '../scss/home.scss';
@@ -8,6 +10,8 @@ import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
 export const Contact = (props) => {
+  const form = useRef();
+
   const [message, setMessage] = useState({
     name: '',
     email: '',

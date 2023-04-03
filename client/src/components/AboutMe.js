@@ -15,7 +15,7 @@ export const AboutMe = (props) => {
         <div className="row header-container">
           <div className="header condensed thin">Hi I'm Abdul Haqani!</div>
           <div className="about-nav">
-            <Link to={'/about'}>
+            <Link to={'/'}>
               <i className="material-icons about-icons">person</i>
             </Link>
             <Link to={'/about/education'}>

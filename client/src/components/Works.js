@@ -22,14 +22,14 @@ export const Works = (props) => {
         <br />
       </div>
       <div className="row">
-        <div className="col card-hover card works-card center-align mercury-scraping grey-text text-lighten-4 waves-effect waves-red">
+        <div className="col card-hover card works-card center-align mercury-scraping text-lighten-4 waves-effect">
           <a
             className="modal-trigger grey-text text-lighten-3"
             href="#modal-mercury-scraping"
           >
             <div className="card-content">
               <br />
-              <h4 className="mercury-title">Mercury Scraping</h4>
+              <h4 className="card-title">Mercury Scraping</h4>
               <div className="italics">Freelance Project</div>
               <div>
                 <p
@@ -47,11 +47,11 @@ export const Works = (props) => {
           </a>
         </div>
 
-        <div className="col card card-hover modal-koga auto-center works-card">
+        <div className="col card card-hover modal-koga auto-center center-align works-card text-lighten-4 waves-effect">
           <a className="modal-trigger" href="#modal-koga">
-            <div className="card-content light-purple">
+            <div className="card-content white-text">
               <br />
-              <h4 className="mercury-title">Koga Website</h4>
+              <h4 className="card-title">Koga Studios</h4>
               <div className="italics">Freelance Project</div>
               <div>
                 <p
@@ -59,7 +59,7 @@ export const Works = (props) => {
                     margin: '3% auto',
                   }}
                 >
-                  Python | Django | PostgreSQL | Bootstrap
+                  ReactJs | Semantic-ui | Spotify | Front-end
                   <i className="material-icons right-align right-arrow">
                     keyboard_arrow_right
                   </i>
@@ -70,37 +70,29 @@ export const Works = (props) => {
         </div>
         <div id="modal-koga" className="modal modal-koga modal-orientation">
           <div className="modal-content my-modal grey-text text-lighten-2">
-            <h4 className="center-align">Koga Website</h4>
+            <h4 className="center-align">Koga Studios</h4>
             <h6 className="italics center-align">Freelance Project</h6>
             <p className="modal-paragraph">
-              <br />
-              Mercury Scraping is a full stack app with a Python Django
-              PostgreSQL stack that I co-developed with a colleague. Public
-              sentiment data is something which in modern times is readily
-              available on the many social medias that are frequented on a
-              regular basis. These sentiments are valuable to certain people,
-              especially to those people in the field of journalism, who
-              regularly use these sentiments to determine where to head next. It
-              is for this reason that this application was developed, it aims to
-              dramatically reduce the time that journalists normally have to
-              spend manually looking for public sentiment data.
+              Koga studios is a music collective which reached out to me to
+              develop a responsive website that they can call their own. The
+              website highlights the collective's music using a built in spotify
+              player, a responsive slideshow including their latest works, in
+              conjunction with links throughout to find their music. This
+              website highlights the different artists, and encapsulates their
+              personalities into the page to encourage a stronger connection
+              from their fans to them.
             </p>
             <p className="modal-paragraph">
-              The app uses web scrapers to pull data from various social medias
-              and perform analytics on it. The web scrapers are able to filter
-              posts based on the content, the date of posting, whether the post
-              was positive or negative, among other things. The social medias
-              that were included in the web scraping were Twitter and Reddit.
-              The data and web scrapers were interfaced with the application to
-              display information to the client.
+              This website was built on react, with plans to implement support
+              to allow fans to purchase merchandise directly on the store. This
+              app used semantic-ui for the bulk of the styling components, and
+              the responsive nature of the single page app provides site go-ers
+              with a strong impression while browsing their site.
             </p>
             <div className="chip-align">
-              <div className="chip">Python</div>
-              <div className="chip">Django </div>
-              <div className="chip">PostgreSQL</div>
-              <div className="chip">Bootstrap</div>
-              <div className="chip">Web Scraping</div>
-              <div className="chip">APIs</div>
+              <div className="chip">Reactjs</div>
+              <div className="chip">Semantic-ui</div>
+              <div className="chip">Spotify</div>
             </div>
           </div>
           <div className="modal-footer modal-koga">
@@ -108,7 +100,7 @@ export const Works = (props) => {
               href="#!"
               className="modal-close white-text waves-effect waves-light waves-grey btn-flat "
             >
-              Agree
+              Close
             </a>
           </div>
         </div>
@@ -148,16 +140,13 @@ export const Works = (props) => {
             <div className="chip">Django </div>
             <div className="chip">PostgreSQL</div>
             <div className="chip">Bootstrap</div>
-            <div className="chip">Web Scraping</div>
+            <div className="chip">WebScraping</div>
             <div className="chip">APIs</div>
           </div>
         </div>
         <div className="modal-footer mercury-scraping">
-          <a
-            href="#!"
-            className="modal-close white-text waves-effect waves-green btn-flat"
-          >
-            Agree
+          <a href="#!" className="modal-close white-text waves-effect btn-flat">
+            Close
           </a>
         </div>
       </div>
@@ -175,7 +164,7 @@ export const Works = (props) => {
           >
             <div className="card-content">
               <br />
-              <span className="card-header">EcoSnap</span>
+              <h4 className="card-title">Ecosnap</h4>
               <div className="italics">Cu Hacking 4 Winning Project</div>
               <div>
                 <p
@@ -197,11 +186,11 @@ export const Works = (props) => {
 
         <div id="modal-ecosnap" className="modal ecosnap modal-orientation">
           <div className="modal-content my-modal grey-text text-lighten-2">
-            <h4 className="center-align">EcoSnap</h4>
+            <h4 className="center-align">Ecosnap</h4>
             <h6 className="italics center-align">Cu Hacking 4</h6>
             <p className="modal-paragraph">
               <br />
-              EcoSnap is an android application which ended up winning the
+              Ecosnap is an android application which ended up winning the
               Jetbrains challenge at the 4th Cu Hacking at Carleton University.
               The technologies and tools used in the application include;
               Kotlin, Android Studio, Python, Keras, Tensorflow, Microsoft Azure
@@ -259,9 +248,9 @@ export const Works = (props) => {
           <div className="modal-footer ecosnap">
             <a
               href="#!"
-              className="modal-close white-text waves-effect waves-green btn-flat"
+              className="modal-close white-text waves-effect btn-flat"
             >
-              Agree
+              Close
             </a>
           </div>
         </div>
@@ -273,7 +262,7 @@ export const Works = (props) => {
           >
             <div className="card-content">
               <br />
-              <span className="card-header">BringIt</span>
+              <h4 className="card-title">BringIt</h4>
               <div className="italics">uOttahack 3</div>
 
               <div>
@@ -340,7 +329,7 @@ export const Works = (props) => {
               href="#!"
               className="modal-close white-text waves-effect waves-light waves-grey btn-flat"
             >
-              Agree
+              Close
             </a>
           </div>
         </div>

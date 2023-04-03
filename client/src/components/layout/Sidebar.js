@@ -20,14 +20,49 @@ export const Sidebar = (props) => {
     height: '100vh',
   };
 
-  const handleClickScroll = (id) => {
-    const element = document.getElementById(id);
-    console.log('EVENT');
-    console.log(element);
-    console.log(id);
+  const homeBtnScroll = () => {
+    const homeElement = document.getElementById('home-container');
+
+    if (homeElement) {
+      // 👇 Will scroll smoothly to the top of the next section
+      homeElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const aboutBtnScroll = () => {
+    const aboutElement = document.getElementById('about');
+
+    if (aboutElement) {
+      // 👇 Will scroll smoothly to the top of the next section
+      aboutElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const worksBtnScroll = () => {
+    const worksElement = document.getElementById('works');
+
+    if (worksElement) {
+      // 👇 Will scroll smoothly to the top of the next section
+      worksElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const contactBtnScroll = () => {
+    const contactElement = document.getElementById('contact');
+
+    if (contactElement) {
+      // 👇 Will scroll smoothly to the top of the next section
+      contactElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleClickScroll = (element) => {
+    console.log('handleClick');
+    console.log(props);
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
       element.scrollIntoView({ behavior: 'smooth' });
+      console.log('ELEMENT EXISTS');
     }
   };
   return (
@@ -84,35 +119,24 @@ export const Sidebar = (props) => {
 
         <ul className="nav-link-list">
           <li className="nav-link-li">
-            <Link to={'/'}>
-              <h4
-                className="nav-links"
-                onClick={handleClickScroll('home-container')}
-              >
-                Home
-              </h4>
-            </Link>
+            <h4 className="nav-links" onClick={homeBtnScroll}>
+              Home
+            </h4>
           </li>
           <li className="nav-link-li">
-            <Link to={'/about'}>
-              <h4 className="nav-links" onClick={handleClickScroll('about')}>
-                About
-              </h4>
-            </Link>
+            <h4 className="nav-links" onClick={aboutBtnScroll}>
+              About
+            </h4>
           </li>
           <li className="nav-link-li">
-            <Link to={'/works'}>
-              <h4 className="nav-links" onClick={handleClickScroll('works')}>
-                Works
-              </h4>
-            </Link>
+            <h4 className="nav-links" onClick={worksBtnScroll}>
+              Works
+            </h4>
           </li>
           <li className="nav-link-li">
-            <Link to={'/contact'}>
-              <h4 className="nav-links" onClick={handleClickScroll('contact')}>
-                Contact
-              </h4>
-            </Link>
+            <h4 className="nav-links" onClick={contactBtnScroll}>
+              Contact
+            </h4>
           </li>
         </ul>
       </div>

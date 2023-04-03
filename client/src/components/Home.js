@@ -1,9 +1,6 @@
 import React from 'react';
 import '../scss/home.scss';
 import '../scss/default.scss';
-import Contact from './Contact';
-import AboutMe from './AboutMe';
-import Works from './Works';
 
 export const Home = (props) => {
   let container = `container-cover ${props.darken}`;
