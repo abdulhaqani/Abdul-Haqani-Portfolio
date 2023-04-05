@@ -1,13 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import 'materialize-css/dist/css/materialize.min.css';
-import M from 'materialize-css/dist/js/materialize.min.js';
 
 const Experience = () => {
-  useEffect(() => {
-    var myModal = document.querySelectorAll('.modal');
-    const moodalInstance = M.Modal.init(myModal, { preventScrolling: true });
-  }, []);
   return (
     <div>
       <div className="about-me-subheader center-align">Applying my skills.</div>

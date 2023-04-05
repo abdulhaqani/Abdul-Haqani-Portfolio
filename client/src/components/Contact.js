@@ -1,21 +1,20 @@
-import React, { useState, useEffect, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState, useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-import axios from "axios";
-import "../scss/contact.scss";
-import "../scss/home.scss";
-import "../scss/default.scss";
+import '../scss/contact.scss';
+import '../scss/home.scss';
+import '../scss/default.scss';
 
-import "materialize-css/dist/css/materialize.min.css";
-import M from "materialize-css/dist/js/materialize.min.js";
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 export const Contact = (props) => {
   const form = useRef();
 
   const [message, setMessage] = useState({
-    name: "",
-    email: "",
-    messageContent: "",
+    name: '',
+    email: '',
+    messageContent: '',
   });
 
   // Materialize js initialization
@@ -40,22 +39,22 @@ export const Contact = (props) => {
     // };
 
     const toastContent = {
-      html: "Message Sent",
-      classes: "rounded center-align",
+      html: 'Message Sent',
+      classes: 'rounded center-align',
     };
 
     const errorToast = {
-      html: "Message failed to send",
-      classes: "rounded center-align",
+      html: 'Message failed to send',
+      classes: 'rounded center-align',
     };
     try {
       // await axios.post("/contact", { name, email, messageContent }, config);
       emailjs
         .sendForm(
-          "service_pw5bfzk",
-          "template_fcd9dks",
+          'service_pw5bfzk',
+          'template_fcd9dks',
           form.current,
-          "aj_JJuur-qzK95coP"
+          'aj_JJuur-qzK95coP'
         )
         .then(
           (result) => {
@@ -67,17 +66,18 @@ export const Contact = (props) => {
         );
       M.toast(toastContent);
     } catch (error) {
+      console.log(error);
+
       M.toast(errorToast);
     }
     setMessage({
-      name: "",
-      email: "",
-      messageContent: "",
+      name: '',
+      email: '',
+      messageContent: '',
     });
   };
   let container = `container-cover ${props.darken}`;
 
-  const sendEmail = (e) => {};
   return (
     <div id="contact" className={container}>
       <h1 className="header">CONTACT</h1>
@@ -93,7 +93,11 @@ export const Contact = (props) => {
           message as I would love to get in touch with you.
         </p>
       </div>
-      <form className="contact-form center-align" onSubmit={sendEmail}>
+      <form
+        ref={form}
+        className="contact-form center-align"
+        onSubmit={onSubmit}
+      >
         <div className="form-group input-field input-edit">
           <input
             name="name"

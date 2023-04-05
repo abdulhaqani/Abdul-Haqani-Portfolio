@@ -13,12 +13,6 @@ export const Sidebar = (props) => {
   const particlesLoaded = useCallback(async (container) => {
     await console.log(container);
   }, []);
-  const particlesStyle = {
-    position: 'fixed !important',
-    'z-index': '-10',
-    width: '20% !important',
-    height: '100vh',
-  };
 
   const homeBtnScroll = () => {
     const homeElement = document.getElementById('home-container');
@@ -56,15 +50,6 @@ export const Sidebar = (props) => {
     }
   };
 
-  const handleClickScroll = (element) => {
-    console.log('handleClick');
-    console.log(props);
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
-      console.log('ELEMENT EXISTS');
-    }
-  };
   return (
     <div>
       <div className={props.className}>
