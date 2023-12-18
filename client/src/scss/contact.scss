@@ -1,18 +1,4 @@
-@import "./default.scss";
-
-.contact-background {
-  @include background();
-  background-image: url(../images/laptop.jpg);
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top right;
-  padding-left: 5%;
-  min-height: 100vh;
-  padding-right: 5%;
-  display: flex;
-  flex-direction: column;
-}
+@import './default.scss';
 
 .contact-form {
   display: flex;
@@ -34,17 +20,17 @@
 }
 
 .input-edit {
-  background-color: #323638;
-  border-radius: 6px;
-  width: max-content;
-  width: 80%;
-  padding: 5px;
-  align-self: center;
+  background-color: #323638 !important;
+  border-radius: 6px !important;
+  width: max-content !important;
+  width: 80% !important;
+  padding: 5px !important;
+  align-self: center !important;
 }
 
 .contact-paragraph {
   @include paragraph();
-  font-family: "Arial";
+  font-family: 'Arial';
   margin: auto;
   margin-top: 2%;
   width: 80%;

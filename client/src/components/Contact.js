@@ -10,17 +10,17 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 
 export const Contact = (props) => {
   const form = useRef();
-
   const [message, setMessage] = useState({
     name: '',
     email: '',
     messageContent: '',
   });
+  const { serviceId, templateId, apiKey, darken } = props;
 
   // Materialize js initialization
   useEffect(() => {
     M.AutoInit();
-  });
+  }, []);
 
   const { name, email, messageContent } = message;
 
@@ -28,16 +28,14 @@ export const Contact = (props) => {
     setMessage({ ...message, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = async (e, message) => {
+  let container = `container-cover ${darken}`;
+
+  console.log('VALUE');
+  console.log(serviceId);
+  console.log(templateId);
+  console.log(apiKey);
+  const sendEmail = (e) => {
     e.preventDefault();
-
-    // config request
-    // const config = {
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // };
-
     const toastContent = {
       html: 'Message Sent',
       classes: 'rounded center-align',
@@ -47,36 +45,36 @@ export const Contact = (props) => {
       html: 'Message failed to send',
       classes: 'rounded center-align',
     };
-    try {
-      // await axios.post("/contact", { name, email, messageContent }, config);
-      emailjs
-        .sendForm(
-          'service_pw5bfzk',
-          'template_fcd9dks',
-          form.current,
-          'aj_JJuur-qzK95coP'
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-      M.toast(toastContent);
-    } catch (error) {
-      console.log(error);
+    emailjs.sendForm(serviceId, templateId, form.current, apiKey).then(
+      (result) => {
+        console.log(result.text);
 
-      M.toast(errorToast);
-    }
-    setMessage({
-      name: '',
-      email: '',
-      messageContent: '',
-    });
+        setMessage({
+          name: '',
+          email: '',
+          messageContent: '',
+        });
+        try {
+          M.toast(toastContent);
+        } catch (error) {
+          console.error('Toast error');
+        }
+      },
+      (error) => {
+        console.log(error.text);
+        setMessage({
+          name: '',
+          email: '',
+          messageContent: '',
+        });
+        try {
+          M.Toast(errorToast);
+        } catch (error) {
+          console.error('toast error');
+        }
+      }
+    );
   };
-  let container = `container-cover ${props.darken}`;
 
   return (
     <div id="contact" className={container}>
@@ -96,49 +94,43 @@ export const Contact = (props) => {
       <form
         ref={form}
         className="contact-form center-align"
-        onSubmit={onSubmit}
+        onSubmit={sendEmail}
       >
-        <div className="form-group input-field input-edit">
-          <input
-            name="name"
-            type="text"
-            className="validate text-inputs"
-            value={name}
-            onChange={onChange}
-            required
-          />
-          <label htmlFor="name" className="active">
-            Name
-          </label>
-        </div>
+        <input
+          name="name"
+          type="text"
+          className="validate text-inputs input-edit"
+          value={name}
+          onChange={onChange}
+          required
+        />
+        <label htmlFor="name" className="active">
+          Name
+        </label>
 
-        <div className="form-group input-field input-edit">
-          <input
-            name="email"
-            type="email"
-            className="validate text-inputs"
-            value={email}
-            onChange={onChange}
-            required
-          />
-          <label htmlFor="email" className="active">
-            Email
-          </label>
-        </div>
+        <input
+          name="email"
+          type="email"
+          className="validate text-inputs input-edit"
+          value={email}
+          onChange={onChange}
+          required
+        />
+        <label htmlFor="email" className="active">
+          Email
+        </label>
 
-        <div className="form-group input-field input-edit">
-          <textarea
-            name="messageContent"
-            className="materialize-textarea text-inputs"
-            value={messageContent}
-            onChange={onChange}
-            required
-          ></textarea>
-          <label htmlFor="messageContent" className="active">
-            Message
-          </label>
-        </div>
-
+        <textarea
+          name="messageContent"
+          className="materialize-textarea text-inputs input-edit"
+          value={messageContent}
+          onChange={onChange}
+          required
+        />
+        <label htmlFor="messageContent" className="active">
+          Message
+        </label>
+        <br />
         <button
           type="submit"
           className="btn waves-effect waves-light grey darken-1 submit-btn-edit"

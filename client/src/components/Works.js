@@ -22,6 +22,89 @@ export const Works = (props) => {
         <br />
       </div>
       <div className="row">
+        <div className="col card card-hover modal-koga auto-center center-align works-card text-lighten-4 waves-effect">
+          <a className="modal-trigger" href="#modal-koga">
+            <div className="card-content white-text">
+              <br />
+              <h4 className="card-title">Koga.world</h4>
+              <div className="italics">Freelance Project</div>
+              <div>
+                <p
+                  style={{
+                    margin: '3% auto',
+                  }}
+                >
+                  ReactJs | Semantic-ui | Spotify | Front-end
+                  <i className="material-icons right-align right-arrow">
+                    keyboard_arrow_right
+                  </i>
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div id="modal-koga" className="modal modal-koga modal-orientation">
+          <div className="modal-content my-modal grey-text text-lighten-2">
+            <h4 className="center-align">Koga.world</h4>
+            <h6 className="italics center-align">Freelance Project</h6>
+            <p className="modal-paragraph">
+              Koga studios is a music collective which reached out to me to
+              develop a responsive website that they can call their own.
+              Koga.world is a website which highlights the collective's music
+              using a built in spotify player, a responsive slideshow including
+              their latest works, in conjunction with links throughout to find
+              their music. This website highlights the different artists, and
+              encapsulates their personalities into the page to encourage a
+              stronger connection from their fans to them.
+            </p>
+            <p className="modal-paragraph">
+              This website was built on react, with plans to implement support
+              to allow fans to purchase merchandise directly on the store. This
+              app used semantic-ui for the bulk of the styling components, and
+              the responsive nature of the single page app provides site go-ers
+              with a strong impression while browsing their site.
+            </p>
+            <div className="chip-align">
+              <div className="chip">Reactjs</div>
+              <div className="chip">Semantic-ui</div>
+              <div className="chip">Spotify</div>
+              <div className="chip">Firebase</div>
+            </div>
+            <div className="modal-images">
+              <img
+                src={require('../images/koga_page1.png')}
+                className="modal-image-bringit"
+                alt=""
+              />
+              <img
+                src={require('../images/koga_page2.png')}
+                className="modal-image-bringit"
+                alt=""
+              />
+            </div>
+            <div className="modal-images">
+              <img
+                src={require('../images/koga_page3.png')}
+                className="modal-image-bringit"
+                alt=""
+              />
+              <img
+                src={require('../images/koga_page4.png')}
+                className="modal-image-bringit"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="modal-footer modal-koga">
+            <a
+              href="#!"
+              className="modal-close white-text waves-effect waves-light waves-grey btn-flat "
+            >
+              Close
+            </a>
+          </div>
+        </div>
+
         <div className="col card-hover card works-card center-align mercury-scraping text-lighten-4 waves-effect">
           <a
             className="modal-trigger grey-text text-lighten-3"
@@ -45,64 +128,6 @@ export const Works = (props) => {
               </div>
             </div>
           </a>
-        </div>
-
-        <div className="col card card-hover modal-koga auto-center center-align works-card text-lighten-4 waves-effect">
-          <a className="modal-trigger" href="#modal-koga">
-            <div className="card-content white-text">
-              <br />
-              <h4 className="card-title">Koga Studios</h4>
-              <div className="italics">Freelance Project</div>
-              <div>
-                <p
-                  style={{
-                    margin: '3% auto',
-                  }}
-                >
-                  ReactJs | Semantic-ui | Spotify | Front-end
-                  <i className="material-icons right-align right-arrow">
-                    keyboard_arrow_right
-                  </i>
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div id="modal-koga" className="modal modal-koga modal-orientation">
-          <div className="modal-content my-modal grey-text text-lighten-2">
-            <h4 className="center-align">Koga Studios</h4>
-            <h6 className="italics center-align">Freelance Project</h6>
-            <p className="modal-paragraph">
-              Koga studios is a music collective which reached out to me to
-              develop a responsive website that they can call their own. The
-              website highlights the collective's music using a built in spotify
-              player, a responsive slideshow including their latest works, in
-              conjunction with links throughout to find their music. This
-              website highlights the different artists, and encapsulates their
-              personalities into the page to encourage a stronger connection
-              from their fans to them.
-            </p>
-            <p className="modal-paragraph">
-              This website was built on react, with plans to implement support
-              to allow fans to purchase merchandise directly on the store. This
-              app used semantic-ui for the bulk of the styling components, and
-              the responsive nature of the single page app provides site go-ers
-              with a strong impression while browsing their site.
-            </p>
-            <div className="chip-align">
-              <div className="chip">Reactjs</div>
-              <div className="chip">Semantic-ui</div>
-              <div className="chip">Spotify</div>
-            </div>
-          </div>
-          <div className="modal-footer modal-koga">
-            <a
-              href="#!"
-              className="modal-close white-text waves-effect waves-light waves-grey btn-flat "
-            >
-              Close
-            </a>
-          </div>
         </div>
       </div>
 

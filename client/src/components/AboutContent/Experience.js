@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 import 'materialize-css/dist/css/materialize.min.css';
 
 const Experience = () => {
+  useEffect(() => {
+    const modals = document.querySelectorAll('.modal');
+    M.Modal.init(modals, {});
+  }, []);
   return (
     <div>
       <div className="about-me-subheader center-align">Applying my skills.</div>
@@ -88,7 +93,7 @@ const Experience = () => {
       <div className="card card-hover modal-cibc auto-center experience-card">
         <a className="modal-trigger" href="#modal-cibc">
           <div className="card-content white-text center-align waves-effect waves-light experience-card">
-            <span className="card-title" style={{ 'font-size': '20px' }}>
+            <span className="card-title" style={{ fontSize: '20px' }}>
               CIBC Capital Markets{' '}
             </span>
             <div className="italics">01/10/2020 - 04/20/2022</div>
