@@ -105,7 +105,90 @@ export const Works = (props) => {
           </div>
         </div>
 
-        <div className="col card-hover card works-card center-align mercury-scraping text-lighten-4 waves-effect">
+        <div className="col card card-hover modal-koga auto-center center-align works-card text-lighten-4 waves-effect">
+          <a className="modal-trigger" href="#modal-jp7">
+            <div className="card-content white-text">
+              <br />
+              <h4 className="card-title">jp7sfootball.com</h4>
+              <div className="italics">Freelance Project</div>
+              <div>
+                <p
+                  style={{
+                    margin: '3% auto',
+                  }}
+                >
+                  ReactJs | Express | Material-ui | Stripe | MongoDB
+                  <i className="material-icons right-align right-arrow">
+                    keyboard_arrow_right
+                  </i>
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div id="modal-jp7" className="modal modal-koga modal-orientation">
+          <div className="modal-content my-modal grey-text text-lighten-2">
+            <h4 className="center-align">jp7sfootball.com</h4>
+            <h6 className="italics center-align">Freelance Project</h6>
+            <p className="modal-paragraph">
+              JP7s is a youth football camp / showcase that was started by CFL
+              football star, James Peter of the Ottawa Redblacks.
+              Jp7sFootball.com is a website that integrates with Stripe in order
+              to process live payments from registrees, and it also ties up the
+              flow for Mr. Peter to access the registrants for communication
+              purposes. This app also uses it's simple, but effective UI to
+              outline the camp information for anyone who are interested.
+            </p>
+            <p className="modal-paragraph">
+              This website was built on react front end, with a node express
+              backend, and a mongodb database. This website also integrated with
+              stripe in order to process payments and manage users after. with a
+              strong impression while browsing their site.
+            </p>
+            <div className="chip-align">
+              <div className="chip">Reactjs</div>
+              <div className="chip">Expressjs</div>
+              <div className="chip">Material-Ui</div>
+              <div className="chip">Stripe</div>
+              <div className="chip">MongoDB</div>
+            </div>
+            <div className="modal-images">
+              <img
+                src={require('../images/koga_page1.png')}
+                className="modal-image-bringit"
+                alt=""
+              />
+              <img
+                src={require('../images/koga_page2.png')}
+                className="modal-image-bringit"
+                alt=""
+              />
+            </div>
+            <div className="modal-images">
+              <img
+                src={require('../images/koga_page3.png')}
+                className="modal-image-bringit"
+                alt=""
+              />
+              <img
+                src={require('../images/koga_page4.png')}
+                className="modal-image-bringit"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="modal-footer modal-koga">
+            <a
+              href="#!"
+              className="modal-close white-text waves-effect waves-light waves-grey btn-flat "
+            >
+              Close
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col card-hover card works-card-single center-align mercury-scraping text-lighten-4 waves-effect">
           <a
             className="modal-trigger grey-text text-lighten-3"
             href="#modal-mercury-scraping"

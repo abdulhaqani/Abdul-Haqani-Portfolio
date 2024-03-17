@@ -7,12 +7,9 @@ import particlesConfig from '../../particlesjs-config.json';
 
 export const Sidebar = (props) => {
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
     await loadFull(engine);
   }, []);
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
-  }, []);
+  const particlesLoaded = useCallback(async (container) => {}, []);
 
   const homeBtnScroll = () => {
     const homeElement = document.getElementById('home-container');

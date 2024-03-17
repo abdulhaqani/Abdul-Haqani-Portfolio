@@ -15,7 +15,11 @@ export const Contact = (props) => {
     email: '',
     messageContent: '',
   });
-  const { serviceId, templateId, apiKey, darken } = props;
+
+  const serviceId = process.env.REACT_APP_SERVICE_ID;
+  const templateId = process.env.REACT_APP_TEMPLATE_ID;
+  const apiKey = process.env.REACT_APP_EMAIL_API_KEY;
+  const { darken } = props;
 
   // Materialize js initialization
   useEffect(() => {
@@ -30,10 +34,6 @@ export const Contact = (props) => {
 
   let container = `container-cover ${darken}`;
 
-  console.log('VALUE');
-  console.log(serviceId);
-  console.log(templateId);
-  console.log(apiKey);
   const sendEmail = (e) => {
     e.preventDefault();
     const toastContent = {
@@ -47,8 +47,6 @@ export const Contact = (props) => {
     };
     emailjs.sendForm(serviceId, templateId, form.current, apiKey).then(
       (result) => {
-        console.log(result.text);
-
         setMessage({
           name: '',
           email: '',
@@ -56,12 +54,9 @@ export const Contact = (props) => {
         });
         try {
           M.toast(toastContent);
-        } catch (error) {
-          console.error('Toast error');
-        }
+        } catch (error) {}
       },
       (error) => {
-        console.log(error.text);
         setMessage({
           name: '',
           email: '',
@@ -69,9 +64,7 @@ export const Contact = (props) => {
         });
         try {
           M.Toast(errorToast);
-        } catch (error) {
-          console.error('toast error');
-        }
+        } catch (error) {}
       }
     );
   };
