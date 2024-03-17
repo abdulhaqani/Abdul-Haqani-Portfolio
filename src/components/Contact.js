@@ -97,7 +97,7 @@ export const Contact = (props) => {
           onChange={onChange}
           required
         />
-        <label htmlFor="name" className="active">
+        <label htmlFor="name" className="active label">
           Name
         </label>
 
@@ -109,7 +109,7 @@ export const Contact = (props) => {
           onChange={onChange}
           required
         />
-        <label htmlFor="email" className="active">
+        <label htmlFor="email" className="active label">
           Email
         </label>
 
@@ -120,7 +120,7 @@ export const Contact = (props) => {
           onChange={onChange}
           required
         />
-        <label htmlFor="messageContent" className="active">
+        <label htmlFor="messageContent" className="active label">
           Message
         </label>
         <br />
