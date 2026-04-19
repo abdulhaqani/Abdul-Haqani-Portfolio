@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 import '../scss/contact.scss';
 import '../scss/home.scss';
@@ -10,9 +11,11 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 
 export const Contact = (props) => {
   const form = useRef();
+  const [ref, isVisible] = useScrollReveal({ threshold: 0.1 });
   const [message, setMessage] = useState({
     name: '',
     email: '',
+    projectType: '',
     messageContent: '',
   });
 
@@ -21,12 +24,11 @@ export const Contact = (props) => {
   const apiKey = process.env.REACT_APP_EMAIL_API_KEY;
   const { darken } = props;
 
-  // Materialize js initialization
   useEffect(() => {
     M.AutoInit();
   }, []);
 
-  const { name, email, messageContent } = message;
+  const { name, email, projectType, messageContent } = message;
 
   const onChange = (e) => {
     setMessage({ ...message, [e.target.name]: e.target.value });
@@ -50,6 +52,7 @@ export const Contact = (props) => {
         setMessage({
           name: '',
           email: '',
+          projectType: '',
           messageContent: '',
         });
         try {
@@ -60,6 +63,7 @@ export const Contact = (props) => {
         setMessage({
           name: '',
           email: '',
+          projectType: '',
           messageContent: '',
         });
         try {
@@ -71,63 +75,97 @@ export const Contact = (props) => {
 
   return (
     <div id="contact" className={container}>
-      <h1 className="header">CONTACT</h1>
+      <h1 className="header">Let's Work Together</h1>
+
+      <div className="availability-badge">
+        <span className="status-dot"></span>
+        Available for new projects
+      </div>
+
       <div>
         <p className="contact-paragraph">
-          I'm always happy to connect with fellow engineers, discuss potential
-          collaborations, or hear about interesting opportunities. Drop me a
-          message below, or find me on GitHub and LinkedIn through the links on
-          this page.
+          Have a project in mind? Tell me about it and I'll get back to you
+          within 24 hours. Whether it's a new web application, an API
+          integration, or a full product build — I'd love to hear about it.
         </p>
       </div>
-      <form
-        ref={form}
-        className="contact-form center-align"
-        onSubmit={sendEmail}
-      >
-        <input
-          name="name"
-          type="text"
-          className="validate text-inputs input-edit"
-          value={name}
-          onChange={onChange}
-          required
-        />
-        <label htmlFor="name" className="active label">
-          Name
-        </label>
 
-        <input
-          name="email"
-          type="email"
-          className="validate text-inputs input-edit"
-          value={email}
-          onChange={onChange}
-          required
-        />
-        <label htmlFor="email" className="active label">
-          Email
-        </label>
-
-        <textarea
-          name="messageContent"
-          className="materialize-textarea text-inputs input-edit"
-          value={messageContent}
-          onChange={onChange}
-          required
-        />
-        <label htmlFor="messageContent" className="active label">
-          Message
-        </label>
-        <br />
-        <button
-          type="submit"
-          className="btn waves-effect waves-light grey darken-1 submit-btn-edit"
+      <div ref={ref} className={`reveal ${isVisible ? 'visible' : ''}`}>
+        <form
+          ref={form}
+          className="contact-form center-align"
+          onSubmit={sendEmail}
         >
-          Submit
-          <i className="material-icons right">send</i>
-        </button>
-      </form>
+          <input
+            name="name"
+            type="text"
+            className="validate text-inputs input-edit"
+            value={name}
+            onChange={onChange}
+            required
+          />
+          <label htmlFor="name" className="active label">
+            Name
+          </label>
+
+          <input
+            name="email"
+            type="email"
+            className="validate text-inputs input-edit"
+            value={email}
+            onChange={onChange}
+            required
+          />
+          <label htmlFor="email" className="active label">
+            Email
+          </label>
+
+          <div className="project-type-select">
+            <select
+              name="projectType"
+              className="browser-default text-inputs input-edit"
+              value={projectType}
+              onChange={onChange}
+              style={{
+                background: 'rgba(255, 255, 255, 0.05)',
+                color: '#a0a0b0',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                borderRadius: '8px',
+                padding: '10px',
+                width: '80%',
+                margin: '10px auto',
+              }}
+            >
+              <option value="" disabled>
+                Project Type
+              </option>
+              <option value="Web Application">Web Application</option>
+              <option value="E-Commerce">E-Commerce</option>
+              <option value="API / Integration">API / Integration</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <textarea
+            name="messageContent"
+            className="materialize-textarea text-inputs input-edit"
+            value={messageContent}
+            onChange={onChange}
+            required
+          />
+          <label htmlFor="messageContent" className="active label">
+            Tell me about your project
+          </label>
+          <br />
+          <button
+            type="submit"
+            className="btn waves-effect waves-light grey darken-1 submit-btn-edit"
+          >
+            Send Message
+            <i className="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

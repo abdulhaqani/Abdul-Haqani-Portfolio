@@ -7,16 +7,15 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 import Sidebar from './components/layout/Sidebar';
 import Home from './components/Home';
 import Toggle from './components/Toggle';
+import Services from './components/Services';
 import AboutMe from './components/AboutMe';
 import Works from './components/Works';
 import Contact from './components/Contact';
 // scss
 import './scss/default.scss';
 import './scss/sidebar.scss';
-// extras
 
 const App = () => {
-  // Materialize js initialization
   useEffect(() => {
     M.AutoInit();
   }, []);
@@ -41,18 +40,31 @@ const App = () => {
             className="main-content"
             onClick={sidebarOpen ? openHandler : undefined}
           >
-            <Fade delay={250}>
-              <Home darken={darken} />
-            </Fade>
-            <Fade delay={500}>
-              <AboutMe darken={darken} />
-            </Fade>
-            <Fade delay={500} opposite={true} style={{ zIndex: 0 }}>
-              <Works darken={darken} />
-            </Fade>
-            <Fade delay={500} style={{ zIndex: 'inherit' }}>
-              <Contact darken={darken} />
-            </Fade>
+            <div className="section-bg section-bg--home">
+              <Fade delay={100}>
+                <Home darken={darken} />
+              </Fade>
+            </div>
+            <div className="section-bg section-bg--services">
+              <Fade delay={100}>
+                <Services darken={darken} />
+              </Fade>
+            </div>
+            <div className="section-bg section-bg--about">
+              <Fade delay={100}>
+                <AboutMe darken={darken} />
+              </Fade>
+            </div>
+            <div className="section-bg section-bg--works">
+              <Fade delay={100}>
+                <Works darken={darken} />
+              </Fade>
+            </div>
+            <div className="section-bg section-bg--contact">
+              <Fade delay={100}>
+                <Contact darken={darken} />
+              </Fade>
+            </div>
           </div>
         </div>
       </>

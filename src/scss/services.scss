@@ -1,0 +1,80 @@
+@import './variables.scss';
+@import './default.scss';
+
+#services {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $section-padding;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.service-card {
+  background: $glassmorphism-bg;
+  border: 1px solid $glassmorphism-border;
+  border-top: 3px solid transparent;
+  border-image: $accent-gradient 1;
+  border-image-slice: 1 1 0 1;
+  border-radius: $radius-md;
+  padding: 32px 28px;
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  // border-image breaks border-radius, so use a workaround
+  border-image: none;
+  border-top: 3px solid $accent-primary;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba($accent-primary, 0.15);
+}
+
+.service-icon {
+  font-size: 2.4em;
+  color: $accent-secondary;
+  margin-bottom: 12px;
+}
+
+.service-title {
+  color: $text-primary;
+  font-size: 1.3em;
+  font-weight: 400;
+  margin: 8px 0;
+}
+
+.service-tech {
+  color: $accent-secondary;
+  font-size: 0.9em;
+  margin-bottom: 12px;
+}
+
+.service-description {
+  color: $text-secondary;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.services-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.services-cta-text {
+  color: $text-secondary;
+  font-size: 1.3em;
+  margin-bottom: 16px;
+}

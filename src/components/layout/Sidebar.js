@@ -11,40 +11,9 @@ export const Sidebar = (props) => {
   }, []);
   const particlesLoaded = useCallback(async (container) => {}, []);
 
-  const homeBtnScroll = () => {
-    const homeElement = document.getElementById('home-container');
-
-    if (homeElement) {
-      // 👇 Will scroll smoothly to the top of the next section
-      homeElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const aboutBtnScroll = () => {
-    const aboutElement = document.getElementById('about');
-
-    if (aboutElement) {
-      // 👇 Will scroll smoothly to the top of the next section
-      aboutElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const worksBtnScroll = () => {
-    const worksElement = document.getElementById('works');
-
-    if (worksElement) {
-      // 👇 Will scroll smoothly to the top of the next section
-      worksElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const contactBtnScroll = () => {
-    const contactElement = document.getElementById('contact');
-
-    if (contactElement) {
-      // 👇 Will scroll smoothly to the top of the next section
-      contactElement.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -104,22 +73,27 @@ export const Sidebar = (props) => {
 
         <ul className="nav-link-list">
           <li className="nav-link-li">
-            <button className="nav-links" onClick={homeBtnScroll}>
+            <button className="nav-links" onClick={() => scrollTo('home-container')}>
               Home
             </button>
           </li>
           <li className="nav-link-li">
-            <button className="nav-links" onClick={aboutBtnScroll}>
+            <button className="nav-links" onClick={() => scrollTo('services')}>
+              Services
+            </button>
+          </li>
+          <li className="nav-link-li">
+            <button className="nav-links" onClick={() => scrollTo('about')}>
               About
             </button>
           </li>
           <li className="nav-link-li">
-            <button className="nav-links" onClick={worksBtnScroll}>
-              Works
+            <button className="nav-links" onClick={() => scrollTo('works')}>
+              Projects
             </button>
           </li>
           <li className="nav-link-li">
-            <button className="nav-links" onClick={contactBtnScroll}>
+            <button className="nav-links" onClick={() => scrollTo('contact')}>
               Contact
             </button>
           </li>
