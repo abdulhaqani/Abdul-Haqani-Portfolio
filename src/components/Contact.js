@@ -74,14 +74,10 @@ export const Contact = (props) => {
       <h1 className="header">CONTACT</h1>
       <div>
         <p className="contact-paragraph">
-          Speaking with other developers, designers, entrepreneurs and people in
-          general is always refreshing. Contact me through this form if you have
-          any recomendations, critiques or if you just want to say hello. If you
-          are interested in my work, it is all posted on Github and if you wish
-          to connect with me, feel free to send me an invitation through
-          LinkedIn from the link on my page. If you are interested in working
-          together, or in the services / consulting I offer please send me a
-          message as I would love to get in touch with you.
+          I'm always happy to connect with fellow engineers, discuss potential
+          collaborations, or hear about interesting opportunities. Drop me a
+          message below, or find me on GitHub and LinkedIn through the links on
+          this page.
         </p>
       </div>
       <form

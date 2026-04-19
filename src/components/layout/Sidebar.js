@@ -53,7 +53,7 @@ export const Sidebar = (props) => {
         <div className="link-row">
           <ul className="links">
             <li className="link">
-              <Link to={'/'}>
+              <Link to={'/'} aria-label="Home">
                 <i className="fa fa-home home" aria-hidden="true"></i>
               </Link>
             </li>
@@ -62,6 +62,7 @@ export const Sidebar = (props) => {
                 href="https://github.com/abdulhaqani"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
               >
                 <i className="fa fa-github github" aria-hidden="true"></i>
               </a>
@@ -71,6 +72,7 @@ export const Sidebar = (props) => {
                 href="https://www.linkedin.com/in/abdulrahman-haqani-173a5611b/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <i className="fa fa-linkedin linkedin" aria-hidden="true"></i>
               </a>
@@ -80,6 +82,7 @@ export const Sidebar = (props) => {
                 href={require('../../images/Abdul_Haqani_C_resume.pdf')}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Resume"
               >
                 <i className="fa fa-file-text resume" aria-hidden="true"></i>
               </a>
@@ -101,24 +104,24 @@ export const Sidebar = (props) => {
 
         <ul className="nav-link-list">
           <li className="nav-link-li">
-            <h4 className="nav-links" onClick={homeBtnScroll}>
+            <button className="nav-links" onClick={homeBtnScroll}>
               Home
-            </h4>
+            </button>
           </li>
           <li className="nav-link-li">
-            <h4 className="nav-links" onClick={aboutBtnScroll}>
+            <button className="nav-links" onClick={aboutBtnScroll}>
               About
-            </h4>
+            </button>
           </li>
           <li className="nav-link-li">
-            <h4 className="nav-links" onClick={worksBtnScroll}>
+            <button className="nav-links" onClick={worksBtnScroll}>
               Works
-            </h4>
+            </button>
           </li>
           <li className="nav-link-li">
-            <h4 className="nav-links" onClick={contactBtnScroll}>
+            <button className="nav-links" onClick={contactBtnScroll}>
               Contact
-            </h4>
+            </button>
           </li>
         </ul>
       </div>

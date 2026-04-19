@@ -74,10 +74,15 @@
   position: relative;
   z-index: inherit;
   color: whitesmoke;
-  /* blue colors for links too */
   text-decoration: inherit;
-  /* no underline */
   text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
 }
 
 .nav-links:hover {

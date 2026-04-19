@@ -8,13 +8,13 @@ export const Home = (props) => {
     <div className={container} id="home-container">
       <div id="home-intro-container" className="z-depth-2">
         <div id="home-title">Abdul Haqani</div>
-        <p id="intro-text">Software Engineer @ Qlik</p>
+        <p id="intro-text">Senior Full Stack Software Engineer @ Barracuda Networks</p>
 
         <p className="paragraph-text">
-          Class of 2020 Graduate from the university of Ottawa, designer to my
-          core, permanent student of the craft. I love to learn, create, design
-          and overcome challenges while developing new things. Feel free to
-          contact me!
+          Senior Full Stack Engineer with experience spanning fintech, cloud
+          platforms, and data engineering. I build scalable systems, optimize
+          performance, and bring ideas to life end to end. Always learning,
+          always shipping. Feel free to contact me!
         </p>
       </div>
     </div>

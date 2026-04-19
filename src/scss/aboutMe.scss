@@ -238,8 +238,10 @@
     width: 80%;
   }
 }
-.card-hover:hover {
+.card-hover:hover,
+.card-hover:focus-within {
   transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(87, 108, 188, 0.4);
 }
 
 .freelance-card {
@@ -248,6 +250,26 @@
 
 .my-modal-header {
   font-weight: 100;
+}
+
+.barracuda-logo {
+  max-height: 40%;
+  max-width: 90%;
+  margin: auto;
+}
+
+.barracuda-logo2 {
+  max-height: 20%;
+  max-width: 30%;
+  margin: auto;
+}
+
+.modal-barracuda {
+  background: radial-gradient(circle, #576cbc 0%, rgba(32, 32, 32, 1) 100%);
+}
+
+.modal-barracuda.open {
+  top: 20% !important;
 }
 
 .modal-stats-can {

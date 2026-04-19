@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 
 import '../scss/aboutMe.scss';
 import '../scss/home.scss';
@@ -10,7 +10,6 @@ import Experience from './AboutContent/Experience';
 export const AboutMe = (props) => {
   let container = `container-cover ${props.darken}`;
   return (
-    <Router>
       <div id="about" className={container}>
         <div className="row header-container">
           <div className="header condensed thin">Hi I'm Abdul Haqani!</div>
@@ -32,7 +31,6 @@ export const AboutMe = (props) => {
           <Route path={['/', '/about']} component={Story} />
         </Switch>
       </div>
-    </Router>
   );
 };
 

@@ -13,7 +13,7 @@ export const Education = () => {
             <img
               src={require("../../images/uottawa.png")}
               className="education-logo"
-              alt=""
+              alt="University of Ottawa logo"
             />
             <div className="content">
               <h6>UNIVERSITY OF OTTAWA</h6>
@@ -50,7 +50,7 @@ export const Education = () => {
             <img
               src={require("../../images/udemy.png")}
               className="education-logo"
-              alt=""
+              alt="Udemy logo"
             />
             <div className="content">
               <h6>UDEMY</h6>

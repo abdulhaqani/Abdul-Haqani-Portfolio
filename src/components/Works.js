@@ -70,30 +70,6 @@ export const Works = (props) => {
               <div className="chip">Spotify</div>
               <div className="chip">Firebase</div>
             </div>
-            <div className="modal-images">
-              <img
-                src={require('../images/koga_page1.png')}
-                className="modal-image-bringit"
-                alt=""
-              />
-              <img
-                src={require('../images/koga_page2.png')}
-                className="modal-image-bringit"
-                alt=""
-              />
-            </div>
-            <div className="modal-images">
-              <img
-                src={require('../images/koga_page3.png')}
-                className="modal-image-bringit"
-                alt=""
-              />
-              <img
-                src={require('../images/koga_page4.png')}
-                className="modal-image-bringit"
-                alt=""
-              />
-            </div>
           </div>
           <div className="modal-footer modal-koga">
             <a
@@ -151,30 +127,6 @@ export const Works = (props) => {
               <div className="chip">Material-Ui</div>
               <div className="chip">Stripe</div>
               <div className="chip">MongoDB</div>
-            </div>
-            <div className="modal-images">
-              <img
-                src={require('../images/koga_page1.png')}
-                className="modal-image-bringit"
-                alt=""
-              />
-              <img
-                src={require('../images/koga_page2.png')}
-                className="modal-image-bringit"
-                alt=""
-              />
-            </div>
-            <div className="modal-images">
-              <img
-                src={require('../images/koga_page3.png')}
-                className="modal-image-bringit"
-                alt=""
-              />
-              <img
-                src={require('../images/koga_page4.png')}
-                className="modal-image-bringit"
-                alt=""
-              />
             </div>
           </div>
           <div className="modal-footer modal-koga">
@@ -328,29 +280,6 @@ export const Works = (props) => {
               <div className="chip">Keras</div>
               <div className="chip">Firebase DB</div>
             </div>
-
-            <div className="modal-images">
-              <img
-                src={require('../images/in-app-camera.jpg')}
-                className="modal-image-ecosnap"
-                alt=""
-              />
-              <img
-                src={require('../images/image-result.jpg')}
-                className="modal-image-ecosnap"
-                alt=""
-              />
-              <img
-                src={require('../images/recycling-steps.jpg')}
-                className="modal-image-ecosnap"
-                alt=""
-              />
-              <img
-                src={require('../images/leaderboard.jpg')}
-                className="modal-image-ecosnap"
-                alt=""
-              />
-            </div>
           </div>
 
           <div className="modal-footer ecosnap">
@@ -418,18 +347,6 @@ export const Works = (props) => {
               <div className="chip">MongoDB</div>
               <div className="chip">APIs</div>
               <div className="chip">Bootstrap</div>
-            </div>
-            <div className="modal-images">
-              <img
-                src={require('../images/bringIt.jpg')}
-                className="modal-image-bringit"
-                alt=""
-              />
-              <img
-                src={require('../images/shopping-cart.jpg')}
-                className="modal-image-bringit"
-                alt=""
-              />
             </div>
           </div>
           <div className="modal-footer bring-it">

@@ -44,8 +44,10 @@
   padding: 0px !important;
 }
 
-.works-card:hover {
+.works-card:hover,
+.works-card:focus-within {
   transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(87, 108, 188, 0.4);
 }
 
 .card-header {
