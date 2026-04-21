@@ -11,16 +11,87 @@ const Experience = () => {
   return (
     <div>
       <div className="about-me-subheader center-align">Applying my skills.</div>
+      <div className="card card-hover modal-barracuda auto-center experience-card">
+        <a className="modal-trigger" href="#modal-barracuda">
+          <div className="card-content white-text center-align waves-effect waves-light experience-card">
+            <span className="card-title">Barracuda Networks</span>
+            <div className="italics">11/01/2024 - Present</div>
+
+            <img
+              src={require('../../images/barracuda.png')}
+              className="barracuda-logo"
+              alt="Barracuda Networks logo"
+            />
+            <div className="arrow-icon">
+              <i className="material-icons right-align right-arrow">
+                keyboard_arrow_right
+              </i>
+              <br />
+            </div>
+          </div>
+        </a>
+      </div>
+      <div id="modal-barracuda" className="modal modal-barracuda modal-orientation">
+        <div className="modal-content my-modal grey-text text-lighten-2">
+          <img
+            src={require('../../images/barracuda.png')}
+            className="barracuda-logo2"
+            alt="Barracuda Networks logo"
+          />
+          <h4>Senior Full Stack Software Engineer</h4>
+          <h6 className="italics">11/01/2024 - Present</h6>
+          <p className="modal-paragraph">
+            - Optimized the customer data platform by re-architecting data
+            fetching and rendering pipelines, resulting in a 90% reduction in
+            page loading times and a significantly improved user experience for
+            B2B clients.
+            <br />
+            - Designed and configured Terraform-based CI/CD pipelines to
+            automate infrastructure provisioning and deployments across AWS
+            managed services, improving release velocity and environment
+            consistency.
+            <br />
+            - Built automated B2B integration workflows using AWS Lambda,
+            enabling seamless data exchange and event-driven processing with
+            external partner organizations.
+            <br />
+            - Created a Databricks Genie AI assistant and integrated it across
+            the full stack, allowing internal teams to query data using natural
+            language and surface insights directly within the application.
+            <br />- Engineered ETL data pipelines on Databricks to ingest,
+            transform, and load large-scale datasets, powering analytics
+            dashboards and enabling data-driven decision making across the
+            organization.
+          </p>
+          <div className="chip-align">
+            <div className="chip">React</div>
+            <div className="chip">Terraform</div>
+            <div className="chip">AWS Lambda</div>
+            <div className="chip">Databricks</div>
+            <div className="chip">CI/CD</div>
+            <div className="chip">ETL</div>
+          </div>
+        </div>
+        <div className="modal-footer modal-barracuda">
+          <a
+            href="#!"
+            className="modal-close white-text waves-effect waves-light waves-grey btn-flat "
+          >
+            Close
+          </a>
+        </div>
+      </div>
+
       <div className="card card-hover modal-qlik auto-center experience-card">
         <a className="modal-trigger" href="#modal-qlik">
           <div className="card-content white-text center-align waves-effect waves-light experience-card">
             <span className="card-title">Qlik</span>
-            <div className="italics">04/20/2022 - Current</div>
+            <div className="italics">04/20/2022 - 09/30/2024</div>
 
             <img
               src={require('../../images/qlik-logo.png')}
               className="qlik-logo"
-              alt=""
+              alt="Qlik logo"
             />
             <div className="arrow-icon">
               <i className="material-icons right-align right-arrow">
@@ -36,10 +107,10 @@ const Experience = () => {
           <img
             src={require('../../images/qlik-logo.png')}
             className="qlik-logo2"
-            alt=""
+            alt="Qlik logo"
           />
           <h4>Software Engineer</h4>
-          <h6 className="italics">04/20/2022 - Current</h6>
+          <h6 className="italics">04/20/2022 - 09/30/2024</h6>
           <p className="modal-paragraph">
             - Developed Full stack e2e applications for the MyQlik team that
             brought various account management tools directly to Qlik customers.
@@ -101,7 +172,7 @@ const Experience = () => {
             <img
               src={require('../../images/cibc.png')}
               className="cibc-logo"
-              alt=""
+              alt="CIBC logo"
             />
             <div className="arrow-icon">
               <i className="material-icons right-align right-arrow">
@@ -118,7 +189,7 @@ const Experience = () => {
           <img
             src={require('../../images/cibc.png')}
             className="cibc-logo2"
-            alt=""
+            alt="CIBC logo"
           />
           <h4>Senior Software Developer</h4>
           <h6 className="italics">01/10/2020 - 04/20/2022</h6>
@@ -169,7 +240,7 @@ const Experience = () => {
             <img
               src={require('../../images/canada.png')}
               className="canada-logo"
-              alt=""
+              alt="Statistics Canada logo"
             />
             <div className="arrow-icon">
               <i className="material-icons right-align right-arrow">
@@ -189,7 +260,7 @@ const Experience = () => {
           <img
             src={require('../../images/statistics-canada.png')}
             className="statistics-canada-logo"
-            alt=""
+            alt="Statistics Canada logo"
           />
           <h4>Software Developer</h4>
           <h6 className="italics">01/01/2019 - 04/30/2020</h6>

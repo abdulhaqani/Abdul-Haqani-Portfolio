@@ -1,0 +1,35 @@
+// Color palette
+$bg-primary: #0a0a0f;
+$bg-secondary: #111118;
+$bg-tertiary: #16161f;
+$accent-primary: #576cbc;
+$accent-secondary: #3a86ff;
+$accent-gradient: linear-gradient(135deg, $accent-primary, $accent-secondary);
+
+// Section backgrounds — subtle tinted gradients for contrast
+$bg-home: radial-gradient(ellipse at 50% 30%, #12121c 0%, $bg-primary 70%);
+$bg-services: radial-gradient(ellipse at 30% 60%, #0f1524 0%, #0c0c14 50%, $bg-primary 100%);
+$bg-about: radial-gradient(ellipse at 70% 40%, #141420 0%, #0d0d16 60%, $bg-primary 100%);
+$bg-works: radial-gradient(ellipse at 40% 50%, #101222 0%, #0b0b14 55%, $bg-primary 100%);
+$bg-contact: radial-gradient(ellipse at 50% 70%, #131320 0%, $bg-primary 70%);
+
+// Text
+$text-primary: #f0f0f0;
+$text-secondary: #a0a0b0;
+
+// Glassmorphism
+$glassmorphism-bg: rgba(20, 20, 30, 0.6);
+$glassmorphism-border: rgba(255, 255, 255, 0.1);
+$card-bg: rgba(255, 255, 255, 0.04);
+$card-border: rgba(255, 255, 255, 0.08);
+
+// Modal
+$modal-bg: radial-gradient(circle, $accent-primary 0%, rgba(32, 32, 32, 1) 100%);
+
+// Layout
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 24px;
+$transition-base: 0.3s ease;
+$section-padding: 5% 8%;
+$breakpoint-mobile: 999px;

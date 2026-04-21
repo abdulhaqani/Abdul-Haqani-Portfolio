@@ -11,40 +11,9 @@ export const Sidebar = (props) => {
   }, []);
   const particlesLoaded = useCallback(async (container) => {}, []);
 
-  const homeBtnScroll = () => {
-    const homeElement = document.getElementById('home-container');
-
-    if (homeElement) {
-      // 👇 Will scroll smoothly to the top of the next section
-      homeElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const aboutBtnScroll = () => {
-    const aboutElement = document.getElementById('about');
-
-    if (aboutElement) {
-      // 👇 Will scroll smoothly to the top of the next section
-      aboutElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const worksBtnScroll = () => {
-    const worksElement = document.getElementById('works');
-
-    if (worksElement) {
-      // 👇 Will scroll smoothly to the top of the next section
-      worksElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const contactBtnScroll = () => {
-    const contactElement = document.getElementById('contact');
-
-    if (contactElement) {
-      // 👇 Will scroll smoothly to the top of the next section
-      contactElement.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -53,7 +22,7 @@ export const Sidebar = (props) => {
         <div className="link-row">
           <ul className="links">
             <li className="link">
-              <Link to={'/'}>
+              <Link to={'/'} aria-label="Home">
                 <i className="fa fa-home home" aria-hidden="true"></i>
               </Link>
             </li>
@@ -62,6 +31,7 @@ export const Sidebar = (props) => {
                 href="https://github.com/abdulhaqani"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
               >
                 <i className="fa fa-github github" aria-hidden="true"></i>
               </a>
@@ -71,6 +41,7 @@ export const Sidebar = (props) => {
                 href="https://www.linkedin.com/in/abdulrahman-haqani-173a5611b/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <i className="fa fa-linkedin linkedin" aria-hidden="true"></i>
               </a>
@@ -80,6 +51,7 @@ export const Sidebar = (props) => {
                 href={require('../../images/Abdul_Haqani_C_resume.pdf')}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Resume"
               >
                 <i className="fa fa-file-text resume" aria-hidden="true"></i>
               </a>
@@ -101,24 +73,29 @@ export const Sidebar = (props) => {
 
         <ul className="nav-link-list">
           <li className="nav-link-li">
-            <h4 className="nav-links" onClick={homeBtnScroll}>
+            <button className="nav-links" onClick={() => scrollTo('home-container')}>
               Home
-            </h4>
+            </button>
           </li>
           <li className="nav-link-li">
-            <h4 className="nav-links" onClick={aboutBtnScroll}>
+            <button className="nav-links" onClick={() => scrollTo('services')}>
+              Services
+            </button>
+          </li>
+          <li className="nav-link-li">
+            <button className="nav-links" onClick={() => scrollTo('about')}>
               About
-            </h4>
+            </button>
           </li>
           <li className="nav-link-li">
-            <h4 className="nav-links" onClick={worksBtnScroll}>
-              Works
-            </h4>
+            <button className="nav-links" onClick={() => scrollTo('works')}>
+              Projects
+            </button>
           </li>
           <li className="nav-link-li">
-            <h4 className="nav-links" onClick={contactBtnScroll}>
+            <button className="nav-links" onClick={() => scrollTo('contact')}>
               Contact
-            </h4>
+            </button>
           </li>
         </ul>
       </div>

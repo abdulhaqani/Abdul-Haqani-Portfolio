@@ -1,3 +1,4 @@
+@import './variables.scss';
 @import './default.scss';
 
 @mixin education-text {
@@ -23,12 +24,6 @@
 
 .about-me-background {
   @include background();
-  background: radial-gradient(
-    circle,
-    rgb(96, 103, 107) 0%,
-    rgba(39, 43, 44, 1) 100%
-  );
-
   min-height: 500px;
   min-height: 100vh;
   height: fit-content;
@@ -37,7 +32,7 @@
 }
 
 .darken {
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     background-blend-mode: soft-light;
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -52,9 +47,9 @@
   margin: auto;
   margin-right: 5%;
   justify-content: center;
-  color: rgb(248, 248, 248);
+  color: $text-primary;
   text-align: justify;
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     width: 80%;
     margin: auto;
   }
@@ -74,7 +69,7 @@
   max-width: 80%;
   border-radius: 50%;
   max-height: 500px;
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     width: 30%;
     margin: 0%;
     clip-path: polygon(6% 6%, 100% 6%, 100% 90%, 6% 90%);
@@ -91,7 +86,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     columns: 1;
     flex-direction: column;
   }
@@ -101,7 +96,7 @@
 .about-me-subheader {
   @include paragraph();
   margin: auto;
-  color: rgb(248, 248, 248);
+  color: $text-primary;
   font-family: Lucida Sans Typewriter, Lucida Console, monaco,
     Bitstream Vera Sans Mono, monospace;
   font-weight: 800;
@@ -115,10 +110,10 @@
   flex-direction: row;
 
   a {
-    color: whitesmoke;
+    color: $text-primary;
   }
   a:hover {
-    color: rgb(150, 150, 150);
+    color: $text-secondary;
   }
 }
 
@@ -137,7 +132,7 @@
 .education-column {
   margin-top: 1%;
   width: 35%;
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     margin-right: 5%;
   }
   margin-bottom: 5%;
@@ -152,7 +147,7 @@
   font-size: 2.4em;
   font-weight: 300;
   width: 100%;
-  color: rgb(248, 248, 248);
+  color: $text-primary;
 }
 
 .formal-subheader {
@@ -234,12 +229,14 @@
   min-height: 175px;
   width: 60%;
   text-align: center;
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     width: 80%;
   }
 }
-.card-hover:hover {
+.card-hover:hover,
+.card-hover:focus-within {
   transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba($accent-primary, 0.4);
 }
 
 .freelance-card {
@@ -250,16 +247,36 @@
   font-weight: 100;
 }
 
+.barracuda-logo {
+  max-height: 40%;
+  max-width: 90%;
+  margin: auto;
+}
+
+.barracuda-logo2 {
+  max-height: 20%;
+  max-width: 30%;
+  margin: auto;
+}
+
+.modal-barracuda {
+  background: $modal-bg;
+}
+
+.modal-barracuda.open {
+  top: 20% !important;
+}
+
 .modal-stats-can {
-  background: radial-gradient(circle, #576cbc 0%, rgba(32, 32, 32, 1) 100%);
+  background: $modal-bg;
 }
 
 .modal-qlik {
-  background: radial-gradient(circle, #576cbc 0%, rgba(32, 32, 32, 1) 100%);
+  background: $modal-bg;
 }
 
 .modal-cibc {
-  background: radial-gradient(circle, #576cbc 0%, rgba(32, 32, 32, 1) 100%);
+  background: $modal-bg;
 }
 
 .chip-align {
@@ -291,13 +308,13 @@
 }
 
 .col.s4 {
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     width: 60% !important;
     margin-left: 20% !important;
   }
 }
 .col.s1 {
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     width: 0% !important;
     margin: 0% !important;
     padding: 0% !important;
@@ -305,9 +322,53 @@
 }
 
 .col.s2 {
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     width: 0% !important;
     margin: 0% !important;
     padding: 0% !important;
   }
+}
+
+// Work timeline
+.work-timeline {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 5%;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-left: 2px solid $glassmorphism-border;
+  padding-left: 20px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 22px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $accent-secondary;
+  }
+}
+
+.timeline-role {
+  color: $text-primary;
+  font-size: 1.05em;
+  font-weight: 400;
+}
+
+.timeline-company {
+  color: $accent-secondary;
+  font-weight: 400;
+}
+
+.timeline-dates {
+  color: $text-secondary;
+  font-size: 0.9em;
+  margin-top: 4px;
 }

@@ -1,3 +1,4 @@
+@import './variables.scss';
 @import './default.scss';
 
 .container-cover {
@@ -16,42 +17,94 @@
 }
 
 #home-title {
-  color: whitesmoke;
+  color: $text-primary;
   font-size: 4.8em;
   font-weight: 300;
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 2.8em;
+  }
 }
 
 #intro-text {
   font-size: 2em;
   font-weight: 100;
-  color: whitesmoke;
+  color: $text-primary;
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 1.4em;
+  }
 }
 
 #home-intro-container {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-width: thin;
-  border-style: solid;
-  border-color: #e0e0e0;
-  padding: 2%;
-  flex-shrink: auto;
+  background: $glassmorphism-bg;
+  border: 1px solid $glassmorphism-border;
+  border-radius: $radius-lg;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 3% 4%;
   margin: 3%;
   display: inline;
 }
 
-.fade-enter {
-  opacity: 0;
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
 }
 
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+.tech-badge {
+  background: $card-bg;
+  border: 1px solid $card-border;
+  border-radius: $radius-sm;
+  padding: 6px 14px;
+  color: $text-secondary;
+  font-size: 0.9em;
+  font-weight: 300;
 }
 
-.fade-exit {
-  opacity: 1;
+.cta-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 500ms ease-out;
+.cta-primary {
+  background: $accent-gradient;
+  color: white;
+  border: none;
+  border-radius: $radius-sm;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  font-weight: 400;
+  cursor: pointer;
+  transition: transform $transition-base, box-shadow $transition-base;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba($accent-secondary, 0.4);
+}
+
+.cta-secondary {
+  background: transparent;
+  color: $text-primary;
+  border: 1px solid $glassmorphism-border;
+  border-radius: $radius-sm;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  font-weight: 300;
+  cursor: pointer;
+  transition: border-color $transition-base, color $transition-base;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-secondary:hover {
+  border-color: $accent-secondary;
+  color: $accent-secondary;
 }

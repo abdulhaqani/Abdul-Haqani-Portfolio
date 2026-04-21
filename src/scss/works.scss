@@ -1,30 +1,28 @@
+@import './variables.scss';
 @import './default.scss';
 
 .works-background {
   @include background();
-
-  background: radial-gradient(
-    circle,
-    rgba(118, 192, 255, 1) 0%,
-    rgba(0, 39, 73, 1) 100%
-  );
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 .darken {
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     background-blend-mode: soft-light;
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
-.works-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  z-index: 0;
+.works-class-container {
+  width: 100%;
+  .works-class {
+    font-size: 2.4em;
+    width: fit-content;
+    margin: 2% 5% 1% 5%;
+    color: $text-primary;
+  }
 }
 
 .modal-trigger {
@@ -44,38 +42,96 @@
   padding: 0px !important;
 }
 
-.works-card:hover {
-  transform: scale(1.05);
+// Case study cards
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 0 5%;
+  margin-bottom: 40px;
 }
 
-.card-header {
-  font-size: 3.6em;
+.project-card {
+  background: $glassmorphism-bg;
+  border: 1px solid $glassmorphism-border;
+  border-left: 3px solid $accent-primary;
+  border-radius: $radius-md;
+  width: 85%;
+  max-width: 800px;
+  padding: 30px 36px;
+  transition: transform $transition-base, box-shadow $transition-base;
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 90%;
+    padding: 24px 20px;
+  }
 }
 
-.card-header-mercury {
-  margin: 0;
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba($accent-primary, 0.2);
+}
+
+.project-name {
   font-size: 1.8em;
-  width: 100%;
+  font-weight: 400;
+  color: $text-primary;
+  margin: 0 0 4px 0;
 }
 
-.bring-it {
-  background: radial-gradient(circle, #576cbc 0%, rgba(32, 32, 32, 1) 100%);
+.project-type {
+  font-style: italic;
+  color: $text-secondary;
+  font-size: 0.95em;
+  margin-bottom: 12px;
 }
 
-.bring-it.open {
-  top: 57% !important;
+.project-impact {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: $accent-secondary;
+  margin-bottom: 12px;
+  line-height: 1.5;
 }
 
-.ecosnap {
-  background: radial-gradient(circle, #576cbc 0%, rgba(32, 32, 32, 1) 100%);
+.project-description {
+  color: $text-secondary;
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
-.ecosnap.open {
-  top: 57% !important;
+.project-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
+.project-chip {
+  background: $card-bg;
+  border: 1px solid $card-border;
+  border-radius: $radius-sm;
+  padding: 4px 12px;
+  color: $text-secondary;
+  font-size: 0.85em;
+}
+
+.project-link {
+  color: $accent-secondary;
+  text-decoration: none;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: color $transition-base;
+
+  &:hover {
+    color: lighten($accent-secondary, 15%);
+  }
+}
+
+// Keep modal styles for "Read More"
 .modal-koga {
-  background: radial-gradient(circle, #576cbc 0%, rgba(32, 32, 32, 1) 100%);
+  background: $modal-bg;
 }
 
 .modal-koga.open {
@@ -83,55 +139,18 @@
 }
 
 .mercury-scraping {
-  background: radial-gradient(circle, #576cbc 0%, rgba(32, 32, 32, 1) 100%);
+  background: $modal-bg;
 }
 
 .mercury-scraping.open {
   top: 50% !important;
 }
 
-.works-class-container {
-  width: 100%;
-  .works-class {
-    font-size: 2.4em;
-    width: fit-content;
-    margin: 2% 5% 1% 5%;
-  }
-}
-
-.works-card {
-  transition: all 0.5s ease-in-out;
-  height: 25vh;
+.chip-align {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-height: 25vh;
-  width: 40%;
-  min-width: 300px;
-  min-height: 175px !important;
-  margin: 0% 5%;
-  text-align: center;
-  @media screen and (max-width: 999px) {
-    width: 80%;
-    margin: 5% 10%;
-  }
-}
-
-.works-card-single {
-  transition: all 0.5s ease-in-out;
-  height: 25vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-height: 25vh;
-  min-width: 300px;
-  min-height: 175px !important;
-  margin: auto;
-  text-align: center;
-  float: none !important;
-  width: 40%;
-  @media screen and (max-width: 999px) {
-    width: 80%;
-    margin: 5% 10%;
-  }
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
 }

@@ -1,10 +1,12 @@
+@import './variables.scss';
+
 .header {
   border-bottom-style: solid;
   font-size: 2.4em;
   border-bottom-width: 5px;
   padding: 0px 0.5em;
   width: fit-content;
-  color: rgb(248, 248, 248);
+  color: $text-primary;
   margin: auto;
   margin-top: 3%;
 }
@@ -32,41 +34,23 @@
   margin-top: 1%;
   font-size: 20px;
 }
+
 .main-content {
   @media screen and (min-width: 1000px) {
     flex: 78%;
     position: relative;
     z-index: 50 !important;
   }
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     min-width: 100%;
   }
   flex-direction: column;
   justify-content: center;
-  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
-    url(../images/stars-min.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-}
-
-.main-content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  z-index: -1;
+  background: $bg-primary;
 }
 
 .darken {
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     background-blend-mode: soft-light;
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -81,13 +65,13 @@
 .paragraph-text {
   @include paragraph();
   font-family: 'Arial';
-  color: whitesmoke;
+  color: $text-primary;
   max-width: 750px;
 }
 
 @mixin background {
   background-size: cover;
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     top: 0;
     left: 0;
     right: 0;
@@ -125,7 +109,7 @@
 
 .modal-orientation {
   width: 78%;
-  @media screen and (max-width: 999px) {
+  @media screen and (max-width: $breakpoint-mobile) {
     width: 90%;
     margin: auto;
   }
@@ -157,6 +141,38 @@
   width: 50%;
 }
 
-.react-reveal {
-  animation-fill-mode: backwards !important;
+// Section background wrappers — applied outside Fade to avoid gaps
+.section-bg { overflow: hidden; }
+.section-bg--home { background: $bg-home; }
+.section-bg--services { background: $bg-services; }
+.section-bg--about { background: $bg-about; }
+.section-bg--works { background: $bg-works; }
+.section-bg--contact { background: $bg-contact; }
+
+// Scroll reveal animations
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0.1s; }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.2s; }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.3s; }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.4s; }
+
+.reveal-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
 }
